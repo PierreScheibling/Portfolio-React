@@ -1,10 +1,13 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+//Import Pages
+import LandingPage from "./pages/LandingPage";
+import GlobalStyle from "./components/GlobalStyle";
 
 function App() {
   return (
     <div className="App">
-      <h1>Portfolio</h1>
+      <GlobalStyle />
+      <LandingPage />
     </div>
   );
 }
