@@ -8,11 +8,11 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  background: #1b1b1b;
+  background: #F4FFFD;
   font-family: "thorngumbald", sans-serif;
   h2 {
-    font-size: 4rem;
-    color: white;
+    font-size: 3rem;
+    color: black;
   }
 }
 `;
