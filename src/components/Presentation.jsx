@@ -54,9 +54,9 @@ const Image = styled(motion.div)`
   align-items: center;
   justify-content: end;
   img {
-    border: 0.5rem solid rgba(255, 255, 255, 0.3);
+    /* background: rgba(255, 255, 255, 0.8);
     padding: 1rem 2rem 0rem 2rem;
-    border-radius: 5rem;
+    border-radius: 5rem; */
     width: 50%;
   }
 `;
