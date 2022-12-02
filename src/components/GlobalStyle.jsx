@@ -11,7 +11,7 @@ body {
   background: #F4FFFD;
   font-family: "thorngumbald", sans-serif;
   h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: black;
   }
 }

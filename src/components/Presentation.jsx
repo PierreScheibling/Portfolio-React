@@ -8,24 +8,29 @@ import { motion } from "framer-motion";
 const PresentationSection = () => {
   return (
     <Presentation>
-      <Introduction>
-        <div className="hide">
-          <h2>Hello, je suis</h2>
-        </div>
-        <div className="hide">
-          <h2>
-            <span> Pierre</span>
-          </h2>
-        </div>
-      </Introduction>
-      <Image>
-        <img src={moi} alt="photo-id" />
-      </Image>
-      <Welcome>
-        <div className="hide">
-          <h2>Bienvenue sur mon porfolio !</h2>
-        </div>
-      </Welcome>
+      <Greetings>
+        <Introduction>
+          <div className="hide">
+            <h2>Hello, je suis</h2>
+          </div>
+          <div className="hide">
+            <h2>
+              <span> Pierre</span>
+            </h2>
+          </div>
+        </Introduction>
+        <Image>
+          <img src={moi} alt="photo-id" />
+        </Image>
+        <Welcome>
+          <div className="hide">
+            <h2>Developpeur Front-End</h2>
+          </div>
+        </Welcome>
+      </Greetings>
+      <Contact>
+        <button>Contact</button>
+      </Contact>
     </Presentation>
   );
 };
@@ -33,11 +38,16 @@ const PresentationSection = () => {
 //Styled Components
 const Presentation = styled(motion.div)`
   height: 100%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Greetings = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 10rem;
-  color: black;
+  padding: 2rem 10rem;
 `;
 
 const Introduction = styled(motion.div)`
@@ -73,6 +83,22 @@ const Welcome = styled(motion.div)`
   align-items: center;
   width: 100%;
   line-height: 8rem;
+`;
+
+const Contact = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #e2a48e;
+    color: white;
+    border: none;
+  }
 `;
 
 export default PresentationSection;

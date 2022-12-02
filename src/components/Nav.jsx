@@ -10,16 +10,36 @@ const Nav = () => {
     <StyledNav>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initials={{ width: "0%" }}
+            animate={{ width: "/" ? "50%" : "0%" }}
+          />
         </li>
         <li>
-          <a href="#">Mes Projets</a>
+          <Link to="/projects">Mes Projets</Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initials={{ width: "0%" }}
+            animate={{ width: "/" ? "50%" : "0%" }}
+          />
         </li>
         <li>
-          <a href="#">A Propos</a>
+          <Link to="/aboutme">A Propos</Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initials={{ width: "0%" }}
+            animate={{ width: "/" ? "50%" : "0%" }}
+          />
         </li>
         <li>
-          <a href="#">Mes Compétences</a>
+          <Link to="/competencies">Mes Competences</Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initials={{ width: "0%" }}
+            animate={{ width: "/" ? "50%" : "0%" }}
+          />
         </li>
       </ul>
     </StyledNav>
@@ -70,7 +90,7 @@ const StyledNav = styled.nav`
 
 const Line = styled(motion.div)`
   height: 0.3rem;
-  background: #23d997;
+  background: #e2a48e;
   width: 0%;
   position: absolute;
   @media (max-width: 1300px) {
