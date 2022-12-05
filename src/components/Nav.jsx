@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Nav = () => {
-  // const { pathname } = useLocation();
+  const { pathname } = useLocation();
   return (
     <StyledNav>
       <ul>
@@ -14,7 +14,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: "/" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/" ? "100%" : "0%" }}
           />
         </li>
         <li>
@@ -22,7 +22,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: "/" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/projects" ? "100%" : "0%" }}
           />
         </li>
         <li>
@@ -30,7 +30,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: "/" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/aboutme" ? "100%" : "0%" }}
           />
         </li>
         <li>
@@ -38,7 +38,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: "/" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/competencies" ? "100%" : "0%" }}
           />
         </li>
       </ul>
@@ -93,6 +93,8 @@ const Line = styled(motion.div)`
   background: #e2a48e;
   width: 0%;
   position: absolute;
+  bottom: -80%;
+  left: 0%;
   @media (max-width: 1300px) {
     left: 2rem;
   }

@@ -41,6 +41,8 @@ export const pageAnimation = {
     y: 0,
     transition: {
       duration: 1,
+      when: "beforeChildren",
+      staggerChildren: 0.5,
     },
   },
   exit: {
@@ -49,5 +51,22 @@ export const pageAnimation = {
     transition: {
       duration: 1,
     },
+  },
+};
+
+export const titleAnim = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { duration: 0.75, ease: "easeOut" },
+  },
+};
+
+export const postAnim = {
+  hidden: { x: 100, opacity: 0 },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 1, ease: "easeOut" },
   },
 };

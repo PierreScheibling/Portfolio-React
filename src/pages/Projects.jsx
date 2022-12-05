@@ -1,15 +1,18 @@
 import React from "react";
-import BlobPage from "../components/Blob";
+//Styled
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <Projects>
+    <ProjectsPage>
       <div>
         <h1>Projects</h1>
       </div>
-      <BlobPage />
-    </Projects>
+    </ProjectsPage>
   );
 };
+
+const ProjectsPage = styled(motion.div)``;
 
 export default Projects;

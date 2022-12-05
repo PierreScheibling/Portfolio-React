@@ -6,6 +6,7 @@ import Competencies from "./pages/Competencies";
 import AboutMe from "./pages/AboutMe";
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
+import BlobPage from "./components/Blob";
 // Router
 import { Routes, Route, useLocation } from "react-router-dom";
 //Animation
@@ -24,6 +25,7 @@ function App() {
           <Route path="/competencies" element={<Competencies />} />
           <Route path="/aboutme" element={<AboutMe />} />
         </Routes>
+        <BlobPage />
       </AnimatePresence>
     </div>
   );

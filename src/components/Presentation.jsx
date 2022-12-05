@@ -6,12 +6,10 @@ import styled from "styled-components";
 // Animations
 import { motion } from "framer-motion";
 import { pageAnimation } from "../Animations";
+import { titleAnim } from "../Animations";
+import { postAnim } from "../Animations";
 
 const PresentationSection = () => {
-  const titleAnimation = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 2 } },
-  };
   const picture = {
     hidden: { scale: 1.3 },
     show: { scale: 1, transition: { duration: 1, ease: "easeOut" } },
@@ -28,18 +26,12 @@ const PresentationSection = () => {
         <Greetings>
           <Introduction>
             <div className="hide">
-              <motion.h2
-                variants={titleAnimation}
-                initial="hidden"
-                animate="show"
-              >
-                Hello, je suis
-              </motion.h2>
+              <motion.h2 variants={titleAnim}>Hello, je suis</motion.h2>
             </div>
             <div className="hide">
-              <h2>
+              <motion.h2 variants={titleAnim}>
                 <span> Pierre</span>
-              </h2>
+              </motion.h2>
             </div>
           </Introduction>
           <Image>
@@ -53,12 +45,17 @@ const PresentationSection = () => {
           </Image>
           <Welcome>
             <div className="hide">
-              <h2>Developpeur Front-End</h2>
+              <motion.h2 variants={postAnim}>Developpeur Front-End</motion.h2>
             </div>
           </Welcome>
         </Greetings>
         <Contact>
-          <button>Contact</button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            Contact
+          </motion.button>
         </Contact>
       </Presentation>
     </motion.div>
@@ -120,6 +117,7 @@ const Contact = styled(motion.div)`
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 6rem;
   button {
     padding: 1rem 2rem;
     font-size: 1.5rem;
