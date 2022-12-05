@@ -8,6 +8,8 @@ import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
 // Router
 import { Routes, Route, useLocation } from "react-router-dom";
+//Animation
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
@@ -15,12 +17,14 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/competencies" element={<Competencies />} />
-        <Route path="/aboutme" element={<AboutMe />} />
-      </Routes>
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/competencies" element={<Competencies />} />
+          <Route path="/aboutme" element={<AboutMe />} />
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }

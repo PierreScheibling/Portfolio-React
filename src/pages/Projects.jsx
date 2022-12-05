@@ -1,10 +1,14 @@
 import React from "react";
+import BlobPage from "../components/Blob";
 
 const Projects = () => {
   return (
-    <div>
-      <h1>Projects</h1>
-    </div>
+    <Projects>
+      <div>
+        <h1>Projects</h1>
+      </div>
+      <BlobPage />
+    </Projects>
   );
 };
 

@@ -8,13 +8,17 @@ import { motion } from "framer-motion";
 
 const LandingPage = () => {
   return (
-    <div className="LandingPage">
+    <FirstPage>
       <Presentation />
       <BlobPage />
-    </div>
+    </FirstPage>
     // <AboutMe />
     // <Projects />
   );
 };
+
+const FirstPage = styled(motion.div)`
+  overflow-y: hidden;
+`;
 
 export default LandingPage;
