@@ -2,13 +2,12 @@ import React from "react";
 //Styled
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import SimpleSlider from "../components/Carousel";
 
 const Projects = () => {
   return (
     <ProjectsPage>
-      <div>
-        <h1>Projects</h1>
-      </div>
+      <SimpleSlider />
     </ProjectsPage>
   );
 };
