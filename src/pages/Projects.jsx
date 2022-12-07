@@ -126,12 +126,7 @@ const Project = styled(motion.div)`
   margin-top: 5rem;
 `;
 
-const ProjectsPage = styled(motion.div)`
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1; */
-`;
+const ProjectsPage = styled(motion.div)``;
 
 // //Frame Animation
 // const Frame1 = styled(motion.div)`
