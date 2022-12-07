@@ -25,8 +25,8 @@ function App() {
           <Route path="/competencies" element={<Competencies />} />
           <Route path="/aboutme" element={<AboutMe />} />
         </Routes>
-        <BlobPage />
       </AnimatePresence>
+      <BlobPage />
     </div>
   );
 }
