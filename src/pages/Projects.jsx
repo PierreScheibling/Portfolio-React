@@ -6,12 +6,23 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 //Animations
-import { pageAnimation } from "../Animations";
+import { pageAnimation, frameContainer, frameTransition } from "../Animations";
 import Wave from "../components/Wave.jsx";
 
 const Projects = () => {
   return (
-    <ProjectsPage>
+    <ProjectsPage
+      varianst={pageAnimation}
+      exit="exit"
+      initial="hidden"
+      animate="show"
+    >
+      {/* <motion.div variants={frameContainer}>
+        <Frame1 variants={frameTransition}></Frame1>
+        <Frame2 variants={frameTransition}></Frame2>
+        <Frame3 variants={frameTransition}></Frame3>
+        <Frame4 variants={frameTransition}></Frame4>
+      </motion.div> */}
       <SimpleSlider />
     </ProjectsPage>
   );
@@ -121,5 +132,25 @@ const ProjectsPage = styled(motion.div)`
   align-items: center;
   flex-grow: 1; */
 `;
+
+// //Frame Animation
+// const Frame1 = styled(motion.div)`
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100vh;
+//   background: #fffebf;
+//   z-index: 2;
+// `;
+// const Frame2 = styled(Frame1)`
+//   background: #ff8efb;
+// `;
+// const Frame3 = styled(Frame1)`
+//   background: #8ed2ff;
+// `;
+// const Frame4 = styled(Frame1)`
+//   background: #8effa0;
+// `;
 
 export default Projects;
