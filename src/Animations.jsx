@@ -70,3 +70,11 @@ export const postAnim = {
     transition: { duration: 1, ease: "easeOut" },
   },
 };
+
+export const lineAnim = {
+  hidden: { width: "0%" },
+  show: {
+    width: "100%",
+    transition: { duration: 1 },
+  },
+};
