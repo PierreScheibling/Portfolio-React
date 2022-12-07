@@ -15,7 +15,9 @@ body {
     font-size: 2rem;
     color: black;
   }
-}
-`;
+  a {
+    text-decoration: none;
+  }
+}`;
 
 export default GlobalStyle;

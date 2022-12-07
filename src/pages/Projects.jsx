@@ -58,6 +58,19 @@ function SimpleSlider() {
                 ipsa dolores earum totam et natus error. Totam impedit quasi
                 voluptatum dolores neque.
               </p>
+              <Contact>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  <a
+                    href="https://www.youtube.com/watch?v=ptb0CURbsCw"
+                    target="_blank"
+                  >
+                    Voir la présentation
+                  </a>
+                </motion.button>
+              </Contact>
             </ProjectPresentation>
             <Wave />
           </Slide>
@@ -94,8 +107,13 @@ const Slide = styled(motion.div)`
   margin-bottom: 3rem;
   border-radius: 3rem;
   position: relative;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   img {
     width: 90%;
+  }
+  a:visited {
+    text-decoration: none;
+    color: white;
   }
 `;
 
@@ -117,6 +135,7 @@ const ProjectPresentation = styled(motion.div)`
     font-size: 1.5rem;
     text-align: justify;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     line-height: 3rem;
   }
 `;
@@ -147,5 +166,22 @@ const ProjectsPage = styled(motion.div)``;
 // const Frame4 = styled(Frame1)`
 //   background: #8effa0;
 // `;
+
+const Contact = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+  button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #e2a48e;
+    color: white;
+    border: none;
+  }
+`;
 
 export default Projects;
