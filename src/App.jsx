@@ -7,6 +7,7 @@ import AboutMe from "./pages/AboutMe";
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
 import BlobPage from "./components/Blob";
+import GameChanger from "./components/gameChanger/GameApp.jsx";
 // Router
 import { Routes, Route, useLocation } from "react-router-dom";
 //Animation
@@ -24,6 +25,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/competencies" element={<Competencies />} />
           <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="/gamechanger" element={<GameChanger />} />
         </Routes>
       </AnimatePresence>
       <BlobPage />
