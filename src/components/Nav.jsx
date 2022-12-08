@@ -34,7 +34,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/competencies">Mes Competences</Link>
+          <Link to="/competencies">Mes Compétences</Link>
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}

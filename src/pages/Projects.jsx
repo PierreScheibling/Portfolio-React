@@ -52,11 +52,23 @@ function SimpleSlider() {
             </Picture>
             <ProjectPresentation>
               <h1>Kick-Ace</h1>
+              <Stack>
+                <img src="src/img/stack/ROR.png" alt="Ruby On Rails" />
+                <img src="src/img/stack/JS.png" alt="JS" />
+                <img src="src/img/stack/HTML.png" alt="HTML" />
+                <img src="src/img/stack/CSS.png" alt="CSS" />
+                <img src="src/img/stack/Figma.png" alt="Figma" />
+                <img src="src/img/stack/Heroku.png" alt="Heroku" />
+                <img src="src/img/stack/Github.png" alt="Github" />
+                <img src="src/img/stack/Cloudinary.png" alt="Cloudinary" />
+                <img src="src/img/stack/Postgre SQL.png" alt="Postgre SQL" />
+              </Stack>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                unde aperiam ad vel placeat consectetur reprehenderit. Veritatis
-                ipsa dolores earum totam et natus error. Totam impedit quasi
-                voluptatum dolores neque.
+                Kick-Ace est un jeu de fantasy tennis où chaque joueur doit
+                constituer une équipe de 8 tennismen grâce à un système
+                d'enchères. Le jeu est ensuite organisé par ligue de 4 à 8
+                joueurs où chaque équipe va s'affronter en fonction des
+                résultats des tennismen à l'ATP.
               </p>
               <Contact>
                 <motion.button
@@ -108,9 +120,6 @@ const Slide = styled(motion.div)`
   border-radius: 3rem;
   position: relative;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
-  img {
-    width: 90%;
-  }
   a:visited {
     text-decoration: none;
     color: white;
@@ -119,6 +128,18 @@ const Slide = styled(motion.div)`
 
 const Picture = styled(motion.div)`
   z-index: 2;
+  img {
+    width: 90%;
+  }
+`;
+
+const Stack = styled(motion.div)`
+  display: flex;
+  img {
+    width: 3vh;
+    height: 3vh;
+    margin: 1rem 1rem 2rem 1rem;
+  }
 `;
 
 const ProjectPresentation = styled(motion.div)`
@@ -128,14 +149,13 @@ const ProjectPresentation = styled(motion.div)`
   width: 70%;
   z-index: 2;
   h1 {
-    font-size: 3rem;
-    margin-bottom: 4rem;
+    font-size: 5vh;
   }
   p {
-    font-size: 1.5rem;
+    font-size: 2vh;
     text-align: justify;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2.5rem;
     line-height: 3rem;
   }
 `;
