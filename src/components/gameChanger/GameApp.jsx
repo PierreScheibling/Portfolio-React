@@ -1,4 +1,5 @@
 import React from "react";
+require("dotenv").config();
 // Components & pages
 import Home from "./pages/GameHome";
 import Nav from "./components/GameNav";
