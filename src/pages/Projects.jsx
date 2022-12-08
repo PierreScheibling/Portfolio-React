@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AppMusic from "../components/musicPlayer/AppMusic";
 //Animations
 import { pageAnimation, frameContainer, frameTransition } from "../Animations";
 import Wave from "../components/Wave.jsx";
@@ -31,7 +32,7 @@ const Projects = () => {
 function SimpleSlider() {
   const settings = {
     dots: true,
-    arrows: false,
+    arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -89,7 +90,7 @@ function SimpleSlider() {
         </Project>
         <Project>
           <Slide>
-            2
+            <AppMusic />
             <Wave />
           </Slide>
         </Project>
@@ -165,7 +166,24 @@ const Project = styled(motion.div)`
   margin-top: 5rem;
 `;
 
-const ProjectsPage = styled(motion.div)``;
+const ProjectsPage = styled(motion.div)`
+  .slick-arrow {
+    z-index: -2;
+    margin: 0rem 7rem 0rem 5rem;
+    z-index: 1 !important;
+    /* width: 2rem !important; */
+    /* font-size: 2rem;
+    background: red !important; */
+  }
+  button.slick-next:before {
+    font-size: 3rem !important;
+    color: #e2a48e !important;
+  }
+  button.slick-prev:before {
+    font-size: 3rem !important;
+    color: #e2a48e !important;
+  }
+`;
 
 // //Frame Animation
 // const Frame1 = styled(motion.div)`

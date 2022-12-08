@@ -1,6 +1,5 @@
 import React from "react";
 import moi from "../img/moi.png";
-import kick_ace from "../img/kick_ace.png";
 //Styled
 import styled from "styled-components";
 // Animations
