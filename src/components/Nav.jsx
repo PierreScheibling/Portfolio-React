@@ -59,45 +59,32 @@ const StyledNav = styled.nav`
   ul {
     display: flex;
     list-style: none;
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem 20rem;
+    justify-content: space-around;
+    /* align-items: center; */
+    padding: 3rem 1rem;
   }
 
   li {
     position: relative;
+    font-size: 1rem;
   }
   @media (max-width: 1300px) {
     flex-direction: column;
-    padding: 1rem;
     ul {
       padding: 2rem;
-      justify-content: center;
+      justify-content: space-around;
       width: 100%;
-    }
-    li {
-      padding: 0rem 2rem;
-      justify-content: center;
-    }
-    #logo {
-      display: inline-block;
-      margin: 1rem;
     }
   }
 `;
 
 const Line = styled(motion.div)`
-  height: 0.3rem;
+  height: 0.2rem;
   background: #e2a48e;
   width: 0%;
   position: absolute;
   bottom: -80%;
   left: 0%;
-  @media (max-width: 1300px) {
-    left: 2rem;
-  }
 `;
 
 export default Nav;

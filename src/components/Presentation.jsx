@@ -63,7 +63,6 @@ const PresentationSection = () => {
 
 //Styled Components
 const Presentation = styled(motion.div)`
-  height: 100%;
   color: black;
   display: flex;
   flex-direction: column;
@@ -73,7 +72,8 @@ const Greetings = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 10rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
 `;
 
 const Introduction = styled(motion.div)`
@@ -82,9 +82,13 @@ const Introduction = styled(motion.div)`
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 3rem;
+  h2 {
+    margin-left: 5rem;
+  }
   span {
     font-family: "Signatura Monoline Script", sans-serif;
-    font-size: 10rem;
+    font-size: 8rem;
     font-weight: lighter;
     color: #e2a48e;
   }
@@ -95,10 +99,7 @@ const Image = styled(motion.div)`
   align-items: center;
   justify-content: center;
   img {
-    /* background: rgba(255, 255, 255, 0.8);
-    padding: 1rem 2rem 0rem 2rem;
-    border-radius: 5rem; */
-    width: 85%;
+    width: 70%;
   }
 `;
 
@@ -108,7 +109,9 @@ const Welcome = styled(motion.div)`
   justify-content: center;
   align-items: center;
   width: 100%;
-  line-height: 8rem;
+  h2 {
+    margin-right: 4rem;
+  }
 `;
 
 const Contact = styled(motion.div)`
@@ -116,10 +119,10 @@ const Contact = styled(motion.div)`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 6rem;
+  height: 5rem;
   button {
     padding: 1rem 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
     border-radius: 20px;
     background: #e2a48e;

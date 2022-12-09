@@ -4,7 +4,7 @@ import LandingPage from "./pages/LandingPage";
 import Projects from "./pages/Projects";
 import Competencies from "./pages/Competencies";
 import AboutMe from "./pages/AboutMe";
-import GlobalStyle from "./components/GlobalStyle";
+import GlobalStyle from "./components/GlobalStyle.jsx";
 import Nav from "./components/Nav";
 import BlobPage from "./components/Blob";
 // Router

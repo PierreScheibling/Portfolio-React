@@ -12,7 +12,6 @@ body {
   font-family: "thorngumbald", sans-serif;
   overflow-y: scroll;
   h2 {
-    font-size: 2rem;
     color: black;
   }
   a {
