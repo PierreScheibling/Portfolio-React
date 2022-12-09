@@ -68,12 +68,12 @@ const StyledNav = styled.nav`
     position: relative;
     font-size: 1rem;
   }
-  @media (max-width: 1300px) {
-    flex-direction: column;
+  @media (max-width: 667px) {
     ul {
-      padding: 2rem;
-      justify-content: space-around;
-      width: 100%;
+      padding: 2rem 0rem;
+    }
+    li {
+      font-size: 0.7rem;
     }
   }
 `;

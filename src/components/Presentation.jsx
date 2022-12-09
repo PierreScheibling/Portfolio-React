@@ -74,6 +74,24 @@ const Greetings = styled(motion.div)`
   justify-content: space-between;
   padding: 1rem 2rem;
   font-size: 1.2rem;
+  @media (max-width: 1280px) {
+    font-size: 0.9rem;
+  }
+  @media (max-width: 834px) {
+    flex-direction: column;
+    padding: 2rem 0rem;
+    font-size: 1rem;
+  }
+  @media (max-width: 667px) {
+    flex-direction: column;
+    padding: 2rem 0rem;
+    font-size: 1rem;
+  }
+  @media (max-width: 359px) {
+    flex-direction: column;
+    padding: 0rem 0rem;
+    font-size: 0.7rem;
+  }
 `;
 
 const Introduction = styled(motion.div)`
@@ -92,6 +110,44 @@ const Introduction = styled(motion.div)`
     font-weight: lighter;
     color: #e2a48e;
   }
+  @media (max-width: 1280px) {
+    h2 {
+      margin-left: 4rem;
+    }
+    span {
+      font-size: 5rem;
+    }
+  }
+  @media (max-width: 834px) {
+    flex-direction: row;
+    margin-top: 0rem;
+    h2 {
+      margin-left: 2rem;
+    }
+    span {
+      font-size: 6rem;
+    }
+  }
+  @media (max-width: 667px) {
+    flex-direction: row;
+    margin-top: 0rem;
+    h2 {
+      margin-left: 1rem;
+    }
+    span {
+      font-size: 3rem;
+    }
+  }
+  @media (max-width: 359px) {
+    flex-direction: row;
+    margin-top: 0rem;
+    h2 {
+      margin-left: 1rem;
+    }
+    span {
+      font-size: 3rem;
+    }
+  }
 `;
 
 const Image = styled(motion.div)`
@@ -100,6 +156,26 @@ const Image = styled(motion.div)`
   justify-content: center;
   img {
     width: 70%;
+  }
+  @media (max-width: 1280px) {
+    img {
+      width: 60%;
+    }
+  }
+  @media (max-width: 834px) {
+    img {
+      width: 50%;
+    }
+  }
+  @media (max-width: 667px) {
+    img {
+      width: 60%;
+    }
+  }
+  @media (max-width: 359px) {
+    img {
+      width: 50%;
+    }
   }
 `;
 
@@ -111,6 +187,29 @@ const Welcome = styled(motion.div)`
   width: 100%;
   h2 {
     margin-right: 4rem;
+  }
+  @media (max-width: 1280px) {
+    h2 {
+      margin-right: 2rem;
+    }
+  }
+  @media (max-width: 834px) {
+    h2 {
+      margin-top: 2rem;
+      margin-right: 0rem;
+    }
+  }
+  @media (max-width: 667px) {
+    h2 {
+      margin-top: 2rem;
+      margin-right: 0rem;
+    }
+  }
+  @media (max-width: 359px) {
+    h2 {
+      margin-top: 1rem;
+      margin-right: 0rem;
+    }
   }
 `;
 
@@ -128,6 +227,29 @@ const Contact = styled(motion.div)`
     background: #e2a48e;
     color: white;
     border: none;
+  }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    height: 7rem;
+    button {
+      padding: 1rem 1.5rem;
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 667px) {
+    height: 4rem;
+    button {
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 359px) {
+    height: 4rem;
+    button {
+      padding: 0.8rem 1.2rem;
+      font-size: 0.8rem;
+    }
   }
 `;
 
