@@ -68,9 +68,21 @@ const StyledNav = styled.nav`
     position: relative;
     font-size: 1rem;
   }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+  }
   @media (max-width: 667px) {
     ul {
       padding: 2rem 0rem;
+    }
+    li {
+      font-size: 0.7rem;
+    }
+  }
+  @media (max-width: 359px) {
+    ul {
+      padding: 1rem 0rem;
     }
     li {
       font-size: 0.7rem;

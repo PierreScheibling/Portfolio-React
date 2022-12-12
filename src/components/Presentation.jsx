@@ -195,7 +195,7 @@ const Welcome = styled(motion.div)`
   }
   @media (max-width: 834px) {
     h2 {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       margin-right: 0rem;
     }
   }

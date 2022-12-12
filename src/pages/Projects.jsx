@@ -117,7 +117,6 @@ const Slide = styled(motion.div)`
   width: 80%;
   display: flex;
   align-items: center;
-  margin-bottom: 3rem;
   border-radius: 3rem;
   position: relative;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
@@ -125,12 +124,64 @@ const Slide = styled(motion.div)`
     text-decoration: none;
     color: white;
   }
+  @media (max-width: 1280px) {
+    margin-bottom: 0rem;
+    margin-top: 0;
+    width: 80%;
+  }
+  @media (max-width: 834px) {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 8%;
+    height: 75vh;
+    width: 80%;
+  }
+  @media (max-width: 667px) {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 8%;
+    height: 75vh;
+    width: 80%;
+  }
+  @media (max-width: 359px) {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0rem;
+    margin-top: 10%;
+    height: 70vh;
+    width: 80%;
+  }
 `;
 
 const Picture = styled(motion.div)`
   z-index: 2;
   img {
     width: 90%;
+  }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 50%;
+    }
+  }
+  @media (max-width: 667px) {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 95%;
+    }
+  }
+  @media (max-width: 359px) {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 75%;
+    }
   }
 `;
 
@@ -140,6 +191,17 @@ const Stack = styled(motion.div)`
     width: 3vh;
     height: 3vh;
     margin: 1rem 1rem 2rem 1rem;
+  }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    display: none;
+  }
+  @media (max-width: 667px) {
+    display: none;
+  }
+  @media (max-width: 359px) {
+    display: none;
   }
 `;
 
@@ -159,11 +221,69 @@ const ProjectPresentation = styled(motion.div)`
     padding-bottom: 2.5rem;
     line-height: 3rem;
   }
+  @media (max-width: 1280px) {
+    margin-top: 4rem;
+    p {
+      line-height: 2.5rem;
+    }
+  }
+  @media (max-width: 834px) {
+    margin-right: 0rem;
+    width: 85%;
+    align-items: center;
+    h1 {
+      font-size: 5vh;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 2rem;
+    }
+  }
+  @media (max-width: 667px) {
+    margin-right: 0rem;
+    width: 85%;
+    align-items: center;
+    h1 {
+      font-size: 5vh;
+      margin-bottom: 1rem;
+    }
+    p {
+      display: none;
+    }
+  }
+  @media (max-width: 359px) {
+    margin-right: 0rem;
+    width: 85%;
+    align-items: center;
+    h1 {
+      font-size: 5vh;
+      margin-bottom: 1rem;
+    }
+    p {
+      display: none;
+    }
+  }
 `;
 
 const Project = styled(motion.div)`
   margin-left: 10%;
   margin-top: 5rem;
+  @media (max-width: 1280px) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  @media (max-width: 834px) {
+    margin-left: 10%;
+    margin-top: 0rem;
+  }
+  @media (max-width: 667px) {
+    margin-left: 10%;
+    margin-top: 0rem;
+  }
+  @media (max-width: 359px) {
+    margin-left: 10%;
+    margin-top: 0rem;
+  }
 `;
 
 const ProjectsPage = styled(motion.div)`
@@ -182,6 +302,51 @@ const ProjectsPage = styled(motion.div)`
   button.slick-prev:before {
     font-size: 3rem !important;
     color: #e2a48e !important;
+  }
+
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    .slick-arrow {
+      display: none;
+    }
+    button.slick-next:before {
+      display: none;
+    }
+    button.slick-prev:before {
+      display: none;
+    }
+    .slick-dots {
+      display: none !important;
+    }
+  }
+  @media (max-width: 667px) {
+    .slick-arrow {
+      display: none;
+    }
+    button.slick-next:before {
+      display: none;
+    }
+    button.slick-prev:before {
+      display: none;
+    }
+    .slick-dots {
+      display: none !important;
+    }
+  }
+  @media (max-width: 359px) {
+    .slick-arrow {
+      display: none;
+    }
+    button.slick-next:before {
+      display: none;
+    }
+    button.slick-prev:before {
+      display: none;
+    }
+    .slick-dots {
+      display: none !important;
+    }
   }
 `;
 
@@ -219,6 +384,31 @@ const Contact = styled(motion.div)`
     background: #e2a48e;
     color: white;
     border: none;
+  }
+  @media (max-width: 1280px) {
+    height: 4rem;
+    padding-bottom: 3.5rem;
+  }
+  @media (max-width: 834px) {
+    height: 6rem;
+    padding-bottom: 2rem;
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 667px) {
+    button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 359px) {
+    height: 3rem;
+    button {
+      padding: 0.7rem 1.5rem;
+      font-size: 0.7rem;
+    }
   }
 `;
 
