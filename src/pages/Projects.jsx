@@ -120,13 +120,14 @@ const Slide = styled(motion.div)`
   border-radius: 3rem;
   position: relative;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2.5rem;
   a:visited {
     text-decoration: none;
     color: white;
   }
   @media (max-width: 1280px) {
-    margin-bottom: 0rem;
-    margin-top: 0;
+    margin-bottom: -0.5rem;
+    margin-top: -1rem;
     width: 80%;
   }
   @media (max-width: 834px) {
@@ -150,7 +151,7 @@ const Slide = styled(motion.div)`
     justify-content: center;
     margin-bottom: 0rem;
     margin-top: 10%;
-    height: 70vh;
+    height: 72vh;
     width: 80%;
   }
 `;
@@ -179,8 +180,9 @@ const Picture = styled(motion.div)`
   @media (max-width: 359px) {
     display: flex;
     justify-content: center;
+    padding-top: 2rem;
     img {
-      width: 75%;
+      width: 80%;
     }
   }
 `;
@@ -222,8 +224,9 @@ const ProjectPresentation = styled(motion.div)`
     line-height: 3rem;
   }
   @media (max-width: 1280px) {
-    margin-top: 4rem;
+    margin-top: 3rem;
     p {
+      padding-top: 0rem;
       line-height: 2.5rem;
     }
   }
@@ -254,10 +257,10 @@ const ProjectPresentation = styled(motion.div)`
   @media (max-width: 359px) {
     margin-right: 0rem;
     width: 85%;
-    align-items: center;
     h1 {
       font-size: 5vh;
       margin-bottom: 1rem;
+      margin-top: -3rem;
     }
     p {
       display: none;
@@ -267,7 +270,7 @@ const ProjectPresentation = styled(motion.div)`
 
 const Project = styled(motion.div)`
   margin-left: 10%;
-  margin-top: 5rem;
+  margin-top: 3rem;
   @media (max-width: 1280px) {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -387,7 +390,11 @@ const Contact = styled(motion.div)`
   }
   @media (max-width: 1280px) {
     height: 4rem;
-    padding-bottom: 3.5rem;
+    padding-bottom: 2rem;
+    button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
   }
   @media (max-width: 834px) {
     height: 6rem;
@@ -404,10 +411,10 @@ const Contact = styled(motion.div)`
     }
   }
   @media (max-width: 359px) {
-    height: 3rem;
+    height: 4rem;
     button {
-      padding: 0.7rem 1.5rem;
-      font-size: 0.7rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 0.8rem;
     }
   }
 `;
