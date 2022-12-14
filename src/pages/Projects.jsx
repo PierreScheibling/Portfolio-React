@@ -135,7 +135,7 @@ const Slide = styled(motion.div)`
     justify-content: center;
     margin-bottom: 2rem;
     margin-top: 8%;
-    height: 75vh;
+    height: 73vh;
     width: 80%;
   }
   @media (max-width: 667px) {

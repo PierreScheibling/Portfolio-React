@@ -29,6 +29,20 @@ const MusicLibraryTitle = styled(motion.div)`
   h1 {
     margin: 3rem;
   }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+  }
+  @media (max-width: 667px) {
+    h1 {
+      display: none;
+    }
+  }
+  @media (max-width: 359px) {
+    h1 {
+      display: none;
+    }
+  }
 `;
 
 const MusicLibraryButton = styled(motion.div)`
@@ -43,6 +57,38 @@ const MusicLibraryButton = styled(motion.div)`
     background: #e2a48e;
     color: white;
     border: none;
+  }
+  @media (max-width: 1280px) {
+    button {
+      right: -20vh;
+      bottom: 2vh;
+      padding: 1.5rem;
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 834px) {
+    button {
+      right: -4vh;
+      bottom: 5vh;
+      padding: 1.5rem;
+      font-size: 1.3rem;
+    }
+  }
+  @media (max-width: 667px) {
+    button {
+      right: -15vh;
+      bottom: 3vh;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 359px) {
+    button {
+      right: -18vh;
+      bottom: -2vh;
+      padding: 0.8rem;
+      font-size: 0.7rem;
+    }
   }
 `;
 

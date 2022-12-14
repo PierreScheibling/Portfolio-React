@@ -15,6 +15,20 @@
       padding: 1.5rem 2rem 1rem 3rem;
       border-bottom: 1px solid rgb(204,204,204);
     }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+  }
+  @media (max-width: 667px) {
+    h2 {
+      display: none;
+    }
+  }
+  @media (max-width: 359px) {
+    h2 {
+      display: none;
+    }
+  }
 }
 
 .music-library-songs {
@@ -30,6 +44,26 @@
   &:hover {
     background: rgba(184, 211, 255, 0.15);
   }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    padding: 0.7rem 0rem 0.7rem 0.7rem;
+    img {
+      width:40%;
+    }
+  }
+  @media (max-width: 667px) {
+    padding: 0.7rem 0rem 0.7rem 0.7rem;
+    img {
+      width:75%;
+    }
+  }
+  @media (max-width: 359px) {
+    padding: 0.7rem 0rem 0.7rem 0.7rem;
+    img {
+      width:75%;
+    }
+  }
 }
 
 .music-song-description {
@@ -39,6 +73,22 @@
     }
     h4 {
       font-size: 0.7rem;
+    }
+    @media (max-width: 1280px) {
+    }
+    @media (max-width: 834px) {
+      h3 {
+        font-size: 0.8rem;
+      }
+      h4 {
+        font-size: 0.5rem;
+      }
+    }
+    @media (max-width: 667px) {
+      display: none;
+    }
+    @media (max-width: 359px) {
+      display: none;
     }
 }
 
@@ -69,10 +119,4 @@
   transform: translateX(167%);
   transition: opacity 0.8s ease;
   opacity: 1;
-}
-
-@media screen and (max-width: 768px) {
-  .library {
-    width: 100%;
-  }
 }
