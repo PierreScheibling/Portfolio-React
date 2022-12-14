@@ -96,13 +96,23 @@ function SimpleSlider() {
         </Project>
         <Project>
           <Slide>
-            3
-            <Wave />
-          </Slide>
-        </Project>
-        <Project>
-          <Slide>
-            4
+            <GameChanger>
+              <img src="src/img/gameChanger.gif" alt="Game_changer" />
+            </GameChanger>
+            <GamePresentation>
+              <h1>Game Changer</h1>
+              <Stack>
+                <img src="src/img/stack/API.png" alt="API" />
+                <img src="src/img/stack/React.png" alt="React" />
+                <img src="src/img/stack/Github.png" alt="Github" />
+              </Stack>
+              <p>
+                Game Changer est un blog d'actualité sur les Jeux Videos avec la
+                possibilité de voir les prochaines sorties, les jeux les mieux
+                notés, ainsi que les plateformes sur lesquels on retrouve ces
+                jeux.
+              </p>
+            </GamePresentation>
             <Wave />
           </Slide>
         </Project>
@@ -166,6 +176,7 @@ const Picture = styled(motion.div)`
   @media (max-width: 834px) {
     display: flex;
     justify-content: center;
+    padding-top: 2rem;
     img {
       width: 50%;
     }
@@ -197,7 +208,11 @@ const Stack = styled(motion.div)`
   @media (max-width: 1280px) {
   }
   @media (max-width: 834px) {
-    display: none;
+    img {
+      width: 2vh;
+      height: 2vh;
+      margin: 0rem 1rem 1rem 1rem;
+    }
   }
   @media (max-width: 667px) {
     display: none;
@@ -208,6 +223,68 @@ const Stack = styled(motion.div)`
 `;
 
 const ProjectPresentation = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  margin-right: 8rem;
+  width: 70%;
+  z-index: 2;
+  h1 {
+    font-size: 5vh;
+  }
+  p {
+    font-size: 2vh;
+    text-align: justify;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+    line-height: 3rem;
+  }
+  @media (max-width: 1280px) {
+    margin-top: 3rem;
+    p {
+      padding-top: 0rem;
+      line-height: 2.5rem;
+    }
+  }
+  @media (max-width: 834px) {
+    margin-right: 0rem;
+    margin-top: -1.5rem;
+    width: 85%;
+    align-items: center;
+    h1 {
+      font-size: 5vh;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 2rem;
+    }
+  }
+  @media (max-width: 667px) {
+    margin-right: 0rem;
+    width: 85%;
+    align-items: center;
+    h1 {
+      font-size: 5vh;
+      margin-bottom: 1rem;
+    }
+    p {
+      display: none;
+    }
+  }
+  @media (max-width: 359px) {
+    margin-right: 0rem;
+    width: 85%;
+    h1 {
+      font-size: 5vh;
+      margin-bottom: 1rem;
+      margin-top: -3rem;
+    }
+    p {
+      display: none;
+    }
+  }
+`;
+
+const GamePresentation = styled(motion.div)`
   display: flex;
   flex-direction: column;
   margin-right: 8rem;
@@ -415,6 +492,43 @@ const Contact = styled(motion.div)`
     button {
       padding: 0.8rem 1.5rem;
       font-size: 0.8rem;
+    }
+  }
+`;
+
+const GameChanger = styled(motion.div)`
+  img {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 75%;
+      padding: 0rem;
+    }
+  }
+  @media (max-width: 667px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 90%;
+      padding: 2rem;
+    }
+  }
+  @media (max-width: 359px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 90%;
+      padding: 2rem;
     }
   }
 `;

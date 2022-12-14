@@ -104,14 +104,13 @@ input[type="range"]::-moz-range-thumb {
     margin: 1rem 1rem;
   }
   @media (max-width: 667px) {
-    width: 50%;
+    width: 65%;
     height: 1rem;
-    margin: 1rem 5rem;
   }
   @media (max-width: 359px) {
     width: 55%;
     height: 0.7rem;
-    margin: 1rem 3rem;
+    margin: 1rem 1rem;
   }
 }
 
