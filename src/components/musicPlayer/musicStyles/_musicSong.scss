@@ -3,6 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  &__imgWP {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   img {
     width: 25%;
     border-radius: 50%;
@@ -19,7 +27,7 @@
 @media (max-width: 1280px) {
   .song-container {
     img {
-      width:15%;
+      width: 15%;
     }
     h2 {
       font-size: 1.5rem;
@@ -33,7 +41,7 @@
 @media (max-width: 834px) {
   .song-container {
     img {
-      width:45%;
+      width: 45%;
     }
     h2 {
       font-size: 1.5rem;

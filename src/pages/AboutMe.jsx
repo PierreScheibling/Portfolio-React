@@ -1,18 +1,21 @@
-import React from "react";
-import costard from "../img/costard.png";
+import React from 'react'
+import costard from '../img/costard.png'
 //Styled
-import styled from "styled-components";
+import styled from 'styled-components'
 // Animations
-import { motion } from "framer-motion";
-import { pageAnimation } from "../Animations";
-import { titleAnim } from "../Animations";
-import { postAnim } from "../Animations";
+import { delay, motion } from 'framer-motion'
+import { pageAnimation } from '../Animations'
+import { titleAnim } from '../Animations'
+import { postAnim } from '../Animations'
 
 const AboutMe = () => {
   const picture = {
-    hidden: { scale: 1.5 },
-    show: { scale: 1, transition: { duration: 1, ease: "easeOut" } },
-  };
+    hidden: { scale: 1.2 },
+    show: {
+      scale: 1,
+      transition: { duration: 1, ease: 'easeOut', delay: 1 },
+    },
+  }
   return (
     <motion.div
       exit="exit"
@@ -45,8 +48,8 @@ const AboutMe = () => {
         </Description>
       </Apropos>
     </motion.div>
-  );
-};
+  )
+}
 
 const Apropos = styled(motion.div)`
   display: flex;
@@ -54,14 +57,14 @@ const Apropos = styled(motion.div)`
   justify-content: center;
   align-items: center;
   margin: 1rem;
-`;
+`
 
-const Title = styled(motion.div)``;
+const Title = styled(motion.div)``
 
 const Description = styled(motion.div)`
   display: flex;
   height: 70vh;
-`;
+`
 
 const Curriculum = styled(motion.div)`
   display: flex;
@@ -69,11 +72,11 @@ const Curriculum = styled(motion.div)`
   align-items: center;
   justify-content: center;
   width: 70%;
-`;
+`
 
-const Bio = styled(motion.div)``;
+const Bio = styled(motion.div)``
 
-const Experience = styled(motion.div)``;
+const Experience = styled(motion.div)``
 
 const Picture = styled(motion.div)`
   display: flex;
@@ -85,6 +88,6 @@ const Picture = styled(motion.div)`
     border-bottom: 2px solid black;
     border-bottom-width: thin;
   }
-`;
+`
 
-export default AboutMe;
+export default AboutMe
