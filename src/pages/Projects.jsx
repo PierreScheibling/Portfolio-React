@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 //Styled
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -11,6 +12,14 @@ import { pageAnimation, frameContainer, frameTransition } from "../Animations";
 import Wave from "../components/Wave.jsx";
 
 const Projects = () => {
+  const [modal, setModal] = useState(false);
+  const [videoLoading, setVideoLoading] = useState(true);
+  const openModal = () => {
+    setModal(!modal);
+  };
+  const spinner = () => {
+    setVideoLoading(!videoLoading);
+  };
   return (
     <ProjectsPage
       varianst={pageAnimation}
@@ -158,7 +167,7 @@ const Slide = styled(motion.div)`
   }
   @media (max-width: 359px) {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 0rem;
     margin-top: 10%;
     height: 72vh;
@@ -191,9 +200,9 @@ const Picture = styled(motion.div)`
   @media (max-width: 359px) {
     display: flex;
     justify-content: center;
-    padding-top: 2rem;
+    margin-top: -2rem;
     img {
-      width: 80%;
+      width: 90%;
     }
   }
 `;
