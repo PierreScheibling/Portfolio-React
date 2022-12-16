@@ -202,6 +202,7 @@ const Slide = styled(motion.div)`
     text-decoration: none;
     color: white;
   }
+
   @media (max-width: 1280px) {
     margin-bottom: -0.5rem;
     margin-top: -1rem;
