@@ -1,15 +1,20 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from 'react'
+
 //Styled
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import AppMusic from "../components/musicPlayer/AppMusic";
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import AppMusic from '../components/musicPlayer/AppMusic'
 //Animations
-import { pageAnimation, frameContainer, frameTransition } from "../Animations";
-import Wave from "../components/Wave.jsx";
+import {
+  pageAnimation,
+  frameContainer,
+  frameTransition,
+  slideReveal,
+} from '../Animations'
+import Wave from '../components/Wave.jsx'
 
 const Projects = () => {
   return (
@@ -27,8 +32,8 @@ const Projects = () => {
       </motion.div> */}
       <SimpleSlider />
     </ProjectsPage>
-  );
-};
+  )
+}
 
 function SimpleSlider() {
   const settings = {
@@ -38,8 +43,12 @@ function SimpleSlider() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-  };
-  console.log(window.innerWidth);
+  }
+
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const { animate, initial, transition } = slideReveal
+
   return (
     <motion.div
       exit="exit"
@@ -47,7 +56,13 @@ function SimpleSlider() {
       initial="hidden"
       animate="show"
     >
-      <Slider {...settings}>
+      <Slider
+        {...settings}
+        afterChange={(currentSlide) => {
+          setCurrentSlide(currentSlide)
+          console.log(currentSlide)
+        }}
+      >
         <Project>
           <Slide>
             <Picture>
@@ -76,7 +91,7 @@ function SimpleSlider() {
               <Contact>
                 <motion.button
                   whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                 >
                   <a
                     href="https://www.youtube.com/watch?v=ptb0CURbsCw"
@@ -92,36 +107,86 @@ function SimpleSlider() {
         </Project>
         <Project>
           <Slide>
-            <AppMusic />
-            <Wave />
+            {currentSlide === 1 && (
+              <>
+                <InnerSlide
+                  initial={initial}
+                  animate={animate}
+                  transition={transition}
+                >
+                  <AppMusic />
+                </InnerSlide>
+                <Wave />
+              </>
+            )}
           </Slide>
         </Project>
         <Project>
-          <Slide>
-            <GameChanger>
-              <img src="src/img/gameChanger.gif" alt="Game_changer" />
-            </GameChanger>
-            <GamePresentation>
-              <h1>Game Changer</h1>
-              <Stack>
-                <img src="src/img/stack/API.png" alt="API" />
-                <img src="src/img/stack/React.png" alt="React" />
-                <img src="src/img/stack/Github.png" alt="Github" />
-              </Stack>
-              <p>
-                Game Changer est un blog d'actualité sur les Jeux Videos avec la
-                possibilité de voir les prochaines sorties, les jeux les mieux
-                notés, ainsi que les plateformes sur lesquels on retrouve ces
-                jeux.
-              </p>
-            </GamePresentation>
-            <Wave />
+          <Slide className="slide-game-changer">
+            {currentSlide === 2 && (
+              <InnerSlide
+                initial={initial}
+                animate={animate}
+                transition={transition}
+              >
+                <GameChanger>
+                  <img src="src/img/gameChanger.gif" alt="Game_changer" />
+                </GameChanger>
+                <GamePresentation>
+                  <h1>Game Changer</h1>
+                  <Stack>
+                    <img src="src/img/stack/API.png" alt="API" />
+                    <img src="src/img/stack/React.png" alt="React" />
+                    <img src="src/img/stack/Github.png" alt="Github" />
+                  </Stack>
+                  <p>
+                    Game Changer est un blog d'actualité sur les Jeux Videos
+                    avec la possibilité de voir les prochaines sorties, les jeux
+                    les mieux notés, ainsi que les plateformes sur lesquels on
+                    retrouve ces jeux.
+                  </p>
+                </GamePresentation>
+                <Wave />
+              </InnerSlide>
+            )}
           </Slide>
         </Project>
       </Slider>
     </motion.div>
-  );
+  )
 }
+
+const InnerSlide = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @media (max-width: 1280px) {
+    margin-bottom: -0.5rem;
+    margin-top: -1rem;
+  }
+  @media (max-width: 834px) {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 8%;
+    height: 73vh;
+  }
+  @media (max-width: 667px) {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 8%;
+    height: 75vh;
+  }
+  @media (max-width: 359px) {
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0rem;
+    margin-top: 10%;
+    height: 72vh;
+  }
+`
 
 const Slide = styled(motion.div)`
   background: rgba(255, 255, 255, 0.4);
@@ -167,7 +232,7 @@ const Slide = styled(motion.div)`
     height: 72vh;
     width: 80%;
   }
-`;
+`
 
 const Picture = styled(motion.div)`
   z-index: 2;
@@ -199,7 +264,7 @@ const Picture = styled(motion.div)`
       width: 90%;
     }
   }
-`;
+`
 
 const Stack = styled(motion.div)`
   display: flex;
@@ -223,7 +288,7 @@ const Stack = styled(motion.div)`
   @media (max-width: 359px) {
     display: none;
   }
-`;
+`
 
 const ProjectPresentation = styled(motion.div)`
   display: flex;
@@ -285,7 +350,7 @@ const ProjectPresentation = styled(motion.div)`
       display: none;
     }
   }
-`;
+`
 
 const GamePresentation = styled(motion.div)`
   display: flex;
@@ -346,7 +411,7 @@ const GamePresentation = styled(motion.div)`
       display: none;
     }
   }
-`;
+`
 
 const Project = styled(motion.div)`
   margin-left: 10%;
@@ -367,7 +432,7 @@ const Project = styled(motion.div)`
     margin-left: 10%;
     margin-top: 0rem;
   }
-`;
+`
 
 const ProjectsPage = styled(motion.div)`
   .slick-arrow {
@@ -431,7 +496,7 @@ const ProjectsPage = styled(motion.div)`
       display: none !important;
     }
   }
-`;
+`
 
 // //Frame Animation
 // const Frame1 = styled(motion.div)`
@@ -497,7 +562,7 @@ const Contact = styled(motion.div)`
       font-size: 0.8rem;
     }
   }
-`;
+`
 
 const GameChanger = styled(motion.div)`
   img {
@@ -534,6 +599,6 @@ const GameChanger = styled(motion.div)`
       padding: 2rem;
     }
   }
-`;
+`
 
-export default Projects;
+export default Projects
