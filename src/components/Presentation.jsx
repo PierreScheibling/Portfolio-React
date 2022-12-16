@@ -74,6 +74,7 @@ const Greetings = styled(motion.div)`
   justify-content: space-between;
   padding: 1rem 2rem;
   font-size: 1.2rem;
+  height: 80%;
   @media (max-width: 1280px) {
     font-size: 0.9rem;
   }
@@ -156,6 +157,11 @@ const Image = styled(motion.div)`
   justify-content: center;
   img {
     width: 70%;
+  }
+  @media (max-width: 1600px) {
+    img {
+      width: 60%;
+    }
   }
   @media (max-width: 1280px) {
     img {

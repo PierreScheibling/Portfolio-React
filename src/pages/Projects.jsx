@@ -14,7 +14,7 @@ import Wave from "../components/Wave.jsx";
 const Projects = () => {
   return (
     <ProjectsPage
-      varianst={pageAnimation}
+      variant={pageAnimation}
       exit="exit"
       initial="hidden"
       animate="show"
@@ -39,6 +39,7 @@ function SimpleSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  console.log(window.innerWidth);
   return (
     <motion.div
       exit="exit"
@@ -136,6 +137,7 @@ const Slide = styled(motion.div)`
     text-decoration: none;
     color: white;
   }
+
   @media (max-width: 1280px) {
     margin-bottom: -0.5rem;
     margin-top: -1rem;

@@ -16,6 +16,20 @@
   }
 }
 
+@media (max-width: 1600px) {
+  .song-container {
+    img {
+      width:20%;
+    }
+    h2 {
+      font-size: 1.5rem;
+      padding: 0.8rem;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
 @media (max-width: 1280px) {
   .song-container {
     img {
