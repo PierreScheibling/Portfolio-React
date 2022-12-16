@@ -12,14 +12,6 @@ import { pageAnimation, frameContainer, frameTransition } from "../Animations";
 import Wave from "../components/Wave.jsx";
 
 const Projects = () => {
-  const [modal, setModal] = useState(false);
-  const [videoLoading, setVideoLoading] = useState(true);
-  const openModal = () => {
-    setModal(!modal);
-  };
-  const spinner = () => {
-    setVideoLoading(!videoLoading);
-  };
   return (
     <ProjectsPage
       varianst={pageAnimation}
