@@ -71,8 +71,10 @@ const StyledNav = styled.nav`
   @media (max-width: 1280px) {
   }
   @media (max-width: 834px) {
+    position: relative;
   }
   @media (max-width: 667px) {
+    position: relative;
     ul {
       padding: 2rem 0rem;
     }
@@ -81,6 +83,7 @@ const StyledNav = styled.nav`
     }
   }
   @media (max-width: 359px) {
+    position: relative;
     ul {
       padding: 1rem 0rem;
     }

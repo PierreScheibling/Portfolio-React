@@ -66,6 +66,7 @@ const Presentation = styled(motion.div)`
   color: black;
   display: flex;
   flex-direction: column;
+  height: 86vh;
 `;
 
 const Greetings = styled(motion.div)`
@@ -74,7 +75,7 @@ const Greetings = styled(motion.div)`
   justify-content: space-between;
   padding: 1rem 2rem;
   font-size: 1.2rem;
-  height: 80%;
+  /* height: 80%; */
   @media (max-width: 1280px) {
     font-size: 0.9rem;
   }
