@@ -66,6 +66,7 @@ const Presentation = styled(motion.div)`
   color: black;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 86vh;
 `;
 
