@@ -4,8 +4,11 @@ import Card from "./card.jsx";
 //Styled
 import styled from "styled-components";
 import "./_memory.scss";
+// let i = 0;
+let compteur = 0;
 
 function Cards() {
+  let score = document.getElementById("score");
   const [items, setItems] = useState(
     [
       { id: 1, img: "src/img/stack/HTML.png", stat: "" },
@@ -29,12 +32,24 @@ function Cards() {
 
   const [prev, setPrev] = useState(-1);
 
+  // const [score, setScore] = useState(document.getElementById("score"));
+  function handleClick(id) {
+    if (prev === -1) {
+      items[id].stat = "active";
+      setItems([...items]);
+      setPrev(id);
+    } else {
+      check(id);
+    }
+  }
+
   function check(current) {
     if (items[current].id == items[prev].id) {
       items[current].stat = "correct";
       items[prev].stat = "correct";
       setItems([...items]);
       setPrev(-1);
+      compteur += 1;
     } else {
       items[current].stat = "wrong";
       items[prev].stat = "wrong";
@@ -44,31 +59,22 @@ function Cards() {
         items[prev].stat = "";
         setItems([...items]);
         setPrev(-1);
+        compteur;
       }, 1000);
     }
+    score.innerHTML = compteur;
   }
 
-  function endGame() {
-    if (Object.values(items).every(items.stat) === "correct") {
-      console.log("GoodJob");
-    } else {
-      console.log("Null");
-    }
-  }
+  // function result() {
+  //   if ()
+  // }
 
-  // Object.values(obj).every((value, _index, arr) => {
-  //   if (value === arr[0]) {
+  //
 
-  function handleClick(id) {
-    if (prev === -1) {
-      items[id].stat = "active";
-      setItems([...items]);
-      setPrev(id);
-    } else {
-      check(id);
-    }
-    endGame();
-  }
+  // function updateScore() {
+  //   let score = document.getElementById("score");
+  //   if ()
+  // }
 
   return (
     <div className="container">
