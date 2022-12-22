@@ -14,7 +14,7 @@
     max-width: 4rem;
     max-height: 4rem;
     transition: transform 0.5s;
-    // transform: scale(0);
+    transform: scale(0);
     animation: 1s hideImage linear;
   }
 }

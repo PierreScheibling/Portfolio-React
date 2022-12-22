@@ -4,9 +4,19 @@ import Card from "./card.jsx";
 //Styled
 import styled from "styled-components";
 import "./_memory.scss";
+//Images
+import API from "../../img/stack/API.png";
+import CSS from "../../img/stack/CSS.png";
+import Figma from "../../img/stack/Figma.png";
+import GitHub from "../../img/stack/Github.png";
+import HTML from "../../img/stack/HTML.png";
+import JS from "../../img/stack/JS.png";
+import React from "../../img/stack/React.png";
+import ROR from "../../img/stack/ROR.png";
 //Animations
 import { pageAnimation } from "../../Animations";
 import { popup } from "../../Animations";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 let compteur = 0;
 
@@ -21,23 +31,34 @@ function Cards() {
   };
   let score = document.getElementById("score");
   const initialState = [
-    { id: 1, img: "src/img/stack/HTML.png", stat: "", check: false },
-    { id: 1, img: "src/img/stack/HTML.png", stat: "", check: false },
-    { id: 2, img: "src/img/stack/CSS.png", stat: "" },
-    { id: 2, img: "src/img/stack/CSS.png", stat: "" },
-    { id: 3, img: "src/img/stack/JS.png", stat: "" },
-    { id: 3, img: "src/img/stack/JS.png", stat: "" },
-    { id: 4, img: "src/img/stack/React.png", stat: "" },
-    { id: 4, img: "src/img/stack/React.png", stat: "" },
-    { id: 5, img: "src/img/stack/ROR.png", stat: "" },
-    { id: 5, img: "src/img/stack/ROR.png", stat: "" },
-    { id: 6, img: "src/img/stack/Figma.png", stat: "" },
-    { id: 6, img: "src/img/stack/Figma.png", stat: "" },
-    { id: 7, img: "src/img/stack/Github.png", stat: "" },
-    { id: 7, img: "src/img/stack/Github.png", stat: "" },
-    { id: 8, img: "src/img/stack/API.png", stat: "" },
-    { id: 8, img: "src/img/stack/API.png", stat: "" },
+    { id: 1, name: "HTML", img: HTML, stat: "", check: false },
+    { id: 1, name: "HTML", img: HTML, stat: "", check: false },
+    { id: 2, name: "CSS", img: CSS, stat: "", check: false },
+    { id: 2, name: "CSS", img: CSS, stat: "", check: false },
+    { id: 3, name: "JS", img: JS, stat: "", check: false },
+    { id: 3, name: "JS", img: JS, stat: "", check: false },
+    { id: 4, name: "React", img: React, stat: "", check: false },
+    { id: 4, name: "React", img: React, stat: "", check: false },
+    { id: 5, name: "ROR", img: ROR, stat: "", check: false },
+    { id: 5, name: "ROR", img: ROR, stat: "", check: false },
+    { id: 6, name: "Figma", img: Figma, stat: "", check: false },
+    { id: 6, name: "Figma", img: Figma, stat: "", check: false },
+    { id: 7, name: "GitHub", img: GitHub, stat: "", check: false },
+    { id: 7, name: "GitHub", img: GitHub, stat: "", check: false },
+    { id: 8, name: "API", img: API, stat: "", check: false },
+    { id: 8, name: "API", img: API, stat: "", check: false },
   ];
+
+  const uniqueIds = [];
+  const uniqueItems = initialState.filter((element) => {
+    const isDuplicate = uniqueIds.includes(element.id);
+
+    if (!isDuplicate) {
+      uniqueIds.push(element.id);
+      return true;
+    }
+    return false;
+  });
 
   const [items, setItems] = useState(
     initialState.sort(() => Math.random() - 0.5)
@@ -123,39 +144,12 @@ function Cards() {
         <CompetenciesList>
           <h2>Allez-vous toutes les trouver ?</h2>
           <List>
-            <Competence>
-              <img src="src/img/stack/API.png" alt="API" />
-              <p>API</p>
-              {isChecked && <motion.img src="src/img/check.png" alt="check" />}
-            </Competence>
-            <Competence>
-              <img src="src/img/stack/CSS.png" alt="CSS" />
-              <p>CSS</p>
-            </Competence>
-            <Competence>
-              <img src="src/img/stack/Figma.png" alt="Figma" />
-              <p>Figma</p>
-            </Competence>
-            <Competence>
-              <img src="src/img/stack/Github.png" alt="Github" />
-              <p>Github</p>
-            </Competence>
-            <Competence>
-              <img src="src/img/stack/HTML.png" alt="HTML" />
-              <p>HTML</p>
-            </Competence>
-            <Competence>
-              <img src="src/img/stack/JS.png" alt="Javascript" />
-              <p>Javascript</p>
-            </Competence>
-            <Competence>
-              <img src="src/img/stack/React.png" alt="React" />
-              <p>React</p>
-            </Competence>
-            <Competence>
-              <img src="src/img/stack/ROR.png" alt="Ruby On Rails" />
-              <p>Ruby On Rails</p>
-            </Competence>
+            {uniqueItems.map((item) => (
+              <Competence>
+                <img src={item.img} alt={item.id} />
+                <p>{item.name}</p>
+              </Competence>
+            ))}
           </List>
         </CompetenciesList>
         <Game variants={gameAnim} initial="hidden" animate="show">
@@ -197,7 +191,7 @@ const GlobalCompetencies = styled(motion.div)`
   display: flex;
   height: 85vh;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 `;
 
 const CompetenciesList = styled(motion.div)`
@@ -225,6 +219,7 @@ const Competence = styled(motion.div)`
   align-items: center;
   margin: 0.5rem 0rem;
   p {
+    font-size: 1.2rem;
     margin-left: 3rem;
   }
 `;
