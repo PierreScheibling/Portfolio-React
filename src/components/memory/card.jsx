@@ -1,6 +1,3 @@
-import { motion } from "framer-motion";
-//Styled
-import styled from "styled-components";
 import "./_memory.scss";
 
 function Card({ item, id, handleClick }) {

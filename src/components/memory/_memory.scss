@@ -1,17 +1,6 @@
-.container{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 0.8em;
-  img {
-    width: 5rem;
-    height:5rem;
-  }
-}
-
 .card{
-  width: 8rem;
-  height: 8rem;
+  width: 7rem;
+  height: 7rem;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -22,8 +11,8 @@
   transition: transform 0.5s;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   img{
-    max-width: 5rem;
-    max-height: 5rem;
+    max-width: 4rem;
+    max-height: 4rem;
     transition: transform 0.5s;
     // transform: scale(0);
     animation: 1s hideImage linear;
@@ -48,9 +37,11 @@
 
 .card.active{
   transform: rotateY(0);
+  pointer-events: none;
 }
 .card.correct{
   background-color: rgba(10, 122, 14, 0.3);
+  pointer-events: none;
 }
 .card.wrong{
   background-color: rgba(255, 67, 67, 0.3);
