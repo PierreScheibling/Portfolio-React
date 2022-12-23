@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import Burger from "../components/burger/burger.jsx";
 
 const Nav = () => {
   const { pathname } = useLocation();
@@ -24,6 +25,9 @@ const Nav = () => {
             initials={{ width: "0%" }}
             animate={{ width: pathname === "/projects" ? "100%" : "0%" }}
           />
+        </li>
+        <li>
+          <Burger />
         </li>
         <li>
           <Link to="/aboutme">A Propos</Link>

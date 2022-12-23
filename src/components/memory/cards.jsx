@@ -228,7 +228,7 @@ const Score = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0rem 0rem 3rem 0rem;
+  padding: 0rem 0rem 2rem 0rem;
   button {
     padding: 1rem 2rem;
     font-size: 1.2rem;
