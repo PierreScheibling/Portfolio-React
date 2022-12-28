@@ -39,6 +39,8 @@ export const Card = ({ card, ...props }) => {
   )
 }
 
+// STYLE
+//_______________________________________________________________________________
 const CardItem = styled(motion.li)`
   opacity: 0;
   width: clamp(3rem, 10vw, 7rem);

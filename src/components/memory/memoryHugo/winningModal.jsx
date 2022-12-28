@@ -23,6 +23,8 @@ export const WinningModal = () => {
   )
 }
 
+// STYLE
+//_______________________________________________________________________________
 const WinningModalWP = styled(motion.div)`
   position: absolute;
   inset: 0;

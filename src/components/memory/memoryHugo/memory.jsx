@@ -99,7 +99,7 @@ export const Memory = () => {
       if (firstCard.skillName === secondCard.skillName) {
         // Check si les deux cartes choisie sont identiques
         // Augmente le score
-        setScore((prev) => prev + 1)
+        setScore((prevScore) => prevScore + 1)
         // Update l'objet skills et la valeur de matched
         setSkills((prev) =>
           prev.map((item) => {
@@ -197,7 +197,7 @@ export const Memory = () => {
               <span id="score">{score}</span>
             </div>
             <div>
-              <h2>Essai:</h2>
+              <h2>Essai{round > 1 && 's'}:</h2>
               <span id="score">{round}</span>
             </div>
           </GameInfo>
@@ -227,6 +227,8 @@ export const Memory = () => {
   )
 }
 
+// STYLE
+//_______________________________________________________________________________
 const GlobalCompetencies = styled(motion.div)`
   display: flex;
   height: 85vh;
