@@ -1,13 +1,13 @@
 // Library import
-import { motion } from 'framer-motion'
-import styled from 'styled-components'
+import { motion } from "framer-motion";
+import styled from "styled-components";
 
 export const WinningModal = () => {
   return (
     <WinningModalWP
-      initial={{ opacity: 0, y: '100%' }}
+      initial={{ opacity: 0, y: "100%" }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: '-100%' }}
+      exit={{ opacity: 0, y: "-100%" }}
     >
       <WinningModalInside>
         <TitleModal>
@@ -16,12 +16,12 @@ export const WinningModal = () => {
 
         <Contact>
           <p>Si vous souhaitez me contacter:</p>
-          <a href="mailto=Romain@hamouma.com">Romain@hamouma.com</a>
+          <a href="mailto=pierre@scheibling.fr">pierre@scheibling.fr</a>
         </Contact>
       </WinningModalInside>
     </WinningModalWP>
-  )
-}
+  );
+};
 
 // STYLE
 //_______________________________________________________________________________
@@ -39,15 +39,16 @@ const WinningModalWP = styled(motion.div)`
   border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: left;
   border-radius: 0.3rem;
-`
+`;
 
 const TitleModal = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Signatura Monoline Script', sans-serif;
+  font-family: "Signatura Monoline Script", sans-serif;
   font-size: 6rem;
-`
+  font-weight: lighter;
+`;
 
 const Contact = styled(motion.div)`
   display: flex;
@@ -57,13 +58,14 @@ const Contact = styled(motion.div)`
   text-align: left;
 
   a {
+    margin-top: 1rem;
     color: black;
     text-decoration: none;
   }
-`
+`;
 const WinningModalInside = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: fit-content;
-`
+`;

@@ -1,175 +1,175 @@
 // Import libraries
-import { useState, useEffect } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
-import styled from 'styled-components'
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import styled from "styled-components";
 
 // import components
-import { Card } from './card'
-import { Skills } from './skillList'
-import { WinningModal } from './winningModal'
+import { Card } from "./card";
+import { Skills } from "./skillList";
+import { WinningModal } from "./winningModal";
 
 // Import animations
-import { pageAnimation } from '../../../Animations'
+import { pageAnimation } from "../../../Animations";
 
 // Import SCSS
-import './animations.scss'
+import "./animations.scss";
 
 export const Memory = () => {
   // Creation d'un Array contenant des objects pour chaque carte
   const initialState = [
     {
       id: 1,
-      img: 'src/img/stack/HTML.png',
-      skillName: 'HTML',
+      img: "src/img/stack/HTML.png",
+      skillName: "HTML",
       matched: false,
     },
     {
       id: 2,
-      img: 'src/img/stack/CSS.png',
-      skillName: 'CSS',
+      img: "src/img/stack/CSS.png",
+      skillName: "CSS",
       matched: false,
     },
     {
       id: 3,
-      img: 'src/img/stack/JS.png',
-      skillName: 'JS',
+      img: "src/img/stack/JS.png",
+      skillName: "JS",
       matched: false,
     },
     {
       id: 4,
-      img: 'src/img/stack/React.png',
-      skillName: 'React',
+      img: "src/img/stack/React.png",
+      skillName: "React",
       matched: false,
     },
     {
       id: 5,
-      img: 'src/img/stack/ROR.png',
-      skillName: 'Ruby On Rails',
+      img: "src/img/stack/ROR.png",
+      skillName: "Ruby On Rails",
       matched: false,
     },
     {
       id: 6,
-      img: 'src/img/stack/Figma.png',
-      skillName: 'Figma',
+      img: "src/img/stack/Figma.png",
+      skillName: "Figma",
       matched: false,
     },
     {
       id: 7,
-      img: 'src/img/stack/Github.png',
-      skillName: 'Github',
+      img: "src/img/stack/Github.png",
+      skillName: "Github",
       matched: false,
     },
     {
       id: 8,
-      img: 'src/img/stack/API.png',
-      skillName: 'API',
+      img: "src/img/stack/API.png",
+      skillName: "API",
       matched: false,
     },
-  ]
+  ];
 
   // States
   // Renvoi les cartes mélangées
-  const [shuffledCards, setShuffledCards] = useState([])
+  const [shuffledCards, setShuffledCards] = useState([]);
   // Renvoi une liste de skills (initialState)
-  const [skills, setSkills] = useState([])
+  const [skills, setSkills] = useState([]);
   // Renvoi le score de l'utilisateur
-  const [score, setScore] = useState(0)
+  const [score, setScore] = useState(0);
   // Renvoi un boolean qui empêche l'utilisateur de jouer si deux cartes sont selectionner
-  const [disabled, setDisabled] = useState(false)
+  const [disabled, setDisabled] = useState(false);
   // Renvoi la première & la seconde carte choisie
-  const [firstCard, setFirstCard] = useState(null)
-  const [secondCard, setSecondCard] = useState(null)
+  const [firstCard, setFirstCard] = useState(null);
+  const [secondCard, setSecondCard] = useState(null);
   // Permet de compter les essais de l'utilisateur
-  const [round, setRound] = useState(0)
+  const [round, setRound] = useState(0);
   // Permet d'afficher un btn rejouer quand l'utilisateur à commencer à jouer
-  const [isBtn, setIsBtn] = useState(false)
+  const [isBtn, setIsBtn] = useState(false);
   // Check si l'utilisateur à gagner
-  const [isGameWon, setIsGameWon] = useState(false)
+  const [isGameWon, setIsGameWon] = useState(false);
 
   useEffect(() => {
     // Appel la fonction dès que le composant est mounted
-    shuffledDeck()
-  }, [])
+    shuffledDeck();
+  }, []);
 
   // Permet de lancer cette fonction à chaque fois qu'une carte est choisie
   useEffect(() => {
     if (firstCard && secondCard) {
       // Si deux cartes sont choisies empêche l'utilistateur de jouer encore
-      setDisabled(true)
+      setDisabled(true);
       if (firstCard.skillName === secondCard.skillName) {
         // Check si les deux cartes choisie sont identiques
         // Augmente le score
-        setScore((prevScore) => prevScore + 1)
+        setScore((prevScore) => prevScore + 1);
         // Update l'objet skills et la valeur de matched
         setSkills((prev) =>
           prev.map((item) => {
             if (item.skillName === firstCard.skillName) {
-              return { ...item, matched: true }
+              return { ...item, matched: true };
             } else {
-              return item
+              return item;
             }
           })
-        )
+        );
         // Update l'objet ShuffleCards et la valeur de matched
         setShuffledCards((prev) =>
           prev.map((item) => {
             if (item.skillName === firstCard.skillName) {
-              return { ...item, matched: true }
+              return { ...item, matched: true };
             } else {
-              return item
+              return item;
             }
           })
-        )
+        );
         // Remet le jeu à niveau pour le prochain tour
-        resetRound()
+        resetRound();
       } else {
         // Si l'utilisateur fait une erreur remet le jeu à niveau après 1s
         // Permet de faire jouer l'anim'
-        setTimeout(() => resetRound(), 1000)
+        setTimeout(() => resetRound(), 1000);
       }
     }
-  }, [firstCard, secondCard])
+  }, [firstCard, secondCard]);
 
   // joue la fonction à chaque fois que kle state score evolue
   // Lance la fonction une fois la partie terminée
   useEffect(() => {
     if (score === initialState.length) {
-      setIsGameWon(true)
+      setIsGameWon(true);
     }
-  }, [score])
+  }, [score]);
 
   // Fonction qui permet de mélanger le jeu de carte et de réinitialiser le jeu à 0
   const shuffledDeck = () => {
     const shuffledCards = [...initialState, ...initialState]
       .sort(() => Math.random() - 0.5)
-      .map((card) => ({ ...card, id: Math.random() }))
-    setShuffledCards(shuffledCards)
-    setSkills(initialState)
-    setSecondCard(null)
-    setFirstCard(null)
-    setRound(0)
-    setScore(0)
-    setIsBtn(false)
-    setIsGameWon(false)
-  }
+      .map((card) => ({ ...card, id: Math.random() }));
+    setShuffledCards(shuffledCards);
+    setSkills(initialState);
+    setSecondCard(null);
+    setFirstCard(null);
+    setRound(0);
+    setScore(0);
+    setIsBtn(false);
+    setIsGameWon(false);
+  };
 
   // Permet de set les cartes choisie par l'utilisateur au premier et au second click
   const handleChoice = (item) => {
-    setIsBtn(true)
+    setIsBtn(true);
     if (firstCard) {
-      item.id !== firstCard.id && setSecondCard(item)
+      item.id !== firstCard.id && setSecondCard(item);
     } else {
-      setFirstCard(item)
+      setFirstCard(item);
     }
-  }
+  };
 
   // Permet de remettre le jeu à niveau entre chaque tour
   const resetRound = () => {
-    setFirstCard(null)
-    setSecondCard(null)
-    setRound((prevRound) => prevRound + 1)
-    setDisabled(false)
-  }
+    setFirstCard(null);
+    setSecondCard(null);
+    setRound((prevRound) => prevRound + 1);
+    setDisabled(false);
+  };
 
   return (
     <motion.div
@@ -197,7 +197,7 @@ export const Memory = () => {
               <span id="score">{score}</span>
             </div>
             <div>
-              <h2>Essai{round > 1 && 's'}:</h2>
+              <h2>Essai{round > 1 && "s"}:</h2>
               <span id="score">{round}</span>
             </div>
           </GameInfo>
@@ -217,15 +217,15 @@ export const Memory = () => {
                   disabled={disabled}
                   matched={card.matched}
                 />
-              )
+              );
             })}
             <AnimatePresence>{isGameWon && <WinningModal />}</AnimatePresence>
           </MemoryList>
         </GameSection>
       </GlobalCompetencies>
     </motion.div>
-  )
-}
+  );
+};
 
 // STYLE
 //_______________________________________________________________________________
@@ -234,11 +234,11 @@ const GlobalCompetencies = styled(motion.div)`
   height: 85vh;
   width: 90%;
   margin: 0 auto;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
   gap: 2rem;
   flex-wrap: wrap;
-`
+`;
 
 const MemoryList = styled(motion.ul)`
   display: grid;
@@ -248,10 +248,12 @@ const MemoryList = styled(motion.ul)`
   justify-items: center;
   align-items: center;
   margin: 2rem 0;
+  padding: 0.5rem;
   gap: 0.5em;
   width: 100%;
   overflow: hidden;
-`
+  border-radius: 0.5rem;
+`;
 const SkillList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -260,22 +262,22 @@ const SkillList = styled.ul`
   padding: 2rem;
   gap: 0.3rem;
   width: 100%;
-`
+`;
 
 const SkillsSection = styled.div`
   h2 {
     font-size: clamp(0.8rem, 2vw, 1.2rem);
   }
-`
+`;
 
 const SkillsTitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.5rem 1.4rem;
-`
+`;
 
-const GameSection = styled.div``
+const GameSection = styled.div``;
 
 const GameInfo = styled.div`
   display: flex;
@@ -289,18 +291,18 @@ const GameInfo = styled.div`
     background: #e2a48e;
     color: white;
     border: none;
-
   }
   div {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    h2{
-        font-size: clamp(0.8rem, 2vw, 1.2rem);
+    h2 {
+      font-size: clamp(0.8rem, 2vw, 1.2rem);
     }
     span {
       font-family: "Signatura Monoline Script", sans-serif;
       font-size: 2rem;
       font-weight: lighter;
     }
-`
+  }
+`;

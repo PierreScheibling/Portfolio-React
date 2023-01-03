@@ -1,13 +1,13 @@
 // Library import
-import styled from 'styled-components'
-import { motion, AnimatePresence } from 'framer-motion'
+import styled from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Get images
-import check from '../../../img/check.png'
+import check from "../../../img/check.png";
 
 export const Skills = ({ skill }) => {
   // Récupère les informations de l'objet skill (destructuration)
-  const { img, skillName, index, matched } = skill
+  const { img, skillName, index, matched } = skill;
   return (
     <Competence
       key={index}
@@ -32,8 +32,8 @@ export const Skills = ({ skill }) => {
       </ImageWrapper>
       <SkillName matched={matched}>{skillName}</SkillName>
     </Competence>
-  )
-}
+  );
+};
 
 // STYLE
 //_______________________________________________________________________________
@@ -46,27 +46,27 @@ const ImageWrapper = styled(motion.div)`
     height: 100%;
     object-fit: contain;
   }
-`
+`;
 
 const Competence = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 3rem;
   width: 100%;
   opacity: 0;
-`
+`;
 
 const SkillName = styled(motion.p)`
   font-size: 1rem;
   text-align: center;
-  ${({ matched }) => matched && 'font-weight: bold; color: #7abb7a'}
-`
+  ${({ matched }) => matched && "font-weight: bold; color: #7abb7a"}
+`;
 
 const Checked = styled(motion.img)`
   position: absolute;
-  bottom: 0.3rem;
-  right: 0;
+  bottom: 0rem;
+  left: 3rem;
   width: 25px;
   height: 25px;
-`
+`;
