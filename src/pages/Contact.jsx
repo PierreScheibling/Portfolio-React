@@ -16,21 +16,33 @@ const Contact = () => {
         <Frame3 variants={slider}></Frame3>
         <Frame4 variants={slider}></Frame4>
       </motion.div>
+      <ContactDetails
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { delay: 1.5 } }}
+        exit={{ opacity: 0 }}
+      >
+        Hello
+      </ContactDetails>
     </ContactContainer>
   );
 };
 
-const ContactContainer = styled(motion.div)``;
+const ContactContainer = styled(motion.div)`
+  min-height: 80vh;
+  overflow: hidden;
+`;
+
+const ContactDetails = styled(motion.div)``;
 
 //Frame Animation
 const Frame1 = styled(motion.div)`
+  z-index: 15;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100vh;
   background: #fffebf;
-  z-index: 11;
 `;
 const Frame2 = styled(Frame1)`
   background: #ff8efb;

@@ -56,16 +56,14 @@ export const pageAnimation = {
 
 export const pageContactAnimation = {
   hidden: {
-    opacity: 0,
-    y: "100%",
+    opacity: 1,
   },
   show: {
     opacity: 1,
-    y: 0,
     transition: {
       duration: 1,
-      // when: "beforeChildren",
-      // staggerChildren: 0.5,
+      when: "delayChildren",
+      staggerChildren: 1,
     },
   },
   exit: {
@@ -168,7 +166,6 @@ export const sliderContainer = {
   },
   show: {
     opacity: 1,
-
     transition: {
       staggerChildren: 0.15,
       ease: "easeOut",
