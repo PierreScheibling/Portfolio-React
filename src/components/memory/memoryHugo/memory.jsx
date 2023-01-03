@@ -191,7 +191,15 @@ export const Memory = () => {
         </SkillsSection>
         <GameSection>
           <GameInfo>
-            {isBtn && <button onClick={() => shuffledDeck()}>Rejouer</button>}
+            {isBtn && (
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                onClick={() => shuffledDeck()}
+              >
+                Rejouer
+              </motion.button>
+            )}
             <div>
               <h2>Score:</h2>
               <span id="score">{score}</span>

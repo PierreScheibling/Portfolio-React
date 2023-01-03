@@ -15,7 +15,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "100%" : "0%" }}
+            animate={{ width: pathname === "/" ? "40%" : "0%" }}
           />
         </li>
         <li>
@@ -23,7 +23,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: pathname === "/projects" ? "100%" : "0%" }}
+            animate={{ width: pathname === "/projects" ? "40%" : "0%" }}
           />
         </li>
         <li>
@@ -34,7 +34,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: pathname === "/aboutme" ? "100%" : "0%" }}
+            animate={{ width: pathname === "/aboutme" ? "40%" : "0%" }}
           />
         </li>
         <li>
@@ -42,7 +42,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: pathname === "/competencies" ? "100%" : "0%" }}
+            animate={{ width: pathname === "/competencies" ? "40%" : "0%" }}
           />
         </li>
       </ul>
@@ -70,6 +70,10 @@ const StyledNav = styled.nav`
 
   li {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
     font-size: 1rem;
   }
   @media (max-width: 1280px) {
@@ -103,7 +107,7 @@ const Line = styled(motion.div)`
   width: 0%;
   position: absolute;
   bottom: -80%;
-  left: 0%;
+  left: 30%;
 `;
 
 export default Nav;
