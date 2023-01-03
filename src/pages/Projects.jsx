@@ -78,7 +78,7 @@ function SimpleSlider() {
                 <img src="src/img/stack/Heroku.png" alt="Heroku" />
                 <img src="src/img/stack/Github.png" alt="Github" />
                 <img src="src/img/stack/Cloudinary.png" alt="Cloudinary" />
-                <img src="src/img/stack/Postgre SQL.png" alt="Postgre SQL" />
+                <img src="src/img/stack/Postgre-SQL.png" alt="Postgre SQL" />
               </Stack>
               <p>
                 Kick-Ace est un jeu de fantasy tennis où chaque joueur doit

@@ -1,0 +1,60 @@
+// Permet de faire un boucle sur chacun des élément enfant et d'ajouter un délai
+// qui multiplié par l'index de l'élément permet de décaler l'animation de chaque enfants
+
+@for $i from 1 through 16 {
+  .memory__card:nth-child(#{$i}) {
+    animation: fadeInCard
+      0.2s
+      cubic-bezier(0.28, 0.84, 0.42, 1)
+      #{0.8 +
+      ($i * 0.1)}s
+      forwards;
+  }
+}
+
+@for $i from 1 through 8 {
+  .skill__item:nth-child(#{$i}) {
+    animation: fadeInSkill
+      0.2s
+      cubic-bezier(0.28, 0.84, 0.42, 1)
+      #{2.4 +
+      ($i * 0.1)}s
+      forwards;
+  }
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  50% {
+  }
+  57% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInSkill {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  30% {
+    opacity: 0.3;
+  }
+  50% {
+  }
+  57% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
