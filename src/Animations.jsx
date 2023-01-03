@@ -54,6 +54,29 @@ export const pageAnimation = {
   },
 };
 
+export const pageContactAnimation = {
+  hidden: {
+    opacity: 0,
+    y: "100%",
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      // when: "beforeChildren",
+      // staggerChildren: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: "100%",
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
 export const titleAnim = {
   hidden: { opacity: 0 },
   show: {

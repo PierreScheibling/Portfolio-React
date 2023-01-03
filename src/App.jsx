@@ -4,6 +4,7 @@ import LandingPage from "./pages/LandingPage";
 import Projects from "./pages/Projects";
 import Competencies from "./pages/Competencies";
 import AboutMe from "./pages/AboutMe";
+import Contact from "./pages/Contact";
 import GlobalStyle from "./components/GlobalStyle.jsx";
 import Nav from "./components/Nav";
 import BlobPage from "./components/Blob";
@@ -22,6 +23,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<LandingPage />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/competencies" element={<Competencies />} />
           <Route path="/aboutme" element={<AboutMe />} />
         </Routes>
