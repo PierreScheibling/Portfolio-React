@@ -26,14 +26,6 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
-          <Line
-            transition={{ duration: 0.75 }}
-            initials={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "33%" : "0%" }}
-          />
-        </li>
-        <li>
           <Link to="/aboutme">A Propos</Link>
           <Line
             transition={{ duration: 0.75 }}
@@ -47,6 +39,14 @@ const Nav = () => {
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
             animate={{ width: pathname === "/competencies" ? "33%" : "0%" }}
+          />
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initials={{ width: "0%" }}
+            animate={{ width: pathname === "/contact" ? "33%" : "0%" }}
           />
         </li>
       </ul>

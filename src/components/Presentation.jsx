@@ -1,5 +1,6 @@
 import React from "react";
 import moi from "../img/moi.png";
+import { Link } from "react-router-dom";
 //Styled
 import styled from "styled-components";
 // Animations
@@ -49,12 +50,14 @@ const PresentationSection = () => {
           </Welcome>
         </Greetings>
         <Contact>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            Contact
-          </motion.button>
+          <Link to="/contact">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              Contact
+            </motion.button>
+          </Link>
         </Contact>
       </Presentation>
     </motion.div>

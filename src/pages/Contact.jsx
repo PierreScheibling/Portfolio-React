@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { pageContactAnimation, sliderContainer, slider } from "../Animations";
+import coffee from "../img/coffee.png";
 
 const Contact = () => {
   return (
@@ -21,7 +22,10 @@ const Contact = () => {
         animate={{ opacity: 1, transition: { delay: 1 } }}
         exit={{ opacity: 0 }}
       >
-        Hello
+        <Picture>
+          <img src={coffee} alt="coffee" />
+        </Picture>
+        <Links></Links>
       </ContactDetails>
     </ContactContainer>
   );
@@ -32,7 +36,26 @@ const ContactContainer = styled(motion.div)`
   overflow: hidden;
 `;
 
-const ContactDetails = styled(motion.div)``;
+const ContactDetails = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+`;
+
+const Picture = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+`;
+
+const Links = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 2;
+`;
 
 //Frame Animation
 const Frame1 = styled(motion.div)`
@@ -42,16 +65,16 @@ const Frame1 = styled(motion.div)`
   top: 0;
   width: 100%;
   height: 100vh;
-  background: #fffebf;
+  background: #a3d3ff;
 `;
 const Frame2 = styled(Frame1)`
-  background: #ff8efb;
+  background: #fdffa1;
 `;
 const Frame3 = styled(Frame1)`
-  background: #8ed2ff;
+  background: #fd9191;
 `;
 const Frame4 = styled(Frame1)`
-  background: #8effa0;
+  background: #e2a48e;
 `;
 
 export default Contact;

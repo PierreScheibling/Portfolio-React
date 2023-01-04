@@ -122,7 +122,7 @@ export const frameTransition = {
   show: {
     x: "100%",
     skew: "0deg",
-    transition: { type: "tween", ease: "easeOut", duration: 1 },
+    transition: { type: "tween", ease: "easeOut", duration: 0.5 },
   },
 };
 export const frameContainer = {
@@ -134,7 +134,7 @@ export const frameContainer = {
     transition: {
       staggerChildren: 0.15,
       ease: "easeOut",
-      duration: 1,
+      duration: 0.5,
     },
   },
 };
