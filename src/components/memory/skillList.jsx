@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Get images
-import check from "../../../img/check.png";
+import check from "../../img/check.png";
 
 export const Skills = ({ skill }) => {
   // Récupère les informations de l'objet skill (destructuration)

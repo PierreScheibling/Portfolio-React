@@ -10,8 +10,6 @@ const LandingPage = () => {
     <FirstPage>
       <Presentation />
     </FirstPage>
-    // <AboutMe />
-    // <Projects />
   );
 };
 

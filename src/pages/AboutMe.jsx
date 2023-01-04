@@ -3,7 +3,7 @@ import costard from "../img/costard.png";
 //Styled
 import styled from "styled-components";
 // Animations
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { pageAnimation } from "../Animations";
 import { titleBioAnim } from "../Animations";
 import { postBioAnim } from "../Animations";
@@ -150,6 +150,7 @@ const Curriculum = styled(motion.div)`
   width: 70%;
   text-align: justify;
   margin: 1rem 6rem 3rem 5rem;
+  min-height: 80vh;
   @media (max-width: 1280px) {
     margin: 0rem 3rem 1rem 3rem;
   }
@@ -235,6 +236,7 @@ const Picture = styled(motion.div)`
   justify-content: center;
   align-items: center;
   width: 35%;
+  min-height: 80vh;
   img {
     width: 80%;
     border-bottom: 2px solid black;

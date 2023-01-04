@@ -70,7 +70,7 @@ const Presentation = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 86vh;
+  min-height: 80vh;
 `;
 
 const Greetings = styled(motion.div)`

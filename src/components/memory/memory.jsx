@@ -3,13 +3,23 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styled from "styled-components";
 
+// import logos
+import API from "../../img/stack/API.png";
+import CSS from "../../img/stack/CSS.png";
+import Figma from "../../img/stack/Figma.png";
+import Github from "../../img/stack/Github.png";
+import HTML from "../../img/stack/HTML.png";
+import JS from "../../img/stack/JS.png";
+import Reactlogo from "../../img/stack/React.png";
+import ROR from "../../img/stack/ROR.png";
+
 // import components
 import { Card } from "./card";
 import { Skills } from "./skillList";
 import { WinningModal } from "./winningModal";
 
 // Import animations
-import { pageAnimation } from "../../../Animations";
+import { pageAnimation } from "../../Animations";
 
 // Import SCSS
 import "./animations.scss";
@@ -19,49 +29,49 @@ export const Memory = () => {
   const initialState = [
     {
       id: 1,
-      img: "src/img/stack/HTML.png",
+      img: HTML,
       skillName: "HTML",
       matched: false,
     },
     {
       id: 2,
-      img: "src/img/stack/CSS.png",
+      img: CSS,
       skillName: "CSS",
       matched: false,
     },
     {
       id: 3,
-      img: "src/img/stack/JS.png",
+      img: JS,
       skillName: "JS",
       matched: false,
     },
     {
       id: 4,
-      img: "src/img/stack/React.png",
+      img: Reactlogo,
       skillName: "React",
       matched: false,
     },
     {
       id: 5,
-      img: "src/img/stack/ROR.png",
+      img: ROR,
       skillName: "Ruby On Rails",
       matched: false,
     },
     {
       id: 6,
-      img: "src/img/stack/Figma.png",
+      img: Figma,
       skillName: "Figma",
       matched: false,
     },
     {
       id: 7,
-      img: "src/img/stack/Github.png",
+      img: Github,
       skillName: "Github",
       matched: false,
     },
     {
       id: 8,
-      img: "src/img/stack/API.png",
+      img: API,
       skillName: "API",
       matched: false,
     },

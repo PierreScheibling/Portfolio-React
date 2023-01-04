@@ -1,19 +1,28 @@
 import React, { useState } from "react";
 
-//Styled
+// import logos
+import API from "../img/stack/API.png";
+import cloudinary from "../img/stack/Cloudinary.png";
+import CSS from "../img/stack/CSS.png";
+import Figma from "../img/stack/Figma.png";
+import Github from "../img/stack/Github.png";
+import Heroku from "../img/stack/Heroku.png";
+import HTML from "../img/stack/HTML.png";
+import JS from "../img/stack/JS.png";
+import Postgre from "../img/stack/Postgre-SQL.png";
+import Reactlogo from "../img/stack/React.png";
+import ROR from "../img/stack/ROR.png";
+
+//Style
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AppMusic from "../components/musicPlayer/AppMusic";
+
 //Animations
-import {
-  pageAnimation,
-  frameContainer,
-  frameTransition,
-  slideReveal,
-} from "../Animations";
+import { pageAnimation, slideReveal } from "../Animations";
 import Wave from "../components/Wave.jsx";
 
 const Projects = () => {
@@ -24,12 +33,6 @@ const Projects = () => {
       initial="hidden"
       animate="show"
     >
-      {/* <motion.div variants={frameContainer}>
-        <Frame1 variants={frameTransition}></Frame1>
-        <Frame2 variants={frameTransition}></Frame2>
-        <Frame3 variants={frameTransition}></Frame3>
-        <Frame4 variants={frameTransition}></Frame4>
-      </motion.div> */}
       <SimpleSlider />
     </ProjectsPage>
   );
@@ -70,15 +73,15 @@ function SimpleSlider() {
             <ProjectPresentation>
               <h1>Kick-Ace</h1>
               <Stack>
-                <img src="src/img/stack/ROR.png" alt="Ruby On Rails" />
-                <img src="src/img/stack/JS.png" alt="JS" />
-                <img src="src/img/stack/HTML.png" alt="HTML" />
-                <img src="src/img/stack/CSS.png" alt="CSS" />
-                <img src="src/img/stack/Figma.png" alt="Figma" />
-                <img src="src/img/stack/Heroku.png" alt="Heroku" />
-                <img src="src/img/stack/Github.png" alt="Github" />
-                <img src="src/img/stack/Cloudinary.png" alt="Cloudinary" />
-                <img src="src/img/stack/Postgre-SQL.png" alt="Postgre SQL" />
+                <img src={ROR} alt="Ruby On Rails" />
+                <img src={JS} alt="JS" />
+                <img src={HTML} alt="HTML" />
+                <img src={CSS} alt="CSS" />
+                <img src={Figma} alt="Figma" />
+                <img src={Heroku} alt="Heroku" />
+                <img src={Github} alt="Github" />
+                <img src={cloudinary} alt="Cloudinary" />
+                <img src={Postgre} alt="Postgre SQL" />
               </Stack>
               <p>
                 Kick-Ace est un jeu de fantasy tennis où chaque joueur doit
@@ -134,9 +137,9 @@ function SimpleSlider() {
                 <GamePresentation>
                   <h1>Game Changer</h1>
                   <Stack>
-                    <img src="src/img/stack/API.png" alt="API" />
-                    <img src="src/img/stack/React.png" alt="React" />
-                    <img src="src/img/stack/Github.png" alt="Github" />
+                    <img src={API} alt="API" />
+                    <img src={Reactlogo} alt="React" />
+                    <img src={Github} alt="Github" />
                   </Stack>
                   <p>
                     Game Changer est un blog d'actualité sur les Jeux Videos
@@ -159,7 +162,6 @@ const InnerSlide = styled(motion.div)`
   display: flex;
   align-items: center;
   width: 100%;
-
   @media (max-width: 1280px) {
     margin-bottom: -0.5rem;
     margin-top: -1rem;

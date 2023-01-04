@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { pageContactAnimation, sliderContainer, slider } from "../Animations";
@@ -8,6 +9,8 @@ import github from "../img/stack/Github.png";
 import coffeehappy from "../img/CoffeeHappy.png";
 
 const Contact = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <ContactContainer
       variants={pageContactAnimation}
@@ -27,36 +30,49 @@ const Contact = () => {
         exit={{ opacity: 0 }}
       >
         <Picture>
-          <img src={coffee} alt="coffee" />
+          {isHovered ? (
+            <img src={coffeehappy} alt="coffee" />
+          ) : (
+            <img src={coffee} alt="coffee" />
+          )}
         </Picture>
         <Links>
-          <LinksDetails>
-            <img src={linkedin} alt="Linkedin" />
+          <LinksDetails
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <a
               href="https://www.linkedin.com/in/pierrescheibling"
               target="_blank"
               rel="linkedin"
             >
+              <img src={linkedin} alt="Linkedin" />
               <h2>Linkedin</h2>
             </a>
           </LinksDetails>
-          <LinksDetails>
-            <img src={github} alt="Github" />
+          <LinksDetails
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <a
               href="https://github.com/PierreScheibling"
               target="_blank"
               rel="Github"
             >
+              <img src={github} alt="Github" />
               <h2>Github</h2>
             </a>
           </LinksDetails>
-          <LinksDetails>
-            <img src={mail} alt="Mail" />
+          <LinksDetails
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <a
               href="mailto:pierre@scheibling.fr"
               target="_blank"
               rel="pierre@scheibling.fr"
             >
+              <img src={mail} alt="Mail" />
               <h2>pierre@scheibling.fr</h2>
             </a>
           </LinksDetails>
@@ -101,11 +117,13 @@ const Links = styled(motion.div)`
 `;
 
 const LinksDetails = styled(motion.div)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  h2 {
-    margin-left: 6rem;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      margin-left: 6rem;
+    }
   }
 `;
 
