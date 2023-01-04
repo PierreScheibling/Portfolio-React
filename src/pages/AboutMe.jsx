@@ -17,6 +17,13 @@ const AboutMe = () => {
     },
   };
 
+  const bio1 =
+    "Merci d'être venus jusque là, c'est peut être que vous voulez en savoir plus sur moi ? \n Après 6 ans dans le domaine du recrutement à échanger avec des profils de tous horizons, j'ai beaucoup appris sur les fonctionnements des organisations, mais surtout sur les personnalités des centaines de candidats que j'ai pu rencontrer. Toujours en essayant de comprendre et trouver la bonne place pour chaque personne. \n C'est cette curiosité qui m'a progressivement amenée à me reconvertir. J'ai petit à petit appris à coder sur mon temps libre pour ensuite m'y consacrer à 100% avec la formation de Développeur Web du Wagon Bordeaux. \n Depuis, je travaille en freelance en tant que développeur avec une sensibilité particulière pour l'UX/UI. \n Si vous avez des besoins en création de site et/ou web design (UX/UI), n’hésitez pas à me contacter pour que l’on en discute.";
+
+  const bio = bio1.split("\n").map((i) => {
+    return <p>{i}</p>;
+  });
+
   return (
     <motion.div
       exit="exit"
@@ -25,9 +32,6 @@ const AboutMe = () => {
       animate="show"
     >
       <Apropos>
-        {/* <Title>
-          <h1>A Propos</h1>
-        </Title> */}
         <Description>
           <Picture>
             <motion.img
@@ -41,15 +45,7 @@ const AboutMe = () => {
           <Curriculum>
             <Bio>
               <motion.h2 variants={titleBioAnim}>Bio</motion.h2>
-              <motion.p variants={postBioAnim}>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dolores illum eaque tempore rem voluptatibus a magni quae cum
-                officiis? Vel impedit excepturi fugiat nisi reprehenderit. Fuga,
-                quas aspernatur blanditiis assumenda possimus eveniet nihil,
-                sapiente atque nesciunt vitae perferendis maxime molestias
-                voluptate sit id soluta laboriosam necessitatibus harum iure in?
-                Ex.
-              </motion.p>
+              <motion.p variants={postBioAnim}>{bio}</motion.p>
             </Bio>
             <Experience>
               <motion.h2 variants={titleBioAnim}>Experiences</motion.h2>
@@ -98,9 +94,8 @@ const Apropos = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
   p {
-    line-height: 3rem;
+    line-height: 2rem;
   }
   @media (max-width: 1280px) {
     margin: 0;
@@ -127,12 +122,10 @@ const Apropos = styled(motion.div)`
   }
 `;
 
-const Title = styled(motion.div)``;
-
 const Description = styled(motion.div)`
   display: flex;
   height: 70vh;
-
+  margin: 0rem 1.5rem;
   @media (max-width: 1280px) {
   }
   @media (max-width: 834px) {
@@ -179,14 +172,14 @@ const Curriculum = styled(motion.div)`
 
 const Bio = styled(motion.div)`
   h2 {
-    padding: 2rem 0rem;
+    padding: 1rem 0rem;
   }
 `;
 
 const Experience = styled(motion.div)`
   width: 100%;
   h2 {
-    padding: 2rem 0rem;
+    padding: 1rem 0rem;
   }
   @media (max-width: 1280px) {
   }
@@ -204,6 +197,7 @@ const XpLine = styled(motion.div)`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin: 1.5rem 0rem;
   .year {
     width: 20%;
   }

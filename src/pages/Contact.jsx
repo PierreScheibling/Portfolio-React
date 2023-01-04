@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { pageContactAnimation, sliderContainer, slider } from "../Animations";
 import coffee from "../img/coffee.png";
+import mail from "../img/Mail.png";
+import linkedin from "../img/Linkedin.png";
+import github from "../img/stack/Github.png";
+import coffeehappy from "../img/CoffeeHappy.png";
 
 const Contact = () => {
   return (
@@ -25,7 +29,38 @@ const Contact = () => {
         <Picture>
           <img src={coffee} alt="coffee" />
         </Picture>
-        <Links></Links>
+        <Links>
+          <LinksDetails>
+            <img src={linkedin} alt="Linkedin" />
+            <a
+              href="https://www.linkedin.com/in/pierrescheibling"
+              target="_blank"
+              rel="linkedin"
+            >
+              <h2>Linkedin</h2>
+            </a>
+          </LinksDetails>
+          <LinksDetails>
+            <img src={github} alt="Github" />
+            <a
+              href="https://github.com/PierreScheibling"
+              target="_blank"
+              rel="Github"
+            >
+              <h2>Github</h2>
+            </a>
+          </LinksDetails>
+          <LinksDetails>
+            <img src={mail} alt="Mail" />
+            <a
+              href="mailto:pierre@scheibling.fr"
+              target="_blank"
+              rel="pierre@scheibling.fr"
+            >
+              <h2>pierre@scheibling.fr</h2>
+            </a>
+          </LinksDetails>
+        </Links>
       </ContactDetails>
     </ContactContainer>
   );
@@ -48,13 +83,30 @@ const Picture = styled(motion.div)`
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  img {
+    width: 85%;
+  }
 `;
 
 const Links = styled(motion.div)`
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 8rem;
+  flex-grow: 2;
+  img {
+    margin: 1.5rem;
+    width: 7rem;
+  }
+`;
+
+const LinksDetails = styled(motion.div)`
+  display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: 2;
+  h2 {
+    margin-left: 6rem;
+  }
 `;
 
 //Frame Animation
