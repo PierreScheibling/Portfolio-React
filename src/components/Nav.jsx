@@ -55,8 +55,7 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
-  min-height: 8vh;
-  /* background: #282828; */
+  max-height: 8vh;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -68,7 +67,6 @@ const StyledNav = styled.nav`
     display: flex;
     list-style: none;
     justify-content: space-around;
-    /* align-items: center; */
     padding: 3rem 1rem;
   }
 
@@ -78,7 +76,7 @@ const StyledNav = styled.nav`
     align-items: center;
     justify-content: center;
     width: 20%;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   @media (max-width: 1280px) {
   }

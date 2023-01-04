@@ -9,58 +9,69 @@ import { pageAnimation } from "../Animations";
 import { titleAnim } from "../Animations";
 import { postAnim } from "../Animations";
 
+//import image
+import Github from "../img/stack/Github.png";
+
 const PresentationSection = () => {
   const picture = {
-    hidden: { scale: 1.3 },
-    show: { scale: 1, transition: { duration: 1, ease: "easeOut" } },
+    hidden: { scale: 1.1 },
+    show: { scale: 1, transition: { duration: 1, ease: "easeOut", delay: 1 } },
   };
 
   return (
-    <motion.div
+    <Presentation
       exit="exit"
       variants={pageAnimation}
       initial="hidden"
       animate="show"
     >
-      <Presentation>
-        <Greetings>
-          <Introduction>
-            <div className="hide">
-              <motion.h2 variants={titleAnim}>Hello, je suis</motion.h2>
-            </div>
-            <div className="hide">
-              <motion.h2 variants={titleAnim}>
-                <span> Pierre</span>
-              </motion.h2>
-            </div>
-          </Introduction>
-          <Image>
-            <motion.img
-              variants={picture}
-              initial="hidden"
-              animate="show"
-              src={moi}
-              alt="photo-id"
-            />
-          </Image>
-          <Welcome>
-            <div className="hide">
-              <motion.h2 variants={postAnim}>Developpeur Front-End</motion.h2>
-            </div>
-          </Welcome>
-        </Greetings>
-        <Contact>
-          <Link to="/contact">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              Contact
-            </motion.button>
-          </Link>
-        </Contact>
-      </Presentation>
-    </motion.div>
+      <Greetings>
+        <Introduction>
+          <div className="hide">
+            <motion.h2 variants={titleAnim}>Hello, je suis</motion.h2>
+          </div>
+          <div className="hide">
+            <motion.h2 variants={titleAnim}>
+              <span> Pierre</span>
+            </motion.h2>
+          </div>
+        </Introduction>
+        <Image>
+          <motion.img
+            variants={picture}
+            initial="hidden"
+            animate="show"
+            src={moi}
+            alt="photo-id"
+          />
+        </Image>
+        <Welcome>
+          <div className="hide">
+            <motion.h2 variants={postAnim}>Developpeur Front-End</motion.h2>
+          </div>
+        </Welcome>
+      </Greetings>
+      <Contact>
+        <Link to="/contact">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            Contact
+          </motion.button>
+        </Link>
+      </Contact>
+      <CodeLink>
+        <a
+          href="https://github.com/PierreScheibling/Portfolio-React"
+          target="_blank"
+          rel="code Portfolio"
+        >
+          <img src={Github} />
+          <p>Voir le code</p>
+        </a>
+      </CodeLink>
+    </Presentation>
   );
 };
 
@@ -70,7 +81,8 @@ const Presentation = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 80vh;
+  align-items: center;
+  min-height: 92vh;
 `;
 
 const Greetings = styled(motion.div)`
@@ -161,7 +173,7 @@ const Image = styled(motion.div)`
   align-items: center;
   justify-content: center;
   img {
-    width: 70%;
+    width: 60%;
   }
   @media (max-width: 1600px) {
     img {
@@ -170,7 +182,7 @@ const Image = styled(motion.div)`
   }
   @media (max-width: 1280px) {
     img {
-      width: 60%;
+      width: 55%;
     }
   }
   @media (max-width: 834px) {
@@ -260,6 +272,24 @@ const Contact = styled(motion.div)`
     button {
       padding: 0.8rem 1.2rem;
       font-size: 0.8rem;
+    }
+  }
+`;
+
+const CodeLink = styled(motion.div)`
+  a {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    img {
+      width: 4%;
+    }
+    p {
+      font-size: 0.7rem;
+      margin-left: 0.5rem;
     }
   }
 `;

@@ -94,16 +94,16 @@ const Apropos = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 85vh;
+  margin: 0rem 1.8rem;
   p {
-    line-height: 2rem;
-  }
-  @media (max-width: 1280px) {
-    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
   }
   @media (max-width: 834px) {
     margin: 0;
     p {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
   @media (max-width: 667px) {
@@ -150,7 +150,7 @@ const Curriculum = styled(motion.div)`
   width: 70%;
   text-align: justify;
   margin: 1rem 6rem 3rem 5rem;
-  min-height: 80vh;
+  /* min-height: 80vh; */
   @media (max-width: 1280px) {
     margin: 0rem 3rem 1rem 3rem;
   }
@@ -211,6 +211,7 @@ const XpLine = styled(motion.div)`
   }
   @media (max-width: 834px) {
     align-items: flex-start;
+    margin: 1rem 0rem;
     .year {
       width: 20%;
     }
@@ -236,7 +237,6 @@ const Picture = styled(motion.div)`
   justify-content: center;
   align-items: center;
   width: 35%;
-  min-height: 80vh;
   img {
     width: 80%;
     border-bottom: 2px solid black;
@@ -247,7 +247,7 @@ const Picture = styled(motion.div)`
   @media (max-width: 834px) {
     width: 100%;
     img {
-      width: 50%;
+      width: 30%;
     }
   }
   @media (max-width: 667px) {

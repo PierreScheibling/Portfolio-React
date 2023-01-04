@@ -43,8 +43,8 @@ export const Card = ({ card, ...props }) => {
 //_______________________________________________________________________________
 const CardItem = styled(motion.li)`
   opacity: 0;
-  width: clamp(3rem, 10vw, 7rem);
-  height: clamp(3rem, 10vw, 7rem);
+  width: clamp(3rem, 10vw, 6rem);
+  height: clamp(3rem, 10vw, 6rem);
   background-color: white;
   display: flex;
   justify-content: center;
@@ -53,7 +53,6 @@ const CardItem = styled(motion.li)`
   transform: rotateY(180deg);
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
   cursor: pointer;
 
   img {

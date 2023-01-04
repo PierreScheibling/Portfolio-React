@@ -50,7 +50,7 @@ const MusicLibraryButton = styled(motion.div)`
     position: absolute;
     right: -10vh;
     bottom: 7vh;
-    padding: 1.3rem;
+    padding: 1rem;
     font-size: 1.3rem;
     cursor: pointer;
     border-radius: 50%;
@@ -62,8 +62,6 @@ const MusicLibraryButton = styled(motion.div)`
     button {
       right: -20vh;
       bottom: 2vh;
-      padding: 1.5rem;
-      font-size: 1.5rem;
     }
   }
   @media (max-width: 834px) {

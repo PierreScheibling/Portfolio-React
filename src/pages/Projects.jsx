@@ -53,7 +53,7 @@ function SimpleSlider() {
   const { animate, initial, transition } = slideReveal;
 
   return (
-    <motion.div
+    <ContainerProject
       exit="exit"
       variants={pageAnimation}
       initial="hidden"
@@ -154,38 +154,120 @@ function SimpleSlider() {
           </Slide>
         </Project>
       </Slider>
-    </motion.div>
+    </ContainerProject>
   );
 }
 
+const ContainerProject = styled(motion.div)``;
+
+const Project = styled(motion.div)`
+  margin-left: 10%;
+  margin-top: 12vh;
+  @media (max-width: 1280px) {
+    margin-bottom: 2rem;
+  }
+  @media (max-width: 834px) {
+    margin-top: 0vh;
+    margin-left: 10%;
+  }
+  @media (max-width: 667px) {
+    margin-top: 0vh;
+    margin-left: 10%;
+  }
+  @media (max-width: 359px) {
+    margin-top: 0vh;
+    margin-left: 10%;
+  }
+`;
+
+const ProjectsPage = styled(motion.div)`
+  .slick-arrow {
+    z-index: -2;
+    margin: 0rem 7rem 0rem 5rem;
+    z-index: 1 !important;
+    /* width: 2rem !important; */
+    /* font-size: 2rem;
+    background: red !important; */
+  }
+  button.slick-next:before {
+    font-size: 3rem !important;
+    color: #e2a48e !important;
+  }
+  button.slick-prev:before {
+    font-size: 3rem !important;
+    color: #e2a48e !important;
+  }
+
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    .slick-arrow {
+      display: none;
+    }
+    button.slick-next:before {
+      display: none;
+    }
+    button.slick-prev:before {
+      display: none;
+    }
+    .slick-dots {
+      display: none !important;
+    }
+  }
+  @media (max-width: 667px) {
+    .slick-arrow {
+      display: none;
+    }
+    button.slick-next:before {
+      display: none;
+    }
+    button.slick-prev:before {
+      display: none;
+    }
+    .slick-dots {
+      display: none !important;
+    }
+  }
+  @media (max-width: 359px) {
+    .slick-arrow {
+      display: none;
+    }
+    button.slick-next:before {
+      display: none;
+    }
+    button.slick-prev:before {
+      display: none;
+    }
+    .slick-dots {
+      display: none !important;
+    }
+  }
+`;
+
 const InnerSlide = styled(motion.div)`
   display: flex;
-  align-items: center;
   width: 100%;
   @media (max-width: 1280px) {
-    margin-bottom: -0.5rem;
-    margin-top: -1rem;
+    /* margin-bottom: -0.5rem;
+    margin-top: -1rem; */
   }
   @media (max-width: 834px) {
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 2rem;
-    margin-top: 8%;
-    height: 73vh;
+    /* margin-bottom: 2rem;
+    margin-top: 8%; */
   }
   @media (max-width: 667px) {
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 2rem;
-    margin-top: 8%;
-    height: 75vh;
+    /* margin-bottom: 2rem;
+    margin-top: 8%; */
   }
   @media (max-width: 359px) {
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 0rem;
-    margin-top: 10%;
-    height: 72vh;
+    /* margin-bottom: 0rem;
+    margin-top: 10%; */
   }
 `;
 
@@ -245,7 +327,6 @@ const Picture = styled(motion.div)`
   @media (max-width: 834px) {
     display: flex;
     justify-content: center;
-    padding-top: 2rem;
     img {
       width: 50%;
     }
@@ -316,7 +397,7 @@ const ProjectPresentation = styled(motion.div)`
   }
   @media (max-width: 834px) {
     margin-right: 0rem;
-    margin-top: -1.5rem;
+    margin-top: -2rem;
     width: 85%;
     align-items: center;
     h1 {
@@ -377,7 +458,8 @@ const GamePresentation = styled(motion.div)`
     }
   }
   @media (max-width: 834px) {
-    margin-right: 0rem;
+    margin-right: 2rem;
+    margin-left: 3rem;
     width: 85%;
     align-items: center;
     h1 {
@@ -385,6 +467,7 @@ const GamePresentation = styled(motion.div)`
       margin-bottom: 1rem;
     }
     p {
+      margin-top: 1.5rem;
       line-height: 2rem;
     }
   }
@@ -413,111 +496,6 @@ const GamePresentation = styled(motion.div)`
     }
   }
 `;
-
-const Project = styled(motion.div)`
-  margin-left: 10%;
-  margin-top: 3rem;
-  @media (max-width: 1280px) {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  @media (max-width: 834px) {
-    margin-left: 10%;
-    margin-top: 0rem;
-  }
-  @media (max-width: 667px) {
-    margin-left: 10%;
-    margin-top: 0rem;
-  }
-  @media (max-width: 359px) {
-    margin-left: 10%;
-    margin-top: 0rem;
-  }
-`;
-
-const ProjectsPage = styled(motion.div)`
-  .slick-arrow {
-    z-index: -2;
-    margin: 0rem 7rem 0rem 5rem;
-    z-index: 1 !important;
-    /* width: 2rem !important; */
-    /* font-size: 2rem;
-    background: red !important; */
-  }
-  button.slick-next:before {
-    font-size: 3rem !important;
-    color: #e2a48e !important;
-  }
-  button.slick-prev:before {
-    font-size: 3rem !important;
-    color: #e2a48e !important;
-  }
-
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    .slick-arrow {
-      display: none;
-    }
-    button.slick-next:before {
-      display: none;
-    }
-    button.slick-prev:before {
-      display: none;
-    }
-    .slick-dots {
-      display: none !important;
-    }
-  }
-  @media (max-width: 667px) {
-    .slick-arrow {
-      display: none;
-    }
-    button.slick-next:before {
-      display: none;
-    }
-    button.slick-prev:before {
-      display: none;
-    }
-    .slick-dots {
-      display: none !important;
-    }
-  }
-  @media (max-width: 359px) {
-    .slick-arrow {
-      display: none;
-    }
-    button.slick-next:before {
-      display: none;
-    }
-    button.slick-prev:before {
-      display: none;
-    }
-    .slick-dots {
-      display: none !important;
-    }
-  }
-`;
-
-// //Frame Animation
-// const Frame1 = styled(motion.div)`
-//   position: fixed;
-//   left: 0;
-//   top: 0;
-//   width: 100%;
-//   height: 100vh;
-//   background: #fffebf;
-//   z-index: 2;
-// `;
-// const Frame2 = styled(Frame1)`
-//   background: #ff8efb;
-// `;
-// const Frame3 = styled(Frame1)`
-//   background: #8ed2ff;
-// `;
-// const Frame4 = styled(Frame1)`
-//   background: #8effa0;
-// `;
 
 const Contact = styled(motion.div)`
   display: flex;

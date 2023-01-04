@@ -83,7 +83,6 @@ const Contact = () => {
 };
 
 const ContactContainer = styled(motion.div)`
-  min-height: 80vh;
   overflow: hidden;
 `;
 
@@ -91,7 +90,17 @@ const ContactDetails = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 92vh;
+  font-size: 0.8rem;
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    flex-direction: column;
+  }
+  @media (max-width: 667px) {
+  }
+  @media (max-width: 359px) {
+  }
 `;
 
 const Picture = styled(motion.div)`
@@ -100,7 +109,18 @@ const Picture = styled(motion.div)`
   justify-content: center;
   flex-grow: 1;
   img {
-    width: 85%;
+    width: 75%;
+  }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    img {
+      width: 50%;
+    }
+  }
+  @media (max-width: 667px) {
+  }
+  @media (max-width: 359px) {
   }
 `;
 
@@ -108,11 +128,11 @@ const Links = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 8rem;
+  margin-left: 3rem;
   flex-grow: 2;
   img {
     margin: 1.5rem;
-    width: 7rem;
+    width: 4.5rem;
   }
 `;
 
@@ -122,7 +142,7 @@ const LinksDetails = styled(motion.div)`
     align-items: center;
     justify-content: center;
     h2 {
-      margin-left: 6rem;
+      margin-left: 3rem;
     }
   }
 `;

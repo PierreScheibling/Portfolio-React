@@ -249,12 +249,9 @@ export const Memory = () => {
 //_______________________________________________________________________________
 const GlobalCompetencies = styled(motion.div)`
   display: flex;
-  height: 85vh;
-  width: 90%;
-  margin: 0 auto;
+  min-height: 92vh;
   align-items: center;
   justify-content: space-around;
-  gap: 2rem;
   flex-wrap: wrap;
 `;
 
@@ -265,7 +262,6 @@ const MemoryList = styled(motion.ul)`
   grid-template-rows: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
-  margin: 2rem 0;
   padding: 0.5rem;
   gap: 0.5em;
   width: 100%;
@@ -277,8 +273,7 @@ const SkillList = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  gap: 0.3rem;
+  gap: 0.2rem;
   width: 100%;
 `;
 
@@ -292,7 +287,7 @@ const SkillsTitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1.4rem;
+  padding-bottom: 2rem;
 `;
 
 const GameSection = styled.div``;
