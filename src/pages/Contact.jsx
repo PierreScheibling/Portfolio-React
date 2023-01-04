@@ -18,7 +18,7 @@ const Contact = () => {
       </motion.div>
       <ContactDetails
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { delay: 1.5 } }}
+        animate={{ opacity: 1, transition: { delay: 1 } }}
         exit={{ opacity: 0 }}
       >
         Hello
