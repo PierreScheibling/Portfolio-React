@@ -104,6 +104,16 @@ function SimpleSlider() {
                 </motion.button>
               </Contact>
             </ProjectPresentation>
+            <CodeLink>
+              <a
+                href="https://github.com/Flolq/KICK_ACE"
+                target="_blank"
+                rel="code Kick-Ace"
+              >
+                <img src={Github} />
+                <p>Voir le code</p>
+              </a>
+            </CodeLink>
             <Wave />
           </Slide>
         </Project>
@@ -118,6 +128,16 @@ function SimpleSlider() {
                 >
                   <AppMusic />
                 </InnerSlide>
+                <CodeLinkMusic>
+                  <a
+                    href="https://github.com/PierreScheibling/Portfolio-React/tree/master/src/components/musicPlayer"
+                    target="_blank"
+                    rel="code Music Player"
+                  >
+                    <img src={Github} />
+                    <p>Voir le code</p>
+                  </a>
+                </CodeLinkMusic>
                 <Wave />
               </>
             )}
@@ -148,6 +168,12 @@ function SimpleSlider() {
                     retrouve ces jeux.
                   </p>
                 </GamePresentation>
+                <CodeLink>
+                  <a href="" target="_blank" rel="code Game Changer">
+                    <img src={Github} />
+                    <p>Voir le code</p>
+                  </a>
+                </CodeLink>
                 <Wave />
               </InnerSlide>
             )}
@@ -281,6 +307,7 @@ const Slide = styled(motion.div)`
   position: relative;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   margin-bottom: 2.5rem;
+  position: relative;
   a:visited {
     text-decoration: none;
     color: white;
@@ -314,6 +341,45 @@ const Slide = styled(motion.div)`
     margin-top: 10%;
     height: 72vh;
     width: 80%;
+  }
+`;
+
+const CodeLink = styled(motion.div)`
+  a {
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    img {
+      width: 4%;
+    }
+    p {
+      color: black;
+      font-size: 0.7rem;
+      margin-left: 0.5rem;
+    }
+  }
+`;
+
+const CodeLinkMusic = styled(motion.div)`
+  a {
+    z-index: 0;
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    img {
+      width: 4%;
+    }
+    p {
+      color: black;
+      font-size: 0.7rem;
+      margin-left: 0.5rem;
+    }
   }
 `;
 
