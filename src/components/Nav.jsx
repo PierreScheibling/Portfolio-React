@@ -18,7 +18,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/projects">Mes Projets</Link>
+          <Link to="/projects">Projets</Link>
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
@@ -34,7 +34,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/competencies">Mes Compétences</Link>
+          <Link to="/competencies">Compétences</Link>
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
@@ -98,7 +98,7 @@ const StyledNav = styled.nav`
       padding: 1rem 0rem;
     }
     li {
-      font-size: 0.7rem;
+      font-size: 0.5rem;
     }
   }
 `;

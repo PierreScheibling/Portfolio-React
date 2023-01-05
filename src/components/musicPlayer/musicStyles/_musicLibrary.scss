@@ -26,6 +26,8 @@
     }
   }
   @media (max-width: 359px) {
+    top: 0;
+    height: 72vh;
     h2 {
       display: none;
     }

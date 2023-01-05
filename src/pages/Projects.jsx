@@ -67,42 +67,44 @@ function SimpleSlider() {
       >
         <Project>
           <Slide>
-            <Picture>
-              <img src="src/img/kick_ace.png" alt="kick_ace" />
-            </Picture>
             <ProjectPresentation>
-              <h1>Kick-Ace</h1>
-              <Stack>
-                <img src={ROR} alt="Ruby On Rails" />
-                <img src={JS} alt="JS" />
-                <img src={HTML} alt="HTML" />
-                <img src={CSS} alt="CSS" />
-                <img src={Figma} alt="Figma" />
-                <img src={Heroku} alt="Heroku" />
-                <img src={Github} alt="Github" />
-                <img src={cloudinary} alt="Cloudinary" />
-                <img src={Postgre} alt="Postgre SQL" />
-              </Stack>
-              <p>
-                Kick-Ace est un jeu de fantasy tennis où chaque joueur doit
-                constituer une équipe de 8 tennismen grâce à un système
-                d'enchères. Le jeu est ensuite organisé par ligue de 4 à 8
-                joueurs où chaque équipe va s'affronter en fonction des
-                résultats des tennismen à l'ATP.
-              </p>
-              <Contact>
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                >
-                  <a
-                    href="https://www.youtube.com/watch?v=ptb0CURbsCw"
-                    target="_blank"
+              <KickAcePicture>
+                <img src="src/img/kick_ace.png" alt="kick_ace" />
+              </KickAcePicture>
+              <KickAceDescription>
+                <h1>Kick-Ace</h1>
+                <Stack>
+                  <img src={ROR} alt="Ruby On Rails" />
+                  <img src={JS} alt="JS" />
+                  <img src={HTML} alt="HTML" />
+                  <img src={CSS} alt="CSS" />
+                  <img src={Figma} alt="Figma" />
+                  <img src={Heroku} alt="Heroku" />
+                  <img src={Github} alt="Github" />
+                  <img src={cloudinary} alt="Cloudinary" />
+                  <img src={Postgre} alt="Postgre SQL" />
+                </Stack>
+                <p>
+                  Kick-Ace est un jeu de fantasy tennis où chaque joueur doit
+                  constituer une équipe de 8 tennismen grâce à un système
+                  d'enchères. Le jeu est ensuite organisé par ligue de 4 à 8
+                  joueurs où chaque équipe va s'affronter en fonction des
+                  résultats des tennismen à l'ATP.
+                </p>
+                <Contact>
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
-                    Voir la présentation
-                  </a>
-                </motion.button>
-              </Contact>
+                    <a
+                      href="https://www.youtube.com/watch?v=ptb0CURbsCw"
+                      target="_blank"
+                    >
+                      Présentation
+                    </a>
+                  </motion.button>
+                </Contact>
+              </KickAceDescription>
             </ProjectPresentation>
             <CodeLink>
               <a
@@ -152,22 +154,41 @@ function SimpleSlider() {
                 transition={transition}
               >
                 <GameChanger>
-                  <img src="src/img/gameChanger.gif" alt="Game_changer" />
+                  <VisualGame>
+                    <img src="src/img/gameChanger.gif" alt="Game_changer" />
+                  </VisualGame>
+                  <GamePresentation>
+                    <h1>Game Changer</h1>
+                    <Stack>
+                      <img src={API} alt="API" />
+                      <img src={Reactlogo} alt="React" />
+                      <img src={Github} alt="Github" />
+                    </Stack>
+                    <p>
+                      Game Changer est un blog d'actualité sur les Jeux Videos
+                      avec la possibilité de voir les prochaines sorties, les
+                      jeux les mieux notés, ainsi que les plateformes sur
+                      lesquels on retrouve ces jeux.
+                    </p>
+                    <Contact>
+                      <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
+                      >
+                        <a
+                          href="https://www.youtube.com/watch?v=ptb0CURbsCw"
+                          target="_blank"
+                        >
+                          Présentation
+                        </a>
+                      </motion.button>
+                    </Contact>
+                  </GamePresentation>
                 </GameChanger>
-                <GamePresentation>
-                  <h1>Game Changer</h1>
-                  <Stack>
-                    <img src={API} alt="API" />
-                    <img src={Reactlogo} alt="React" />
-                    <img src={Github} alt="Github" />
-                  </Stack>
-                  <p>
-                    Game Changer est un blog d'actualité sur les Jeux Videos
-                    avec la possibilité de voir les prochaines sorties, les jeux
-                    les mieux notés, ainsi que les plateformes sur lesquels on
-                    retrouve ces jeux.
-                  </p>
-                </GamePresentation>
                 <CodeLink>
                   <a href="" target="_blank" rel="code Game Changer">
                     <img src={Github} />
@@ -292,8 +313,8 @@ const InnerSlide = styled(motion.div)`
   @media (max-width: 359px) {
     flex-direction: column;
     justify-content: space-between;
-    /* margin-bottom: 0rem;
-    margin-top: 10%; */
+    margin-bottom: 0rem;
+    margin-top: 10%;
   }
 `;
 
@@ -336,7 +357,7 @@ const Slide = styled(motion.div)`
   }
   @media (max-width: 359px) {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 0rem;
     margin-top: 10%;
     height: 72vh;
@@ -383,37 +404,6 @@ const CodeLinkMusic = styled(motion.div)`
   }
 `;
 
-const Picture = styled(motion.div)`
-  z-index: 2;
-  img {
-    width: 90%;
-  }
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    display: flex;
-    justify-content: center;
-    img {
-      width: 50%;
-    }
-  }
-  @media (max-width: 667px) {
-    display: flex;
-    justify-content: center;
-    img {
-      width: 95%;
-    }
-  }
-  @media (max-width: 359px) {
-    display: flex;
-    justify-content: center;
-    margin-top: -2rem;
-    img {
-      width: 90%;
-    }
-  }
-`;
-
 const Stack = styled(motion.div)`
   display: flex;
   img {
@@ -440,15 +430,15 @@ const Stack = styled(motion.div)`
 
 const ProjectPresentation = styled(motion.div)`
   display: flex;
-  flex-direction: column;
-  margin-right: 8rem;
-  width: 70%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 4rem;
   z-index: 2;
   h1 {
-    font-size: 5vh;
+    font-size: 2rem;
   }
   p {
-    font-size: 2vh;
+    font-size: 0.8rem;
     text-align: justify;
     padding-top: 1rem;
     padding-bottom: 2.5rem;
@@ -462,8 +452,8 @@ const ProjectPresentation = styled(motion.div)`
     }
   }
   @media (max-width: 834px) {
-    margin-right: 0rem;
-    margin-top: -2rem;
+    flex-direction: column;
+    padding-right: 0;
     width: 85%;
     align-items: center;
     h1 {
@@ -471,11 +461,14 @@ const ProjectPresentation = styled(motion.div)`
       margin-bottom: 1rem;
     }
     p {
+      font-size: 1.2rem;
+      padding-top: 1rem;
       line-height: 2rem;
     }
   }
   @media (max-width: 667px) {
-    margin-right: 0rem;
+    flex-direction: column;
+    padding-right: 0;
     width: 85%;
     align-items: center;
     h1 {
@@ -487,15 +480,114 @@ const ProjectPresentation = styled(motion.div)`
     }
   }
   @media (max-width: 359px) {
+    flex-direction: column;
     margin-right: 0rem;
     width: 85%;
+    padding-right: 0;
     h1 {
       font-size: 5vh;
-      margin-bottom: 1rem;
-      margin-top: -3rem;
+      margin-bottom: 1.5rem;
     }
     p {
       display: none;
+    }
+  }
+`;
+
+const KickAcePicture = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  margin-top: -6rem;
+  img {
+    width: 100%;
+  }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 50%;
+    }
+  }
+  @media (max-width: 667px) {
+    img {
+      width: 95%;
+    }
+  }
+  @media (max-width: 359px) {
+    margin-top: -4rem;
+    img {
+      width: 85%;
+    }
+  }
+`;
+
+const KickAceDescription = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 667px) {
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 359px) {
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const GameChanger = styled(motion.div)`
+  display: flex;
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 667px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 359px) {
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+const VisualGame = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 80%;
+  }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    img {
+      width: 50%;
+    }
+  }
+  @media (max-width: 667px) {
+    img {
+      width: 70%;
+      margin-bottom: 3rem;
+    }
+  }
+  @media (max-width: 359px) {
+    img {
+      width: 60%;
+      margin-bottom: 2rem;
     }
   }
 `;
@@ -510,7 +602,7 @@ const GamePresentation = styled(motion.div)`
     font-size: 5vh;
   }
   p {
-    font-size: 2vh;
+    font-size: 1.2rem;
     text-align: justify;
     padding-top: 1rem;
     padding-bottom: 2.5rem;
@@ -538,7 +630,7 @@ const GamePresentation = styled(motion.div)`
     }
   }
   @media (max-width: 667px) {
-    margin-right: 0rem;
+    margin: 0;
     width: 85%;
     align-items: center;
     h1 {
@@ -550,12 +642,10 @@ const GamePresentation = styled(motion.div)`
     }
   }
   @media (max-width: 359px) {
-    margin-right: 0rem;
+    margin: 0;
     width: 85%;
     h1 {
       font-size: 5vh;
-      margin-bottom: 1rem;
-      margin-top: -3rem;
     }
     p {
       display: none;
@@ -605,43 +695,6 @@ const Contact = styled(motion.div)`
     button {
       padding: 0.8rem 1.5rem;
       font-size: 0.8rem;
-    }
-  }
-`;
-
-const GameChanger = styled(motion.div)`
-  img {
-    width: 90%;
-    padding: 2rem;
-  }
-
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      width: 75%;
-      padding: 0rem;
-    }
-  }
-  @media (max-width: 667px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      width: 90%;
-      padding: 2rem;
-    }
-  }
-  @media (max-width: 359px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      width: 90%;
-      padding: 2rem;
     }
   }
 `;
