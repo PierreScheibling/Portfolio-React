@@ -69,7 +69,7 @@ function SimpleSlider() {
           <Slide>
             <ProjectPresentation>
               <KickAcePicture>
-                <img src="src/img/kick_ace.png" alt="kick_ace" />
+                <img src="src/img/kickAce.png" alt="kickace" />
               </KickAcePicture>
               <KickAceDescription>
                 <h1>Kick-Ace</h1>
@@ -460,6 +460,9 @@ const ProjectPresentation = styled(motion.div)`
   }
   @media (max-width: 1280px) {
     margin-top: 3rem;
+    h1 {
+      font-size: 2rem;
+    }
     p {
       padding-top: 0rem;
       line-height: 2.5rem;
@@ -625,7 +628,7 @@ const GamePresentation = styled(motion.div)`
 
   @media (max-width: 1727px) {
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
     }
     p {
       font-size: 0.8rem;
