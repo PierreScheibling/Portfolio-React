@@ -148,55 +148,61 @@ function SimpleSlider() {
         <Project>
           <Slide className="slide-game-changer">
             {currentSlide === 2 && (
-              <InnerSlide
-                initial={initial}
-                animate={animate}
-                transition={transition}
-              >
-                <GameChanger>
-                  <VisualGame>
-                    <img src="src/img/gameChanger.gif" alt="Game_changer" />
-                  </VisualGame>
-                  <GamePresentation>
-                    <h1>Game Changer</h1>
-                    <Stack>
-                      <img src={API} alt="API" />
-                      <img src={Reactlogo} alt="React" />
-                      <img src={Github} alt="Github" />
-                    </Stack>
-                    <p>
-                      Game Changer est un blog d'actualité sur les Jeux Videos
-                      avec la possibilité de voir les prochaines sorties, les
-                      jeux les mieux notés, ainsi que les plateformes sur
-                      lesquels on retrouve ces jeux.
-                    </p>
-                    <Contact>
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 400,
-                          damping: 10,
-                        }}
-                      >
-                        <a
-                          href="https://www.youtube.com/watch?v=ptb0CURbsCw"
-                          target="_blank"
+              <>
+                <InnerSlide
+                  initial={initial}
+                  animate={animate}
+                  transition={transition}
+                >
+                  <GameChanger>
+                    <VisualGame>
+                      <img src="src/img/GameChanger.png" alt="Game_changer" />
+                    </VisualGame>
+                    <GamePresentation>
+                      <h1>Game Changer</h1>
+                      <Stack>
+                        <img src={API} alt="API" />
+                        <img src={Reactlogo} alt="React" />
+                        <img src={Github} alt="Github" />
+                      </Stack>
+                      <p>
+                        Game Changer est un blog d'actualité sur les Jeux Videos
+                        avec la possibilité de voir les prochaines sorties, les
+                        jeux les mieux notés, ainsi que les plateformes sur
+                        lesquels on retrouve ces jeux.
+                      </p>
+                      <Contact>
+                        <motion.button
+                          whileHover={{ scale: 1.1 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 400,
+                            damping: 10,
+                          }}
                         >
-                          Présentation
-                        </a>
-                      </motion.button>
-                    </Contact>
-                  </GamePresentation>
-                </GameChanger>
-                <CodeLink>
-                  <a href="" target="_blank" rel="code Game Changer">
-                    <img src={Github} />
-                    <p>Voir le code</p>
-                  </a>
-                </CodeLink>
+                          <a
+                            href="https://gameschanger.netlify.app/"
+                            target="_blank"
+                          >
+                            Site
+                          </a>
+                        </motion.button>
+                      </Contact>
+                    </GamePresentation>
+                  </GameChanger>
+                  <CodeLink>
+                    <a
+                      href="https://github.com/PierreScheibling/GameChanger"
+                      target="_blank"
+                      rel="code Game Changer"
+                    >
+                      <img src={Github} />
+                      <p>Voir le code</p>
+                    </a>
+                  </CodeLink>
+                </InnerSlide>
                 <Wave />
-              </InnerSlide>
+              </>
             )}
           </Slide>
         </Project>
@@ -634,7 +640,7 @@ const GamePresentation = styled(motion.div)`
     width: 85%;
     align-items: center;
     h1 {
-      font-size: 5vh;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
     p {

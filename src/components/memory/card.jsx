@@ -34,7 +34,7 @@ export const Card = ({ card, ...props }) => {
       //_________________
       onClick={() => handleClick(card)}
     >
-      <img src={img} alt="" />
+      <img src={img} alt="" draggable="false" />
     </CardItem>
   );
 };
@@ -49,16 +49,17 @@ const CardItem = styled(motion.li)`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.3rem;
+  border-radius: 0.4rem;
   transform: rotateY(180deg);
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 
   img {
-    opacity: 0;
+    opacity: 1;
     width: 100%;
     height: 100%;
+    padding: 0.3rem;
   }
 
   ${({ flip }) =>

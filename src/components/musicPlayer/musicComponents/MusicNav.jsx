@@ -74,7 +74,7 @@ const MusicLibraryButton = styled(motion.div)`
   }
   @media (max-width: 667px) {
     button {
-      right: -15vh;
+      right: -12vh;
       bottom: 3vh;
       padding: 1rem;
       font-size: 1rem;

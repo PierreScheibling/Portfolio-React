@@ -253,6 +253,17 @@ const GlobalCompetencies = styled(motion.div)`
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    flex-direction: column;
+  }
+  @media (max-width: 667px) {
+    flex-direction: column;
+  }
+  @media (max-width: 359px) {
+  }
 `;
 
 const MemoryList = styled(motion.ul)`
@@ -275,11 +286,32 @@ const SkillList = styled.ul`
   align-items: center;
   gap: 0.2rem;
   width: 100%;
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+  }
+  @media (max-width: 667px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  @media (max-width: 359px) {
+    display: none;
+  }
 `;
 
 const SkillsSection = styled.div`
   h2 {
     font-size: clamp(0.8rem, 2vw, 1.2rem);
+  }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+  }
+  @media (max-width: 667px) {
+  }
+  @media (max-width: 359px) {
+    display: none;
   }
 `;
 
@@ -316,6 +348,21 @@ const GameInfo = styled.div`
       font-family: "Signatura Monoline Script", sans-serif;
       font-size: 2rem;
       font-weight: lighter;
+    }
+
+    @media (max-width: 1280px) {
+    }
+    @media (max-width: 834px) {
+      padding-bottom: 1rem;
+    }
+    @media (max-width: 667px) {
+      padding-bottom: 1rem;
+      span {
+        font-size: 1.5rem;
+      }
+    }
+    @media (max-width: 359px) {
+      padding-bottom: 1rem;
     }
   }
 `;

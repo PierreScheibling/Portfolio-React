@@ -48,6 +48,16 @@ const TitleModal = styled(motion.div)`
   font-family: "Signatura Monoline Script", sans-serif;
   font-size: 6rem;
   font-weight: lighter;
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    font-size: 4rem;
+  }
+  @media (max-width: 667px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 359px) {
+  }
 `;
 
 const Contact = styled(motion.div)`
@@ -62,10 +72,32 @@ const Contact = styled(motion.div)`
     color: black;
     text-decoration: none;
   }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    align-items: center;
+    text-align: center;
+  }
+  @media (max-width: 667px) {
+    align-items: center;
+    text-align: center;
+  }
+  @media (max-width: 359px) {
+  }
 `;
 const WinningModalInside = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: fit-content;
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+    align-items: center;
+  }
+  @media (max-width: 667px) {
+    align-items: center;
+  }
+  @media (max-width: 359px) {
+  }
 `;

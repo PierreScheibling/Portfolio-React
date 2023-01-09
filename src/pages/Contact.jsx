@@ -100,6 +100,7 @@ const ContactDetails = styled(motion.div)`
   @media (max-width: 667px) {
   }
   @media (max-width: 359px) {
+    font-size: 0.5rem;
   }
 `;
 
@@ -119,8 +120,14 @@ const Picture = styled(motion.div)`
     }
   }
   @media (max-width: 667px) {
+    img {
+      width: 50%;
+    }
   }
   @media (max-width: 359px) {
+    img {
+      width: 40%;
+    }
   }
 `;
 
@@ -134,6 +141,22 @@ const Links = styled(motion.div)`
     margin: 1.5rem;
     width: 4.5rem;
   }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+  }
+  @media (max-width: 667px) {
+    img {
+      margin: 0.4rem;
+      width: 2rem;
+    }
+  }
+  @media (max-width: 359px) {
+    img {
+      margin: 0.4rem;
+      width: 2rem;
+    }
+  }
 `;
 
 const LinksDetails = styled(motion.div)`
@@ -143,6 +166,24 @@ const LinksDetails = styled(motion.div)`
     justify-content: center;
     h2 {
       margin-left: 3rem;
+    }
+  }
+  @media (max-width: 1280px) {
+  }
+  @media (max-width: 834px) {
+  }
+  @media (max-width: 667px) {
+    a {
+      h2 {
+        margin-left: 1rem;
+      }
+    }
+  }
+  @media (max-width: 359px) {
+    a {
+      h2 {
+        margin-left: 1rem;
+      }
     }
   }
 `;

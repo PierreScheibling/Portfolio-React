@@ -103,12 +103,14 @@ const Apropos = styled(motion.div)`
   @media (max-width: 834px) {
     margin: 0;
     p {
+      font-size: 0.85rem;
       margin-bottom: 1rem;
     }
   }
   @media (max-width: 667px) {
     margin: 0;
     p {
+      font-size: 0.75rem;
       line-height: 1.5rem;
       margin-bottom: 2rem;
     }
@@ -116,8 +118,9 @@ const Apropos = styled(motion.div)`
   @media (max-width: 359px) {
     margin: 0;
     p {
+      font-size: 0.7rem;
       line-height: 1.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
 `;
@@ -216,11 +219,12 @@ const XpLine = styled(motion.div)`
       width: 20%;
     }
     .xp {
-      width: 75%;
+      width: 80%;
     }
   }
   @media (max-width: 667px) {
     align-items: flex-start;
+    margin: 0rem 0rem;
     .year {
       width: 15%;
     }
@@ -253,13 +257,13 @@ const Picture = styled(motion.div)`
   @media (max-width: 667px) {
     width: 100%;
     img {
-      width: 60%;
+      width: 30%;
     }
   }
   @media (max-width: 359px) {
     width: 100%;
     img {
-      width: 75%;
+      width: 30%;
     }
   }
 `;
