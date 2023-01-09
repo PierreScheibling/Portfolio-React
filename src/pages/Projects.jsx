@@ -441,14 +441,22 @@ const ProjectPresentation = styled(motion.div)`
   padding-right: 4rem;
   z-index: 2;
   h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: justify;
     padding-top: 1rem;
     padding-bottom: 2.5rem;
     line-height: 3rem;
+  }
+  @media (max-width: 1727px) {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 0.8rem;
+    }
   }
   @media (max-width: 1280px) {
     margin-top: 3rem;
@@ -605,15 +613,25 @@ const GamePresentation = styled(motion.div)`
   width: 70%;
   z-index: 2;
   h1 {
-    font-size: 5vh;
+    font-size: 3rem;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: justify;
     padding-top: 1rem;
     padding-bottom: 2.5rem;
     line-height: 3rem;
   }
+
+  @media (max-width: 1727px) {
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
   @media (max-width: 1280px) {
     margin-top: 3rem;
     p {

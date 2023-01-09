@@ -1,6 +1,7 @@
 // Libraries import
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import face from "../../img/Face.png";
 
 // SCSS imports
 import "./animations.scss";
@@ -34,7 +35,12 @@ export const Card = ({ card, ...props }) => {
       //_________________
       onClick={() => handleClick(card)}
     >
-      <img src={img} alt="" draggable="false" />
+      <div className="on">
+        <img src={img} alt="" draggable="false" />
+      </div>
+      <div className="off">
+        <img src={face} alt="" draggable="false" />
+      </div>
     </CardItem>
   );
 };
@@ -54,18 +60,30 @@ const CardItem = styled(motion.li)`
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  position: relative;
+  .on {
+    position: absolute;
+    img {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0.3rem;
+    }
+  }
 
-  img {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    padding: 0.3rem;
+  .off {
+    img {
+      opacity: 0.05;
+      width: 100%;
+      height: 100%;
+      padding: 0.5rem;
+    }
   }
 
   ${({ flip }) =>
     flip &&
     `transform: rotateY(0deg);
-  img{opacity: 1};`}
+  .on{img{opacity: 1}};.off{img{opacity:0}};`}
   ${({ selected }) =>
     selected &&
     `box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);

@@ -10,7 +10,7 @@ const Nav = () => {
     <StyledNav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Accueil</Link>
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
@@ -76,8 +76,14 @@ const StyledNav = styled.nav`
     align-items: center;
     justify-content: center;
     width: 20%;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
+  @media (max-width: 1727px) {
+    li {
+      font-size: 0.8rem;
+    }
+  }
+
   @media (max-width: 1280px) {
   }
   @media (max-width: 834px) {
