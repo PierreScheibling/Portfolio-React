@@ -12,7 +12,7 @@ import JS from "../img/stack/JS.png";
 import Postgre from "../img/stack/Postgre-SQL.png";
 import Reactlogo from "../img/stack/React.png";
 import ROR from "../img/stack/ROR.png";
-import KickAce from "../img/KickAce.png";
+import KickAce from "../img/kickAce.png";
 import GameChangerPic from "../img/GameChanger.png";
 
 //Style
