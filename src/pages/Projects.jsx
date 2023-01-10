@@ -13,7 +13,7 @@ import Postgre from "../img/stack/Postgre-SQL.png";
 import Reactlogo from "../img/stack/React.png";
 import ROR from "../img/stack/ROR.png";
 import KickAce from "../img/KickAce.png";
-import GameChanger from "../img/GameChanger.png";
+import GameChangerPic from "../img/GameChanger.png";
 
 //Style
 import styled from "styled-components";
@@ -158,7 +158,7 @@ function SimpleSlider() {
                 >
                   <GameChanger>
                     <VisualGame>
-                      <img src={GameChanger} alt="Game_changer" />
+                      <img src={GameChangerPic} alt="Game_changer" />
                     </VisualGame>
                     <GamePresentation>
                       <h1>Game Changer</h1>
