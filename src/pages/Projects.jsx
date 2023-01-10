@@ -71,7 +71,7 @@ function SimpleSlider() {
           <Slide>
             <ProjectPresentation>
               <KickAcePicture>
-                <img src={KickAce} alt="kickace" />
+                <img src={kickAce} alt="kickace" />
               </KickAcePicture>
               <KickAceDescription>
                 <h1>Kick-Ace</h1>
