@@ -14,7 +14,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: '0%' }}
-            animate={{ width: pathname === '/' ? '33%' : '0%' }}
+            animate={{ width: pathname === '/' ? '100%' : '0%' }}
           />
         </li>
         <li>
@@ -22,7 +22,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: '0%' }}
-            animate={{ width: pathname === '/projects' ? '33%' : '0%' }}
+            animate={{ width: pathname === '/projects' ? '100%' : '0%' }}
           />
         </li>
         <li>
@@ -30,7 +30,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: '0%' }}
-            animate={{ width: pathname === '/aboutme' ? '33%' : '0%' }}
+            animate={{ width: pathname === '/aboutme' ? '100%' : '0%' }}
           />
         </li>
         <li>
@@ -38,7 +38,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: '0%' }}
-            animate={{ width: pathname === '/competencies' ? '33%' : '0%' }}
+            animate={{ width: pathname === '/competencies' ? '100%' : '0%' }}
           />
         </li>
         <li>
@@ -46,7 +46,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: '0%' }}
-            animate={{ width: pathname === '/contact' ? '33%' : '0%' }}
+            animate={{ width: pathname === '/contact' ? '100%' : '0%' }}
           />
         </li>
       </ul>
@@ -78,7 +78,7 @@ const StyledNav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20%;
+    width: fit-content;
     font-size: clamp(0.8rem, 0.73rem + 0.3vw, 1rem);
   }
   // @media (max-width: 1727px) {
@@ -118,7 +118,6 @@ const Line = styled(motion.div)`
   width: 0%;
   position: absolute;
   bottom: -80%;
-  left: 33%;
 `
 
 export default Nav
