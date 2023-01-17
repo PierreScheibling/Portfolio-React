@@ -30,19 +30,19 @@ const Blob = styled(motion.div)`
     z-index: -1;
   }
   .shape:nth-of-type(2) {
-    width: 800px;
-    height: 800px;
+    width: clamp(13rem, 40vw, 25rem);
+    height: clamp(13rem, 40vw, 25rem);
     background: #7998ff;
     position: absolute;
-    top: -200px;
-    left: -400px;
+    top: -40%;
+    left: -25%;
     opacity: 0.2;
     z-index: -1;
     animation: wave 5s ease-in-out infinite;
   }
   .shape:nth-of-type(3) {
-    width: 500px;
-    height: 500px;
+    width: clamp(6rem, 30vw, 20rem);
+    height: clamp(6rem, 30vw, 20rem);
     background: #379eff;
     position: absolute;
     bottom: -25%;
@@ -52,22 +52,22 @@ const Blob = styled(motion.div)`
     animation: wave 7s ease-in-out infinite;
   }
   .shape:nth-of-type(4) {
-    width: 250px;
-    height: 250px;
+    width: clamp(10rem, 25vw, 12rem);
+    height: clamp(10rem, 25vw, 12rem);
     background: #fbff0d;
     position: absolute;
-    bottom: -120px;
-    left: 50%;
+    bottom: -20%;
+    left: 5%;
     opacity: 0.4;
     z-index: -1;
     animation: wave 3s ease-in-out infinite;
   }
   .shape:nth-of-type(5) {
-    width: 350px;
-    height: 350px;
+    width: clamp(12rem, 45vw, 30rem);
+    height: clamp(12rem, 45vw, 30rem);
     background: #ff4343;
     position: absolute;
-    top: -8%;
+    top: -15%;
     right: 10%;
     opacity: 0.2;
     z-index: -1;
@@ -84,7 +84,7 @@ const Blob = styled(motion.div)`
     }
   }
 
-  @media (max-width: 1280px) {
+  /* @media (max-width: 1280px) {
     .shape:nth-of-type(2) {
       width: 600px;
       height: 600px;
@@ -142,7 +142,7 @@ const Blob = styled(motion.div)`
       width: 150px;
       height: 150px;
     }
-  }
+  } */
 `;
 
 export default BlobPage;
