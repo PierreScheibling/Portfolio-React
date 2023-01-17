@@ -83,66 +83,6 @@ const Blob = styled(motion.div)`
       border-radius: 26% 74% 51% 49% / 22% 53% 47% 78%;
     }
   }
-
-  /* @media (max-width: 1280px) {
-    .shape:nth-of-type(2) {
-      width: 600px;
-      height: 600px;
-    }
-    .shape:nth-of-type(3) {
-      width: 400px;
-      height: 400px;
-    }
-    .shape:nth-of-type(4) {
-      width: 200px;
-      height: 200px;
-      bottom: 170px;
-      left: 50%;
-    }
-    .shape:nth-of-type(5) {
-      width: 150px;
-      height: 150px;
-    }
-  }
-  @media (max-width: 820px) {
-    .shape:nth-of-type(2) {
-      width: 600px;
-      height: 600px;
-    }
-    .shape:nth-of-type(3) {
-      width: 400px;
-      height: 400px;
-    }
-    .shape:nth-of-type(4) {
-      width: 250px;
-      height: 250px;
-      bottom: 100px;
-      left: 30%;
-    }
-    .shape:nth-of-type(5) {
-      width: 150px;
-      height: 150px;
-    }
-  }
-  @media (max-width: 667px) {
-    .shape:nth-of-type(2) {
-      width: 500px;
-      height: 450px;
-    }
-    .shape:nth-of-type(3) {
-      width: 200px;
-      height: 200px;
-    }
-    .shape:nth-of-type(4) {
-      width: 80px;
-      height: 80px;
-      bottom: 70px;
-    }
-    .shape:nth-of-type(5) {
-      width: 150px;
-      height: 150px;
-    }
-  } */
 `;
 
 export default BlobPage;

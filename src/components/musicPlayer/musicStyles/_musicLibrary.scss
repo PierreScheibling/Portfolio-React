@@ -13,21 +13,11 @@
   border-bottom-left-radius: 3rem;
   background: rgb(255, 255, 255,0.8);
     h2 {
+      font-size: clamp(1rem, 2vw, 3rem);
       padding: 1.5rem 2rem 1rem 3rem;
       border-bottom: 1px solid rgb(204,204,204);
     }
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-  }
   @media (max-width: 667px) {
-    h2 {
-      display: none;
-    }
-  }
-  @media (max-width: 359px) {
-    top: 0;
-    height: 72vh;
     h2 {
       display: none;
     }
@@ -40,57 +30,21 @@
   padding: 1rem 2rem 1rem 3rem;
   cursor: pointer;
   img {
-    width: 30%;
+    width: clamp(1rem, 8vw, 10rem);
+    height: 100%;
+    object-fit: contain;
     border-radius: 5%;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1)
   }
   &:hover {
     background: rgba(184, 211, 255, 0.15);
   }
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    padding: 0.7rem 0rem 0.7rem 0.7rem;
-    img {
-      width:40%;
-    }
-  }
-  @media (max-width: 667px) {
-    padding: 0.7rem 0rem 0.7rem 0.7rem;
-    img {
-      width:75%;
-    }
-  }
-  @media (max-width: 359px) {
-    padding: 0.7rem 0rem 0.7rem 0.7rem;
-    img {
-      width:75%;
-    }
-  }
 }
 
 .music-song-description {
   padding-left: 1rem;
-    h3 {
-      font-size: 1rem;
-    }
-    h4 {
-      font-size: 0.7rem;
-    }
-    @media (max-width: 1280px) {
-    }
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
     @media (max-width: 834px) {
-      h3 {
-        font-size: 0.8rem;
-      }
-      h4 {
-        font-size: 0.5rem;
-      }
-    }
-    @media (max-width: 667px) {
-      display: none;
-    }
-    @media (max-width: 359px) {
       display: none;
     }
 }

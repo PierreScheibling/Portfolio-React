@@ -22,12 +22,15 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AppMusic from "../components/musicPlayer/AppMusic";
+import clamp from "../components/Clamp.jsx";
 
 //Animations
 import { pageAnimation, slideReveal } from "../Animations";
 import Wave from "../components/Wave.jsx";
 
 const Projects = () => {
+  console.log(clamp(1, 4, 375, 1440));
+
   return (
     <ProjectsPage
       variant={pageAnimation}
@@ -132,7 +135,7 @@ function SimpleSlider() {
                 >
                   <AppMusic />
                 </InnerSlide>
-                <CodeLinkMusic>
+                <CodeLink>
                   <a
                     href="https://github.com/PierreScheibling/Portfolio-React/tree/master/src/components/musicPlayer"
                     target="_blank"
@@ -141,7 +144,7 @@ function SimpleSlider() {
                     <img src={Github} />
                     <p>Voir le code</p>
                   </a>
-                </CodeLinkMusic>
+                </CodeLink>
                 <Wave />
               </>
             )}
@@ -156,7 +159,7 @@ function SimpleSlider() {
                   animate={animate}
                   transition={transition}
                 >
-                  <GameChanger>
+                  <ProjectPresentation>
                     <VisualGame>
                       <img src={GameChangerPic} alt="Game_changer" />
                     </VisualGame>
@@ -191,7 +194,7 @@ function SimpleSlider() {
                         </motion.button>
                       </Contact>
                     </GamePresentation>
-                  </GameChanger>
+                  </ProjectPresentation>
                   <CodeLink>
                     <a
                       href="https://github.com/PierreScheibling/GameChanger"
@@ -217,22 +220,7 @@ const ContainerProject = styled(motion.div)``;
 
 const Project = styled(motion.div)`
   margin-left: 10%;
-  margin-top: 12vh;
-  @media (max-width: 1280px) {
-    margin-bottom: 2rem;
-  }
-  @media (max-width: 834px) {
-    margin-top: 0vh;
-    margin-left: 10%;
-  }
-  @media (max-width: 667px) {
-    margin-top: 0vh;
-    margin-left: 10%;
-  }
-  @media (max-width: 359px) {
-    margin-top: 0vh;
-    margin-left: 10%;
-  }
+  margin-top: 2%;
 `;
 
 const ProjectsPage = styled(motion.div)`
@@ -240,9 +228,6 @@ const ProjectsPage = styled(motion.div)`
     z-index: -2;
     margin: 0rem 7rem 0rem 5rem;
     z-index: 1 !important;
-    /* width: 2rem !important; */
-    /* font-size: 2rem;
-    background: red !important; */
   }
   button.slick-next:before {
     font-size: 3rem !important;
@@ -253,8 +238,6 @@ const ProjectsPage = styled(motion.div)`
     color: #e2a48e !important;
   }
 
-  @media (max-width: 1280px) {
-  }
   @media (max-width: 834px) {
     .slick-arrow {
       display: none;
@@ -268,67 +251,12 @@ const ProjectsPage = styled(motion.div)`
     .slick-dots {
       display: none !important;
     }
-  }
-  @media (max-width: 667px) {
-    .slick-arrow {
-      display: none;
-    }
-    button.slick-next:before {
-      display: none;
-    }
-    button.slick-prev:before {
-      display: none;
-    }
-    .slick-dots {
-      display: none !important;
-    }
-  }
-  @media (max-width: 359px) {
-    .slick-arrow {
-      display: none;
-    }
-    button.slick-next:before {
-      display: none;
-    }
-    button.slick-prev:before {
-      display: none;
-    }
-    .slick-dots {
-      display: none !important;
-    }
-  }
-`;
-
-const InnerSlide = styled(motion.div)`
-  display: flex;
-  width: 100%;
-  @media (max-width: 1280px) {
-    /* margin-bottom: -0.5rem;
-    margin-top: -1rem; */
-  }
-  @media (max-width: 834px) {
-    flex-direction: column;
-    justify-content: center;
-    /* margin-bottom: 2rem;
-    margin-top: 8%; */
-  }
-  @media (max-width: 667px) {
-    flex-direction: column;
-    justify-content: center;
-    /* margin-bottom: 2rem;
-    margin-top: 8%; */
-  }
-  @media (max-width: 359px) {
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 0rem;
-    margin-top: 10%;
   }
 `;
 
 const Slide = styled(motion.div)`
   background: rgba(255, 255, 255, 0.4);
-  height: 70vh;
+  height: clamp(60vh, 70vh, 80vh);
   width: 80%;
   display: flex;
   align-items: center;
@@ -342,34 +270,73 @@ const Slide = styled(motion.div)`
     color: white;
   }
 
-  @media (max-width: 1280px) {
-    margin-bottom: -0.5rem;
-    margin-top: -1rem;
-    width: 80%;
-  }
   @media (max-width: 834px) {
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 2rem;
-    margin-top: 8%;
-    height: 73vh;
-    width: 80%;
   }
-  @media (max-width: 667px) {
+`;
+
+const InnerSlide = styled(motion.div)`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 834px) {
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 2rem;
-    margin-top: 8%;
-    height: 75vh;
-    width: 80%;
   }
-  @media (max-width: 359px) {
+`;
+
+const ProjectPresentation = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  h1 {
+    font-size: clamp(1rem, 4vw, 5rem);
+  }
+  p {
+    margin-top: 2rem;
+    margin-right: 4rem;
+    font-size: clamp(0.1rem, 1.5vw, 2.5rem);
+    text-align: justify;
+    line-height: clamp(1rem, 3vw, 3rem);
+  }
+
+  @media (max-width: 834px) {
     flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: 0rem;
-    margin-top: 10%;
-    height: 72vh;
-    width: 80%;
+    p {
+      margin-right: 0rem;
+    }
+  }
+  @media (max-width: 667px) {
+    p {
+      display: none;
+    }
+  }
+`;
+
+const KickAcePicture = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  width: 40%;
+  img {
+    width: clamp(15rem, 30vw, 30rem);
+    height: 100%;
+    object-fit: contain;
+  }
+`;
+
+const KickAceDescription = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  @media (max-width: 834px) {
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -382,31 +349,13 @@ const CodeLink = styled(motion.div)`
     align-items: center;
     text-decoration: none;
     img {
-      width: 4%;
+      width: clamp(1rem, 3vw, 7rem);
+      height: 100%;
+      object-fit: contain;
     }
     p {
       color: black;
-      font-size: 0.7rem;
-      margin-left: 0.5rem;
-    }
-  }
-`;
-
-const CodeLinkMusic = styled(motion.div)`
-  a {
-    z-index: 0;
-    position: absolute;
-    bottom: 1rem;
-    left: 2rem;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    img {
-      width: 4%;
-    }
-    p {
-      color: black;
-      font-size: 0.7rem;
+      font-size: clamp(0.5rem, 1.2vw, 2rem);
       margin-left: 0.5rem;
     }
   }
@@ -415,171 +364,13 @@ const CodeLinkMusic = styled(motion.div)`
 const Stack = styled(motion.div)`
   display: flex;
   img {
-    width: 3vh;
-    height: 3vh;
-    margin: 1rem 1rem 2rem 1rem;
-  }
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    img {
-      width: 2vh;
-      height: 2vh;
-      margin: 0rem 1rem 1rem 1rem;
-    }
+    width: clamp(1rem, 2vw, 3rem);
+    height: 100%;
+    object-fit: contain;
+    margin: clamp(0.5rem, 1vw, 1rem);
   }
   @media (max-width: 667px) {
     display: none;
-  }
-  @media (max-width: 359px) {
-    display: none;
-  }
-`;
-
-const ProjectPresentation = styled(motion.div)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 4rem;
-  z-index: 2;
-  h1 {
-    font-size: 3rem;
-  }
-  p {
-    font-size: 1rem;
-    text-align: justify;
-    padding-top: 1rem;
-    padding-bottom: 2.5rem;
-    line-height: 3rem;
-  }
-  @media (max-width: 1727px) {
-    h1 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 0.8rem;
-    }
-  }
-  @media (max-width: 1280px) {
-    margin-top: 3rem;
-    h1 {
-      font-size: 2rem;
-    }
-    p {
-      padding-top: 0rem;
-      line-height: 2.5rem;
-    }
-  }
-  @media (max-width: 834px) {
-    flex-direction: column;
-    padding-right: 0;
-    width: 85%;
-    align-items: center;
-    h1 {
-      font-size: 5vh;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1.2rem;
-      padding-top: 1rem;
-      line-height: 2rem;
-    }
-  }
-  @media (max-width: 667px) {
-    flex-direction: column;
-    padding-right: 0;
-    width: 85%;
-    align-items: center;
-    h1 {
-      font-size: 5vh;
-      margin-bottom: 1rem;
-    }
-    p {
-      display: none;
-    }
-  }
-  @media (max-width: 359px) {
-    flex-direction: column;
-    margin-right: 0rem;
-    width: 85%;
-    padding-right: 0;
-    h1 {
-      font-size: 5vh;
-      margin-bottom: 1.5rem;
-    }
-    p {
-      display: none;
-    }
-  }
-`;
-
-const KickAcePicture = styled(motion.div)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  margin-top: -6rem;
-  img {
-    width: 100%;
-  }
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    display: flex;
-    justify-content: center;
-    img {
-      width: 50%;
-    }
-  }
-  @media (max-width: 667px) {
-    img {
-      width: 95%;
-    }
-  }
-  @media (max-width: 359px) {
-    margin-top: -4rem;
-    img {
-      width: 85%;
-    }
-  }
-`;
-
-const KickAceDescription = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    justify-content: center;
-    align-items: center;
-  }
-  @media (max-width: 667px) {
-    justify-content: center;
-    align-items: center;
-  }
-  @media (max-width: 359px) {
-    justify-content: center;
-    align-items: center;
-  }
-`;
-
-const GameChanger = styled(motion.div)`
-  display: flex;
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  @media (max-width: 667px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  @media (max-width: 359px) {
-    align-items: center;
-    justify-content: center;
   }
 `;
 
@@ -587,98 +378,23 @@ const VisualGame = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
+  width: 40%;
+  margin-bottom: 1rem;
   img {
-    width: 80%;
-  }
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    img {
-      width: 50%;
-    }
-  }
-  @media (max-width: 667px) {
-    img {
-      width: 70%;
-      margin-bottom: 3rem;
-    }
-  }
-  @media (max-width: 359px) {
-    img {
-      width: 60%;
-      margin-bottom: 2rem;
-    }
+    width: clamp(15rem, 25vw, 35rem);
+    height: 100%;
+    object-fit: contain;
   }
 `;
 
 const GamePresentation = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  margin-right: 8rem;
-  width: 70%;
-  z-index: 2;
-  h1 {
-    font-size: 3rem;
-  }
-  p {
-    font-size: 1rem;
-    text-align: justify;
-    padding-top: 1rem;
-    padding-bottom: 2.5rem;
-    line-height: 3rem;
-  }
-
-  @media (max-width: 1727px) {
-    h1 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 0.8rem;
-    }
-  }
-
-  @media (max-width: 1280px) {
-    margin-top: 3rem;
-    p {
-      padding-top: 0rem;
-      line-height: 2.5rem;
-    }
-  }
+  width: 60%;
   @media (max-width: 834px) {
-    margin-right: 2rem;
-    margin-left: 3rem;
-    width: 85%;
+    justify-content: center;
     align-items: center;
-    h1 {
-      font-size: 5vh;
-      margin-bottom: 1rem;
-    }
-    p {
-      margin-top: 1.5rem;
-      line-height: 2rem;
-    }
-  }
-  @media (max-width: 667px) {
-    margin: 0;
-    width: 85%;
-    align-items: center;
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      display: none;
-    }
-  }
-  @media (max-width: 359px) {
-    margin: 0;
-    width: 85%;
-    h1 {
-      font-size: 5vh;
-    }
-    p {
-      display: none;
-    }
   }
 `;
 
@@ -687,44 +403,15 @@ const Contact = styled(motion.div)`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 6rem;
+  margin-top: clamp(0.2rem, 3vw, 6rem);
   button {
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 5rem);
+    padding: clamp(1rem, 2vw, 1rem);
     cursor: pointer;
     border-radius: 20px;
     background: #e2a48e;
     color: white;
     border: none;
-  }
-  @media (max-width: 1280px) {
-    height: 4rem;
-    padding-bottom: 2rem;
-    button {
-      padding: 1rem 2rem;
-      font-size: 1rem;
-    }
-  }
-  @media (max-width: 834px) {
-    height: 6rem;
-    padding-bottom: 2rem;
-    button {
-      padding: 1rem 2rem;
-      font-size: 1.5rem;
-    }
-  }
-  @media (max-width: 667px) {
-    button {
-      padding: 1rem 2rem;
-      font-size: 1rem;
-    }
-  }
-  @media (max-width: 359px) {
-    height: 4rem;
-    button {
-      padding: 0.8rem 1.5rem;
-      font-size: 0.8rem;
-    }
   }
 `;
 
