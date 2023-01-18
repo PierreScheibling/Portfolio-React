@@ -39,7 +39,7 @@ export const Skills = ({ skill }) => {
 //_______________________________________________________________________________
 const ImageWrapper = styled(motion.div)`
   position: relative;
-  width: clamp(2rem, 4vw, 4rem);
+  width: clamp(2rem, 3vw, 3rem);
   height: auto;
   .skillImg {
     width: 100%;

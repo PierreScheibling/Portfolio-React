@@ -310,7 +310,7 @@ const GameInfo = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: clamp(0.5rem, 1vw, 2rem);
   button {
     padding: 0.5rem 1.4rem;
     font-size: clamp(1rem, 1.5vw, 2rem);
