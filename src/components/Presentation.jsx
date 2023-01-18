@@ -86,6 +86,7 @@ const Presentation = styled(motion.div)`
   justify-content: center;
   align-items: center;
   height: 85vh;
+  overflow-y: hidden;
 `;
 
 const Greetings = styled(motion.div)`

@@ -15,7 +15,6 @@ const LandingPage = () => {
 
 const FirstPage = styled(motion.div)`
   overflow-y: hidden;
-  position: relative;
 `;
 
 export default LandingPage;
