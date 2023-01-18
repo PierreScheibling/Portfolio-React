@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
 
 html{
   font-size: 16px;
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 body {
@@ -24,6 +28,6 @@ body {
         color: black;
     }
   }
-}`;
+}`
 
-export default GlobalStyle;
+export default GlobalStyle
