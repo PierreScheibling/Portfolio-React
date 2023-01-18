@@ -278,7 +278,7 @@ const SkillList = styled.ul`
   align-items: center;
   gap: clamp(0.2rem, 1vw, 3rem);
   width: 100%;
-  @media (max-width: 667px) {
+  @media (max-width: 820px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
