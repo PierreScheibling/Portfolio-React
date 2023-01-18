@@ -99,7 +99,7 @@ const Greetings = styled(motion.div)`
     font-size: clamp(0.8rem, 0.65rem + 0.601vw, 1.2rem);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 820px) {
     flex-direction: column;
   }
 `;
