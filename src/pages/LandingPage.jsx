@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react'
 //Import Components
-import Presentation from "../components/Presentation";
+import Presentation from '../components/Presentation'
 //Styled
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 const LandingPage = () => {
   return (
     <FirstPage className="firstPage">
       <Presentation />
     </FirstPage>
-  );
-};
+  )
+}
 
 const FirstPage = styled(motion.div)`
   overflow-y: hidden;
-  height: 85vh;
-`;
+  height: 85%;
+`
 
-export default LandingPage;
+export default LandingPage
