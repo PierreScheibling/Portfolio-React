@@ -13,10 +13,10 @@ import { postAnim } from "../Animations";
 import Github from "../img/stack/Github.png";
 
 const PresentationSection = () => {
-  const picture = {
-    hidden: { scale: 1.3 },
-    show: { scale: 1, transition: { duration: 1, ease: "easeOut", delay: 1 } },
-  };
+  // const picture = {
+  //   hidden: { scale: 1.1 },
+  //   show: { scale: 1, transition: { duration: 1, ease: "easeOut", delay: 2 } },
+  // };
 
   return (
     <Presentation
@@ -39,9 +39,9 @@ const PresentationSection = () => {
         </Introduction>
         <Image>
           <motion.img
-            variants={picture}
-            initial="hidden"
-            animate="show"
+            // variants={picture}
+            // initial="hidden"
+            // animate="show"
             src={moi}
             alt="photo-id"
           />

@@ -11,6 +11,10 @@ html{
   font-size: 16px;
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
 body {
   background: #F4FFFD;
   font-family: "thorngumbald", sans-serif;
