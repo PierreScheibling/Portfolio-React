@@ -84,7 +84,7 @@ const Contact = () => {
 
 const ContactContainer = styled(motion.div)`
   overflow: hidden;
-  height: 85vh;
+  height: 85%;
 `;
 
 const ContactDetails = styled(motion.div)`

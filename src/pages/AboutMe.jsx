@@ -94,7 +94,7 @@ const Apropos = styled(motion.div)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 85vh;
+  height: 85%;
   h2 {
     font-size: clamp(1rem, 1.5vw, 3rem);
     padding-bottom: clamp(1rem, 1vw, 3rem);
