@@ -39,11 +39,14 @@
   &:hover {
     background: rgba(184, 211, 255, 0.15);
   }
+  @media (max-width: 834px) {
+    padding: 1rem 2rem;
+  }
 }
 
 .music-song-description {
   padding-left: 1rem;
-  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  font-size: clamp(0.7rem, 1vw, 1.5rem);
     @media (max-width: 834px) {
       display: none;
     }

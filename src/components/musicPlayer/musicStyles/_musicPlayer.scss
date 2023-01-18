@@ -3,22 +3,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  width: 70%;
 }
 
 .time-control {
-  width: clamp(5rem, 35vw, 50rem);
+  width: 80%;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: rgb(65,65,65);
+  font-size: clamp(0.7rem, 1.2vw, 2.2rem);
   input {
-    width: 100%;
     padding: 1rem 0rem;
     -webkit-appearance: none;
     background: transparent;
     cursor: pointer;
   }
   p {
-    padding: 1rem;
+    padding: clamp(0.5rem, 1vw, 2rem);
   }
 }
 
@@ -26,9 +28,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  width: 100%;
+  padding: clamp(0.7rem, 1vw, 2rem);
+  width: 60%;
   color: rgb(65,65,65);
+  font-size: clamp(0.5rem, 1.2vw, 2.2rem);
   svg {
     cursor: pointer;
   }

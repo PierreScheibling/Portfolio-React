@@ -27,10 +27,12 @@ const MusicLibraryTitle = styled(motion.div)`
   display: flex;
   flex-direction: column;
   width: 70%;
+  position: relative;
   h1 {
     display: flex;
     justify-content: center;
-    font-size: clamp(1rem, 3vw, 4rem);
+    font-size: clamp(1rem, 2.5vw, 4rem);
+    margin-bottom: clamp(1rem, 2vw, 1rem);
   }
   @media (max-width: 667px) {
     h1 {
@@ -40,13 +42,13 @@ const MusicLibraryTitle = styled(motion.div)`
 `;
 
 const MusicLibraryButton = styled(motion.div)`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  position: absolute;
+  right: 5%;
+  bottom: 0;
   button {
     margin: 1rem;
-    padding: 1rem;
-    font-size: clamp(1rem, 1.6vw, 3rem);
+    padding: clamp(0.7rem, 1vw, 1.5rem);
+    font-size: clamp(0.7rem, 1.6vw, 3rem);
     cursor: pointer;
     border-radius: 50%;
     background: #e2a48e;

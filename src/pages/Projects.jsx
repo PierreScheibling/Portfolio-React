@@ -294,12 +294,12 @@ const ProjectPresentation = styled(motion.div)`
   height: 100%;
   z-index: 2;
   h1 {
-    font-size: clamp(1rem, 4vw, 5rem);
+    font-size: clamp(1rem, 3vw, 4rem);
   }
   p {
     margin-top: 2rem;
     margin-right: 4rem;
-    font-size: clamp(0.1rem, 1.5vw, 2.5rem);
+    font-size: clamp(0.1rem, 1.2vw, 2.2rem);
     text-align: justify;
     line-height: clamp(1rem, 3vw, 3rem);
   }
@@ -355,7 +355,7 @@ const CodeLink = styled(motion.div)`
     }
     p {
       color: black;
-      font-size: clamp(0.5rem, 1.2vw, 2rem);
+      font-size: clamp(0.5rem, 1vw, 1.5rem);
       margin-left: 0.5rem;
     }
   }
@@ -405,7 +405,7 @@ const Contact = styled(motion.div)`
   width: 100%;
   margin-top: clamp(0.2rem, 3vw, 6rem);
   button {
-    font-size: clamp(1rem, 2vw, 5rem);
+    font-size: clamp(1rem, 1.5vw, 4rem);
     padding: clamp(1rem, 2vw, 1rem);
     cursor: pointer;
     border-radius: 20px;
