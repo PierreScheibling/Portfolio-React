@@ -217,7 +217,7 @@ function SimpleSlider() {
 }
 
 const ContainerProject = styled(motion.div)`
-  height: 85vh;
+  height: 100%;
   overflow-y: hidden;
 `;
 
