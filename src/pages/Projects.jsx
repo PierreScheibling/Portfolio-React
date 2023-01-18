@@ -228,15 +228,19 @@ const Project = styled(motion.div)`
 const ProjectsPage = styled(motion.div)`
   .slick-arrow {
     z-index: -2;
-    margin: 0rem 7rem 0rem 5rem;
+    margin-top: 0;
+    margin-right: clamp(2rem, 12vh, 7rem);
+    margin-bottom: 0;
+    margin-left: clamp(2rem, 8vh, 7rem);
+    /* margin: 0rem 7rem 0rem 5rem; */
     z-index: 1 !important;
   }
   button.slick-next:before {
-    font-size: 3rem !important;
+    font-size: clamp(0.5rem, 8vh, 4rem) !important;
     color: #e2a48e !important;
   }
   button.slick-prev:before {
-    font-size: 3rem !important;
+    font-size: clamp(0.5rem, 8vh, 4rem) !important;
     color: #e2a48e !important;
   }
 
