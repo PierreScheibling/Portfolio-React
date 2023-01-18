@@ -61,9 +61,6 @@ const SkillName = styled(motion.p)`
   font-size: clamp(1rem, 1.5vw, 2rem);
   text-align: center;
   ${({ matched }) => matched && "font-weight: bold; color: #7abb7a"}
-  @media (max-width: 834px) {
-    display: none;
-  }
 `;
 
 const Checked = styled(motion.img)`

@@ -278,15 +278,13 @@ const SkillList = styled.ul`
   align-items: center;
   gap: clamp(0.2rem, 1vw, 3rem);
   width: 100%;
-  @media (max-width: 834px) {
-    p {
-      display: none;
-    }
-  }
   @media (max-width: 667px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+    p {
+      display: none;
+    }
   }
   @media (max-width: 359px) {
     display: none;
