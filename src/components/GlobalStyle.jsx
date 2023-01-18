@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -15,6 +15,7 @@ body {
   background: #F4FFFD;
   font-family: "thorngumbald", sans-serif;
   overflow-y: scroll;
+  height: 100vh;
   h2 {
     color: black;
   }
@@ -25,6 +26,6 @@ body {
         color: black;
     }
   }
-}`
+}`;
 
-export default GlobalStyle
+export default GlobalStyle;

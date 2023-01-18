@@ -55,7 +55,7 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
-  height: 12vh;
+  height: 15vh;
   position: sticky;
   top: 0;
   z-index: 10;
