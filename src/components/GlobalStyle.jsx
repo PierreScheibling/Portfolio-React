@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -28,6 +28,10 @@ body {
         color: black;
     }
   }
-}`;
+}
 
-export default GlobalStyle;
+.App{
+  height: calc(var(--vh, 1vh) * 100);
+}`
+
+export default GlobalStyle
