@@ -85,7 +85,7 @@ const Presentation = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 85vh;
+  height: 100%;
   overflow-y: hidden;
 `;
 

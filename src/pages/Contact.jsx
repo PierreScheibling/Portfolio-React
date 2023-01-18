@@ -84,13 +84,14 @@ const Contact = () => {
 
 const ContactContainer = styled(motion.div)`
   overflow: hidden;
+  height: 85vh;
 `;
 
 const ContactDetails = styled(motion.div)`
   display: flex;
+  height: 100%;
   align-items: center;
   justify-content: center;
-  height: 85vh;
   font-size: clamp(0.8rem, 0.65rem + 0.601vw, 3rem);
   @media (max-width: 834px) {
     flex-direction: column;

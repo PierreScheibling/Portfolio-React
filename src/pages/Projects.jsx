@@ -217,13 +217,14 @@ function SimpleSlider() {
 }
 
 const ContainerProject = styled(motion.div)`
-  height: 100%;
+  height: 85vh;
   overflow-y: hidden;
 `;
 
 const Project = styled(motion.div)`
   margin-left: 10%;
   margin-top: 2%;
+  height: 100%;
 `;
 
 const ProjectsPage = styled(motion.div)`
