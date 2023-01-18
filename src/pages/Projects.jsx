@@ -220,7 +220,7 @@ const ContainerProject = styled(motion.div)`
 
 const Project = styled(motion.div)`
   margin-left: 10%;
-  margin-top: 2%;
+  margin-top: 3%;
 `;
 
 const ProjectsPage = styled(motion.div)`
@@ -278,6 +278,7 @@ const Slide = styled(motion.div)`
   @media (max-width: 834px) {
     flex-direction: column;
     justify-content: center;
+    height: clamp(60vh, 60vh, 80vh);
   }
 `;
 

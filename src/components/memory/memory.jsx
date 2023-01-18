@@ -278,6 +278,11 @@ const SkillList = styled.ul`
   align-items: center;
   gap: clamp(0.2rem, 1vw, 3rem);
   width: 100%;
+  @media (max-width: 834px) {
+    p {
+      display: none;
+    }
+  }
   @media (max-width: 667px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -312,7 +317,7 @@ const GameInfo = styled.div`
   align-items: center;
   padding: clamp(0.5rem, 1vw, 2rem);
   button {
-    padding: 0.5rem 1.4rem;
+    padding: 0.5rem 0.5rem;
     font-size: clamp(1rem, 1.5vw, 2rem);
     cursor: pointer;
     border-radius: 0.3rem;

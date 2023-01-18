@@ -39,6 +39,7 @@ const WinningModalWP = styled(motion.div)`
   border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: left;
   border-radius: 0.3rem;
+  font-size: clamp(0.7rem, 2vw, 3rem);
 `;
 
 const TitleModal = styled(motion.div)`
@@ -46,18 +47,7 @@ const TitleModal = styled(motion.div)`
   justify-content: center;
   align-items: center;
   font-family: "Signatura Monoline Script", sans-serif;
-  font-size: 6rem;
-  font-weight: lighter;
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    font-size: 4rem;
-  }
-  @media (max-width: 667px) {
-    font-size: 2rem;
-  }
-  @media (max-width: 359px) {
-  }
+  font-size: clamp(1.5rem, 10vw, 5rem);
 `;
 
 const Contact = styled(motion.div)`
@@ -72,17 +62,9 @@ const Contact = styled(motion.div)`
     color: black;
     text-decoration: none;
   }
-  @media (max-width: 1280px) {
-  }
   @media (max-width: 834px) {
     align-items: center;
     text-align: center;
-  }
-  @media (max-width: 667px) {
-    align-items: center;
-    text-align: center;
-  }
-  @media (max-width: 359px) {
   }
 `;
 const WinningModalInside = styled(motion.div)`
@@ -90,14 +72,7 @@ const WinningModalInside = styled(motion.div)`
   flex-direction: column;
   align-items: flex-start;
   width: fit-content;
-  @media (max-width: 1280px) {
-  }
   @media (max-width: 834px) {
     align-items: center;
-  }
-  @media (max-width: 667px) {
-    align-items: center;
-  }
-  @media (max-width: 359px) {
   }
 `;
