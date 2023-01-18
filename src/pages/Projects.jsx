@@ -1,36 +1,33 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 // import logos
-import API from "../img/stack/API.png";
-import cloudinary from "../img/stack/Cloudinary.png";
-import CSS from "../img/stack/CSS.png";
-import Figma from "../img/stack/Figma.png";
-import Github from "../img/stack/Github.png";
-import Heroku from "../img/stack/Heroku.png";
-import HTML from "../img/stack/HTML.png";
-import JS from "../img/stack/JS.png";
-import Postgre from "../img/stack/Postgre-SQL.png";
-import Reactlogo from "../img/stack/React.png";
-import ROR from "../img/stack/ROR.png";
-import KickAce from "../img/kickAce.png";
-import GameChangerPic from "../img/GameChanger.png";
+import API from '../img/stack/API.png'
+import cloudinary from '../img/stack/Cloudinary.png'
+import CSS from '../img/stack/CSS.png'
+import Figma from '../img/stack/Figma.png'
+import Github from '../img/stack/Github.png'
+import Heroku from '../img/stack/Heroku.png'
+import HTML from '../img/stack/HTML.png'
+import JS from '../img/stack/JS.png'
+import Postgre from '../img/stack/Postgre-SQL.png'
+import Reactlogo from '../img/stack/React.png'
+import ROR from '../img/stack/ROR.png'
+import KickAce from '../img/kickAce.png'
+import GameChangerPic from '../img/GameChanger.png'
 
 //Style
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import AppMusic from "../components/musicPlayer/AppMusic";
-import clamp from "../components/Clamp.jsx";
+import styled from 'styled-components'
+import { motion } from 'framer-motion'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import AppMusic from '../components/musicPlayer/AppMusic'
 
 //Animations
-import { pageAnimation, slideReveal } from "../Animations";
-import Wave from "../components/Wave.jsx";
+import { pageAnimation, slideReveal } from '../Animations'
+import Wave from '../components/Wave.jsx'
 
 const Projects = () => {
-  console.log(clamp(1, 4, 375, 1440));
-
   return (
     <ProjectsPage
       variant={pageAnimation}
@@ -40,8 +37,8 @@ const Projects = () => {
     >
       <SimpleSlider />
     </ProjectsPage>
-  );
-};
+  )
+}
 
 function SimpleSlider() {
   const settings = {
@@ -51,11 +48,11 @@ function SimpleSlider() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-  };
+  }
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0)
 
-  const { animate, initial, transition } = slideReveal;
+  const { animate, initial, transition } = slideReveal
 
   return (
     <ContainerProject
@@ -67,7 +64,7 @@ function SimpleSlider() {
       <Slider
         {...settings}
         afterChange={(currentSlide) => {
-          setCurrentSlide(currentSlide);
+          setCurrentSlide(currentSlide)
         }}
       >
         <Project>
@@ -99,7 +96,7 @@ function SimpleSlider() {
                 <Contact>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                   >
                     <a
                       href="https://www.youtube.com/watch?v=ptb0CURbsCw"
@@ -180,7 +177,7 @@ function SimpleSlider() {
                         <motion.button
                           whileHover={{ scale: 1.1 }}
                           transition={{
-                            type: "spring",
+                            type: 'spring',
                             stiffness: 400,
                             damping: 10,
                           }}
@@ -213,19 +210,19 @@ function SimpleSlider() {
         </Project>
       </Slider>
     </ContainerProject>
-  );
+  )
 }
 
 const ContainerProject = styled(motion.div)`
   height: 85vh;
   overflow-y: hidden;
-`;
+`
 
 const Project = styled(motion.div)`
   margin-left: 10%;
   margin-top: 2%;
   height: 100%;
-`;
+`
 
 const ProjectsPage = styled(motion.div)`
   .slick-arrow {
@@ -260,7 +257,7 @@ const ProjectsPage = styled(motion.div)`
       display: none !important;
     }
   }
-`;
+`
 
 const Slide = styled(motion.div)`
   background: rgba(255, 255, 255, 0.4);
@@ -283,7 +280,7 @@ const Slide = styled(motion.div)`
     flex-direction: column;
     justify-content: center;
   }
-`;
+`
 
 const InnerSlide = styled(motion.div)`
   display: flex;
@@ -293,7 +290,7 @@ const InnerSlide = styled(motion.div)`
     flex-direction: column;
     justify-content: center;
   }
-`;
+`
 
 const ProjectPresentation = styled(motion.div)`
   display: flex;
@@ -324,7 +321,7 @@ const ProjectPresentation = styled(motion.div)`
       display: none;
     }
   }
-`;
+`
 
 const KickAcePicture = styled(motion.div)`
   display: flex;
@@ -337,7 +334,7 @@ const KickAcePicture = styled(motion.div)`
     height: 100%;
     object-fit: contain;
   }
-`;
+`
 
 const KickAceDescription = styled(motion.div)`
   display: flex;
@@ -347,7 +344,7 @@ const KickAceDescription = styled(motion.div)`
     justify-content: center;
     align-items: center;
   }
-`;
+`
 
 const CodeLink = styled(motion.div)`
   z-index: 2;
@@ -369,7 +366,7 @@ const CodeLink = styled(motion.div)`
       margin-left: 0.5rem;
     }
   }
-`;
+`
 
 const Stack = styled(motion.div)`
   display: flex;
@@ -382,7 +379,7 @@ const Stack = styled(motion.div)`
   @media (max-width: 667px) {
     display: none;
   }
-`;
+`
 
 const VisualGame = styled(motion.div)`
   display: flex;
@@ -396,7 +393,7 @@ const VisualGame = styled(motion.div)`
     height: 100%;
     object-fit: contain;
   }
-`;
+`
 
 const GamePresentation = styled(motion.div)`
   display: flex;
@@ -406,7 +403,7 @@ const GamePresentation = styled(motion.div)`
     justify-content: center;
     align-items: center;
   }
-`;
+`
 
 const Contact = styled(motion.div)`
   display: flex;
@@ -423,6 +420,6 @@ const Contact = styled(motion.div)`
     color: white;
     border: none;
   }
-`;
+`
 
-export default Projects;
+export default Projects
