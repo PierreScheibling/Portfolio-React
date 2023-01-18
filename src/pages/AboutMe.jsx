@@ -102,7 +102,7 @@ const Apropos = styled(motion.div)`
   p {
     font-size: clamp(0.5rem, 1vw, 1.5rem);
     text-align: justify;
-    line-height: clamp(0.5rem, 1.7vw, 2.5rem);
+    line-height: clamp(0.7rem, 1.7vw, 2.5rem);
     margin-bottom: clamp(0.5rem, 1vw, 2.5rem);
   }
 `;
@@ -142,12 +142,12 @@ const XpLine = styled(motion.div)`
   justify-content: space-between;
   width: 100%;
   .year {
-    width: 20%;
+    width: 30%;
   }
   .xp {
     display: flex;
     justify-content: flex-start;
-    width: 80%;
+    width: 70%;
   }
 `;
 
