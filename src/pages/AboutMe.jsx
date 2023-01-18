@@ -18,7 +18,7 @@ const AboutMe = () => {
   };
 
   const bio1 =
-    "Merci d'être venus jusque là, c'est peut être que vous voulez en savoir plus sur moi ? \n Après 6 ans dans le domaine du recrutement à échanger avec des profils de tous horizons, j'ai beaucoup appris sur les fonctionnements des organisations, mais surtout sur les personnalités des centaines de candidats que j'ai pu rencontrer. Toujours en essayant de comprendre et trouver la bonne place pour chaque personne. \n C'est cette curiosité qui m'a progressivement amenée à me reconvertir. J'ai petit à petit appris à coder sur mon temps libre pour ensuite m'y consacrer à 100% avec la formation de Développeur Web du Wagon Bordeaux. \n Depuis, je travaille en freelance en tant que développeur avec une sensibilité particulière pour l'UX/UI. \n Si vous avez des besoins en création de site et/ou web design (UX/UI), n’hésitez pas à me contacter pour que l’on en discute.";
+    "Merci d'être venu jusque là, c'est peut être que vous voulez en savoir plus sur moi ? \n Après 6 ans dans le domaine du recrutement à échanger avec des profils de tous horizons, j'ai beaucoup appris sur les fonctionnements des organisations, mais surtout sur les personnalités des centaines de candidats que j'ai pu rencontrer. Toujours en essayant de comprendre et trouver la bonne place pour chaque personne. \n C'est cette curiosité qui m'a progressivement amené à me reconvertir. J'ai petit à petit appris à coder sur mon temps libre pour ensuite m'y consacrer à 100% avec la formation de Développeur Web du Wagon Bordeaux. \n Depuis, je travaille en freelance en tant que développeur avec une sensibilité particulière pour l'UX/UI. \n Si vous avez des besoins en création de site et/ou web design (UX/UI), n’hésitez pas à me contacter pour que l’on en discute.";
 
   const bio = bio1.split("\n").map((i) => {
     return <p>{i}</p>;
@@ -94,68 +94,27 @@ const Apropos = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 85vh;
-  margin: 0rem 1.8rem;
+  height: 100%;
   h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1rem, 1.5vw, 3rem);
+    padding-bottom: clamp(1rem, 1vw, 3rem);
   }
   p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  @media (max-width: 1727px) {
-    h2 {
-      font-size: 1.5rem;
-    }
-    p {
-      font-size: 0.7rem;
-      margin-bottom: 0.8rem;
-    }
-  }
-
-  @media (max-width: 834px) {
-    margin: 0;
-    p {
-      font-size: 0.85rem;
-      margin-bottom: 1rem;
-    }
-  }
-  @media (max-width: 667px) {
-    margin: 0;
-    p {
-      font-size: 0.75rem;
-      line-height: 1.5rem;
-      margin-bottom: 2rem;
-    }
-  }
-  @media (max-width: 359px) {
-    margin: 0;
-    p {
-      font-size: 0.7rem;
-      line-height: 1.5rem;
-      margin-bottom: 1rem;
-    }
+    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    text-align: justify;
+    line-height: clamp(0.5rem, 1.7vw, 2.5rem);
+    margin-bottom: clamp(0.5rem, 1vw, 2.5rem);
   }
 `;
 
 const Description = styled(motion.div)`
   display: flex;
-  height: 70vh;
-  margin: 0rem 1.5rem;
-  @media (max-width: 1280px) {
-  }
+  margin-right: 3rem;
   @media (max-width: 834px) {
     flex-direction: column;
-    font-size: 1rem;
-  }
-  @media (max-width: 667px) {
-    flex-direction: column;
-    font-size: 0.8rem;
-  }
-  @media (max-width: 359px) {
-    flex-direction: column;
-    font-size: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
   }
 `;
 
@@ -164,46 +123,14 @@ const Curriculum = styled(motion.div)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 70%;
-  text-align: justify;
-  margin: 1rem 6rem 3rem 5rem;
-  @media (max-width: 1280px) {
-    margin: 0rem 3rem 1rem 2rem;
-  }
-  @media (max-width: 834px) {
-    width: 90%;
-    justify-content: center;
-    margin: 1rem 3rem 1rem 3rem;
-  }
-  @media (max-width: 667px) {
-    width: 90%;
-    justify-content: center;
-    margin: 1rem;
-  }
-  @media (max-width: 359px) {
-    width: 90%;
-    justify-content: center;
-    margin: 1rem;
-  }
+  width: 80%;
 `;
 
-const Bio = styled(motion.div)`
-  h2 {
-    padding: 1rem 0rem;
-  }
-`;
+const Bio = styled(motion.div)``;
 
 const Experience = styled(motion.div)`
   width: 100%;
-  h2 {
-    padding: 1rem 0rem;
-  }
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-  }
-  @media (max-width: 667px) {
-  }
+  padding-top: clamp(1rem, 1.5vw, 2.5rem);
   @media (max-width: 359px) {
     display: none;
   }
@@ -214,7 +141,6 @@ const XpLine = styled(motion.div)`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 1.5rem 0rem;
   .year {
     width: 20%;
   }
@@ -222,33 +148,6 @@ const XpLine = styled(motion.div)`
     display: flex;
     justify-content: flex-start;
     width: 80%;
-  }
-  @media (max-width: 1727px) {
-    margin: 0.5rem 0rem;
-  }
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    align-items: flex-start;
-    margin: 1rem 0rem;
-    .year {
-      width: 20%;
-    }
-    .xp {
-      width: 80%;
-    }
-  }
-  @media (max-width: 667px) {
-    align-items: flex-start;
-    margin: 0rem 0rem;
-    .year {
-      width: 15%;
-    }
-    .xp {
-      width: 65%;
-    }
-  }
-  @media (max-width: 359px) {
   }
 `;
 
@@ -258,29 +157,10 @@ const Picture = styled(motion.div)`
   align-items: center;
   width: 35%;
   img {
-    width: 80%;
+    width: clamp(7rem, 25vw, 30rem);
+    object-fit: contain;
     border-bottom: 2px solid black;
     border-bottom-width: thin;
-  }
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    width: 100%;
-    img {
-      width: 30%;
-    }
-  }
-  @media (max-width: 667px) {
-    width: 100%;
-    img {
-      width: 30%;
-    }
-  }
-  @media (max-width: 359px) {
-    width: 100%;
-    img {
-      width: 30%;
-    }
   }
 `;
 

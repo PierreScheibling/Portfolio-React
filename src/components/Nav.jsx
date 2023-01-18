@@ -14,7 +14,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "33%" : "0%" }}
+            animate={{ width: pathname === "/" ? "100%" : "0%" }}
           />
         </li>
         <li>
@@ -22,7 +22,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: pathname === "/projects" ? "33%" : "0%" }}
+            animate={{ width: pathname === "/projects" ? "100%" : "0%" }}
           />
         </li>
         <li>
@@ -30,7 +30,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: pathname === "/aboutme" ? "33%" : "0%" }}
+            animate={{ width: pathname === "/aboutme" ? "100%" : "0%" }}
           />
         </li>
         <li>
@@ -38,7 +38,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: pathname === "/competencies" ? "33%" : "0%" }}
+            animate={{ width: pathname === "/competencies" ? "100%" : "0%" }}
           />
         </li>
         <li>
@@ -46,7 +46,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initials={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "33%" : "0%" }}
+            animate={{ width: pathname === "/contact" ? "100%" : "0%" }}
           />
         </li>
       </ul>
@@ -55,10 +55,13 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
-  max-height: 8vh;
+  height: 15vh;
   position: sticky;
   top: 0;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   a {
     color: black;
     text-decoration: none;
@@ -67,7 +70,7 @@ const StyledNav = styled.nav`
     display: flex;
     list-style: none;
     justify-content: space-around;
-    padding: 3rem 1rem;
+    width: 100%;
   }
 
   li {
@@ -75,37 +78,8 @@ const StyledNav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20%;
-    font-size: 1rem;
-  }
-  @media (max-width: 1727px) {
-    li {
-      font-size: 0.8rem;
-    }
-  }
-
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    position: relative;
-  }
-  @media (max-width: 667px) {
-    position: relative;
-    ul {
-      padding: 2rem 0rem;
-    }
-    li {
-      font-size: 0.7rem;
-    }
-  }
-  @media (max-width: 359px) {
-    position: relative;
-    ul {
-      padding: 1rem 0rem;
-    }
-    li {
-      font-size: 0.5rem;
-    }
+    width: fit-content;
+    font-size: clamp(0.8rem, 0.73rem + 0.3vw, 1rem);
   }
 `;
 
@@ -115,7 +89,6 @@ const Line = styled(motion.div)`
   width: 0%;
   position: absolute;
   bottom: -80%;
-  left: 33%;
 `;
 
 export default Nav;

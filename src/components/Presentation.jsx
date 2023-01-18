@@ -14,18 +14,19 @@ import Github from "../img/stack/Github.png";
 
 const PresentationSection = () => {
   const picture = {
-    hidden: { scale: 1.1 },
+    hidden: { scale: 1.3 },
     show: { scale: 1, transition: { duration: 1, ease: "easeOut", delay: 1 } },
   };
 
   return (
     <Presentation
+      className="presentation"
       exit="exit"
       variants={pageAnimation}
       initial="hidden"
       animate="show"
     >
-      <Greetings>
+      <Greetings className="greeting">
         <Introduction>
           <div className="hide">
             <motion.h2 variants={titleAnim}>Hello, je suis</motion.h2>
@@ -47,7 +48,9 @@ const PresentationSection = () => {
         </Image>
         <Welcome>
           <div className="hide">
-            <motion.h2 variants={postAnim}>Developpeur Front-End</motion.h2>
+            <motion.h2 className="titleh2" variants={postAnim}>
+              Developpeur Front-End
+            </motion.h2>
           </div>
         </Welcome>
       </Greetings>
@@ -82,89 +85,39 @@ const Presentation = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 92vh;
+  min-height: 85vh;
 `;
 
 const Greetings = styled(motion.div)`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  /* height: 80%; */
-  @media (max-width: 1280px) {
-    font-size: 0.9rem;
+  justify-content: space-around;
+  width: 100%;
+  gap: 1rem;
+  h2 {
+    font-size: clamp(0.8rem, 0.65rem + 0.601vw, 1.2rem);
   }
-  @media (max-width: 834px) {
+
+  @media (max-width: 768px) {
     flex-direction: column;
-    padding: 2rem 0rem;
-    font-size: 1rem;
-  }
-  @media (max-width: 667px) {
-    flex-direction: column;
-    padding: 2rem 0rem;
-    font-size: 1rem;
-  }
-  @media (max-width: 359px) {
-    flex-direction: column;
-    padding: 0rem 0rem;
-    font-size: 0.7rem;
   }
 `;
 
 const Introduction = styled(motion.div)`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   width: 100%;
-  margin-top: 3rem;
   h2 {
-    margin-left: 5rem;
+    /* font-family: 'Signatura Monoline Script', sans-serif; */
+    font-size: clamp(0.8rem, 0.65rem + 0.601vw, 2rem);
   }
   span {
     font-family: "Signatura Monoline Script", sans-serif;
-    font-size: 8rem;
+    font-size: clamp(3rem, 0.59rem + 6.01vw, 6rem);
     font-weight: lighter;
     color: #e2a48e;
-  }
-  @media (max-width: 1280px) {
-    h2 {
-      margin-left: 4rem;
-    }
-    span {
-      font-size: 5rem;
-    }
-  }
-  @media (max-width: 834px) {
-    flex-direction: row;
-    margin-top: 0rem;
-    h2 {
-      margin-left: 2rem;
-    }
-    span {
-      font-size: 6rem;
-    }
-  }
-  @media (max-width: 667px) {
-    flex-direction: row;
-    margin-top: 0rem;
-    h2 {
-      margin-left: 1rem;
-    }
-    span {
-      font-size: 3rem;
-    }
-  }
-  @media (max-width: 359px) {
-    flex-direction: row;
-    margin-top: 0rem;
-    h2 {
-      margin-left: 1rem;
-    }
-    span {
-      font-size: 3rem;
-    }
   }
 `;
 
@@ -172,33 +125,11 @@ const Image = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+
   img {
-    width: 60%;
-  }
-  @media (max-width: 1600px) {
-    img {
-      width: 60%;
-    }
-  }
-  @media (max-width: 1280px) {
-    img {
-      width: 55%;
-    }
-  }
-  @media (max-width: 834px) {
-    img {
-      width: 50%;
-    }
-  }
-  @media (max-width: 667px) {
-    img {
-      width: 60%;
-    }
-  }
-  @media (max-width: 359px) {
-    img {
-      width: 50%;
-    }
+    width: clamp(14rem, 30vw, 23rem);
+    height: 100%;
+    object-fit: contain;
   }
 `;
 
@@ -209,30 +140,7 @@ const Welcome = styled(motion.div)`
   align-items: center;
   width: 100%;
   h2 {
-    margin-right: 4rem;
-  }
-  @media (max-width: 1280px) {
-    h2 {
-      margin-right: 2rem;
-    }
-  }
-  @media (max-width: 834px) {
-    h2 {
-      margin-top: 1.5rem;
-      margin-right: 0rem;
-    }
-  }
-  @media (max-width: 667px) {
-    h2 {
-      margin-top: 2rem;
-      margin-right: 0rem;
-    }
-  }
-  @media (max-width: 359px) {
-    h2 {
-      margin-top: 1rem;
-      margin-right: 0rem;
-    }
+    font-size: clamp(0.8rem, 0.65rem + 0.601vw, 1.2rem);
   }
 `;
 
@@ -241,54 +149,32 @@ const Contact = styled(motion.div)`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 5rem;
+  margin-top: 3rem;
   button {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
+    padding: 0.7rem 1.6rem;
+    font-size: clamp(0.8rem, 0.65rem + 0.601vw, 3rem);
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 0.3rem;
     background: #e2a48e;
     color: white;
     border: none;
-  }
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-    height: 7rem;
-    button {
-      padding: 1rem 1.5rem;
-      font-size: 1.5rem;
-    }
-  }
-  @media (max-width: 667px) {
-    height: 4rem;
-    button {
-      padding: 1rem 1.5rem;
-      font-size: 1rem;
-    }
-  }
-  @media (max-width: 359px) {
-    height: 4rem;
-    button {
-      padding: 0.8rem 1.2rem;
-      font-size: 0.8rem;
-    }
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   }
 `;
 
 const CodeLink = styled(motion.div)`
   a {
     position: absolute;
-    bottom: 0.5rem;
-    left: 2rem;
+    bottom: 2%;
+    left: 2%;
     display: flex;
     align-items: center;
     text-decoration: none;
     img {
-      width: 4%;
+      width: clamp(1rem, 3.5vw, 3rem);
     }
     p {
-      font-size: 0.7rem;
+      font-size: clamp(0.8rem, 0.55rem + 0.601vw, 1.2rem);
       margin-left: 0.5rem;
     }
   }

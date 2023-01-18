@@ -39,7 +39,7 @@ export const Skills = ({ skill }) => {
 //_______________________________________________________________________________
 const ImageWrapper = styled(motion.div)`
   position: relative;
-  width: clamp(2rem, 4vw, 3rem);
+  width: clamp(2rem, 3vw, 3rem);
   height: auto;
   .skillImg {
     width: 100%;
@@ -58,17 +58,11 @@ const Competence = styled(motion.div)`
 `;
 
 const SkillName = styled(motion.p)`
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.5vw, 2rem);
   text-align: center;
   ${({ matched }) => matched && "font-weight: bold; color: #7abb7a"}
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-  }
   @media (max-width: 667px) {
     display: none;
-  }
-  @media (max-width: 359px) {
   }
 `;
 
@@ -76,16 +70,10 @@ const Checked = styled(motion.img)`
   position: absolute;
   bottom: 0rem;
   left: 3rem;
-  width: 25px;
-  height: 25px;
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-  }
+  width: clamp(1rem, 1.5vw, 2rem);
+  height: clamp(1rem, 1.5vw, 2rem);
   @media (max-width: 667px) {
     bottom: -0.2rem;
     left: 1.5rem;
-  }
-  @media (max-width: 359px) {
   }
 `;

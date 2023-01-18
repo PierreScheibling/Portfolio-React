@@ -249,20 +249,12 @@ export const Memory = () => {
 //_______________________________________________________________________________
 const GlobalCompetencies = styled(motion.div)`
   display: flex;
-  min-height: 92vh;
+  height: 85vh;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-
-  @media (max-width: 1280px) {
-  }
   @media (max-width: 834px) {
     flex-direction: column;
-  }
-  @media (max-width: 667px) {
-    flex-direction: column;
-  }
-  @media (max-width: 359px) {
   }
 `;
 
@@ -284,12 +276,8 @@ const SkillList = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.2rem;
+  gap: clamp(0.2rem, 1vw, 3rem);
   width: 100%;
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-  }
   @media (max-width: 667px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -302,13 +290,7 @@ const SkillList = styled.ul`
 
 const SkillsSection = styled.div`
   h2 {
-    font-size: clamp(0.8rem, 2vw, 1.2rem);
-  }
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
-  }
-  @media (max-width: 667px) {
+    font-size: clamp(1rem, 1.5vw, 2rem);
   }
   @media (max-width: 359px) {
     display: none;
@@ -328,9 +310,10 @@ const GameInfo = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: clamp(0.5rem, 1vw, 2rem);
   button {
     padding: 0.5rem 1.4rem;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.5vw, 2rem);
     cursor: pointer;
     border-radius: 0.3rem;
     background: #e2a48e;
@@ -342,27 +325,12 @@ const GameInfo = styled.div`
     align-items: center;
     gap: 0.5rem;
     h2 {
-      font-size: clamp(0.8rem, 2vw, 1.2rem);
+      font-size: clamp(1rem, 1.5vw, 2rem);
     }
     span {
       font-family: "Signatura Monoline Script", sans-serif;
-      font-size: 2rem;
+      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
       font-weight: lighter;
-    }
-
-    @media (max-width: 1280px) {
-    }
-    @media (max-width: 834px) {
-      padding-bottom: 1rem;
-    }
-    @media (max-width: 667px) {
-      padding-bottom: 1rem;
-      span {
-        font-size: 1.5rem;
-      }
-    }
-    @media (max-width: 359px) {
-      padding-bottom: 1rem;
     }
   }
 `;

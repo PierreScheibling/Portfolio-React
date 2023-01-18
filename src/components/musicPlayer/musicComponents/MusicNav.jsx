@@ -25,20 +25,16 @@ const MusicNav = ({ libraryStatus, setLibraryStatus }) => {
 
 const MusicLibraryTitle = styled(motion.div)`
   display: flex;
+  flex-direction: column;
+  width: 70%;
   position: relative;
   h1 {
-    margin: 3rem;
-  }
-  @media (max-width: 1280px) {
-  }
-  @media (max-width: 834px) {
+    display: flex;
+    justify-content: center;
+    font-size: clamp(1rem, 2.5vw, 4rem);
+    margin-bottom: clamp(1rem, 2vw, 1rem);
   }
   @media (max-width: 667px) {
-    h1 {
-      display: none;
-    }
-  }
-  @media (max-width: 359px) {
     h1 {
       display: none;
     }
@@ -46,47 +42,18 @@ const MusicLibraryTitle = styled(motion.div)`
 `;
 
 const MusicLibraryButton = styled(motion.div)`
+  position: absolute;
+  right: 5%;
+  bottom: -30%;
   button {
-    position: absolute;
-    right: -10vh;
-    bottom: 7vh;
-    padding: 1rem;
-    font-size: 1.3rem;
+    margin: 1rem;
+    padding: clamp(0.7rem, 1vw, 1.5rem);
+    font-size: clamp(0.7rem, 1.6vw, 3rem);
     cursor: pointer;
     border-radius: 50%;
     background: #e2a48e;
     color: white;
     border: none;
-  }
-  @media (max-width: 1280px) {
-    button {
-      right: -20vh;
-      bottom: 2vh;
-    }
-  }
-  @media (max-width: 834px) {
-    button {
-      right: -4vh;
-      bottom: 5vh;
-      padding: 1.5rem;
-      font-size: 1.3rem;
-    }
-  }
-  @media (max-width: 667px) {
-    button {
-      right: -12vh;
-      bottom: 3vh;
-      padding: 1rem;
-      font-size: 1rem;
-    }
-  }
-  @media (max-width: 359px) {
-    button {
-      right: -18vh;
-      bottom: -2vh;
-      padding: 0.8rem;
-      font-size: 0.7rem;
-    }
   }
 `;
 

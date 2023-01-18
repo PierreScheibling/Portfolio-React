@@ -49,8 +49,8 @@ export const Card = ({ card, ...props }) => {
 //_______________________________________________________________________________
 const CardItem = styled(motion.li)`
   opacity: 0;
-  width: clamp(3rem, 10vw, 6rem);
-  height: clamp(3rem, 10vw, 6rem);
+  width: clamp(3rem, 8vw, 9rem);
+  height: clamp(3rem, 8vw, 9rem);
   background-color: white;
   display: flex;
   justify-content: center;
@@ -67,7 +67,7 @@ const CardItem = styled(motion.li)`
       opacity: 0;
       width: 100%;
       height: 100%;
-      padding: 0.3rem;
+      padding: clamp(0.2rem, 0.5vw, 1rem);
     }
   }
 
@@ -76,7 +76,7 @@ const CardItem = styled(motion.li)`
       opacity: 0.05;
       width: 100%;
       height: 100%;
-      padding: 0.5rem;
+      padding: clamp(0.1rem, 0.5vw, 1rem);
     }
   }
 
