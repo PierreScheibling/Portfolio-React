@@ -221,7 +221,6 @@ const ContainerProject = styled(motion.div)`
 const Project = styled(motion.div)`
   margin-left: 10%;
   margin-top: 2%;
-  height: 100%;
 `;
 
 const ProjectsPage = styled(motion.div)`
@@ -285,7 +284,6 @@ const Slide = styled(motion.div)`
 const InnerSlide = styled(motion.div)`
   display: flex;
   width: 100%;
-  height: 100%;
   @media (max-width: 834px) {
     flex-direction: column;
     justify-content: center;
@@ -297,7 +295,6 @@ const ProjectPresentation = styled(motion.div)`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
   z-index: 2;
   h1 {
     font-size: clamp(1rem, 3vw, 4rem);

@@ -250,7 +250,7 @@ export const Memory = () => {
 const GlobalCompetencies = styled(motion.div)`
   display: flex;
   height: 85%;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
   @media (max-width: 834px) {
