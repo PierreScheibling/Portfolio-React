@@ -216,9 +216,7 @@ function SimpleSlider() {
   );
 }
 
-const ContainerProject = styled(motion.div)`
-  height: 85vh;
-`;
+const ContainerProject = styled(motion.div)``;
 
 const Project = styled(motion.div)`
   margin-left: 10%;

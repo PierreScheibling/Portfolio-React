@@ -85,7 +85,6 @@ const Presentation = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 85vh;
 `;
 
 const Greetings = styled(motion.div)`
