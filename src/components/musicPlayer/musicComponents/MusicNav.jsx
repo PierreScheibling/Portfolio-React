@@ -44,7 +44,7 @@ const MusicLibraryTitle = styled(motion.div)`
 const MusicLibraryButton = styled(motion.div)`
   position: absolute;
   right: 5%;
-  bottom: 0;
+  bottom: -30%;
   button {
     margin: 1rem;
     padding: clamp(0.7rem, 1vw, 1.5rem);

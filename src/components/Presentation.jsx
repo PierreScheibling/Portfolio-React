@@ -111,7 +111,7 @@ const Introduction = styled(motion.div)`
   width: 100%;
   h2 {
     /* font-family: 'Signatura Monoline Script', sans-serif; */
-    font-size: clamp(0.8rem, 0.65rem + 0.601vw, 1.2rem);
+    font-size: clamp(0.8rem, 0.65rem + 0.601vw, 2rem);
   }
   span {
     font-family: "Signatura Monoline Script", sans-serif;
@@ -127,7 +127,7 @@ const Image = styled(motion.div)`
   justify-content: center;
 
   img {
-    width: clamp(14rem, 30vw, 20rem);
+    width: clamp(14rem, 30vw, 23rem);
     height: 100%;
     object-fit: contain;
   }
@@ -152,7 +152,7 @@ const Contact = styled(motion.div)`
   margin-top: 3rem;
   button {
     padding: 0.7rem 1.6rem;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 0.65rem + 0.601vw, 3rem);
     cursor: pointer;
     border-radius: 0.3rem;
     background: #e2a48e;
@@ -165,16 +165,16 @@ const Contact = styled(motion.div)`
 const CodeLink = styled(motion.div)`
   a {
     position: absolute;
-    bottom: 0.5rem;
-    left: 2rem;
+    bottom: 2%;
+    left: 2%;
     display: flex;
     align-items: center;
     text-decoration: none;
     img {
-      width: 4%;
+      width: clamp(1rem, 3.5vw, 3rem);
     }
     p {
-      font-size: 0.7rem;
+      font-size: clamp(0.8rem, 0.55rem + 0.601vw, 1.2rem);
       margin-left: 0.5rem;
     }
   }

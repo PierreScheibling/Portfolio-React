@@ -216,7 +216,9 @@ function SimpleSlider() {
   );
 }
 
-const ContainerProject = styled(motion.div)``;
+const ContainerProject = styled(motion.div)`
+  height: 85vh;
+`;
 
 const Project = styled(motion.div)`
   margin-left: 10%;
@@ -341,6 +343,7 @@ const KickAceDescription = styled(motion.div)`
 `;
 
 const CodeLink = styled(motion.div)`
+  z-index: 2;
   a {
     position: absolute;
     bottom: 1rem;
