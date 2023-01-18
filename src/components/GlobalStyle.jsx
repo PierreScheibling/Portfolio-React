@@ -14,8 +14,6 @@ html{
 body {
   background: #F4FFFD;
   font-family: "thorngumbald", sans-serif;
-  overflow-y: scroll;
-  height: 100vh;
   h2 {
     color: black;
   }
