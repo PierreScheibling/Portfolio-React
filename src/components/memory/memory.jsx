@@ -251,7 +251,7 @@ const GlobalCompetencies = styled(motion.div)`
   display: flex;
   height: 85vh;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
   @media (max-width: 834px) {
     flex-direction: column;

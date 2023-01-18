@@ -268,6 +268,7 @@ const Slide = styled(motion.div)`
   width: 80%;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 3rem;
   position: relative;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);

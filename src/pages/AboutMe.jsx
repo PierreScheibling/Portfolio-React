@@ -92,7 +92,7 @@ const AboutMe = () => {
 const Apropos = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 85vh;
   h2 {
