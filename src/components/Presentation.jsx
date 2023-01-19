@@ -83,7 +83,7 @@ const Presentation = styled(motion.div)`
   color: black;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   height: 100%;
   overflow-y: hidden;
