@@ -227,10 +227,9 @@ const ProjectsPage = styled(motion.div)`
   .slick-arrow {
     z-index: -2;
     margin-top: 0;
-    margin-right: clamp(2rem, 12vh, 7rem);
+    margin-right: clamp(2rem, 10vh, 6rem);
     margin-bottom: 0;
-    margin-left: clamp(2rem, 8vh, 7rem);
-    /* margin: 0rem 7rem 0rem 5rem; */
+    margin-left: clamp(2rem, 5vh, 7rem);
     z-index: 1 !important;
   }
   button.slick-next:before {
