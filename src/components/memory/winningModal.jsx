@@ -37,9 +37,9 @@ const WinningModalWP = styled(motion.div)`
   backdrop-filter: blur(9.5px);
   -webkit-backdrop-filter: blur(9.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  text-align: left;
+  text-align: center;
   border-radius: 0.3rem;
-  font-size: clamp(0.7rem, 2vw, 3rem);
+  font-size: clamp(0.7rem, 1.5vw, 3rem);
 `;
 
 const TitleModal = styled(motion.div)`
@@ -47,15 +47,15 @@ const TitleModal = styled(motion.div)`
   justify-content: center;
   align-items: center;
   font-family: "Signatura Monoline Script", sans-serif;
-  font-size: clamp(1.5rem, 10vw, 5rem);
+  font-size: clamp(1.2rem, 7vw, 4rem);
 `;
 
 const Contact = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
 
   a {
     margin-top: 1rem;
@@ -70,9 +70,6 @@ const Contact = styled(motion.div)`
 const WinningModalInside = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: fit-content;
-  @media (max-width: 834px) {
-    align-items: center;
-  }
 `;

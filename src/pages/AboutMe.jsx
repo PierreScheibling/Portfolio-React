@@ -4,9 +4,7 @@ import costard from "../img/costard.png";
 import styled from "styled-components";
 // Animations
 import { motion } from "framer-motion";
-import { pageAnimation } from "../Animations";
-import { titleBioAnim } from "../Animations";
-import { postBioAnim } from "../Animations";
+import { pageAnimation, titleBioAnim, postBioAnim } from "../utils/Animations";
 
 const AboutMe = () => {
   const picture = {

@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { pageContactAnimation, sliderContainer, slider } from "../Animations";
+import {
+  pageContactAnimation,
+  sliderContainer,
+  slider,
+} from "../utils/Animations";
 import coffee from "../img/coffee.png";
 import mail from "../img/Mail.png";
 import linkedin from "../img/Linkedin.png";
@@ -37,43 +41,64 @@ const Contact = () => {
           )}
         </Picture>
         <Links>
-          <LinksDetails
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
+          <LinksDetails>
             <a
               href="https://www.linkedin.com/in/pierrescheibling"
               target="_blank"
               rel="linkedin"
             >
-              <img src={linkedin} alt="Linkedin" />
-              <h2>Linkedin</h2>
+              <img
+                src={linkedin}
+                alt="Linkedin"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              />
+              <h2
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                Linkedin
+              </h2>
             </a>
           </LinksDetails>
-          <LinksDetails
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
+          <LinksDetails>
             <a
               href="https://github.com/PierreScheibling"
               target="_blank"
               rel="Github"
             >
-              <img src={github} alt="Github" />
-              <h2>Github</h2>
+              <img
+                src={github}
+                alt="Github"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              />
+              <h2
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                Github
+              </h2>
             </a>
           </LinksDetails>
-          <LinksDetails
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
+          <LinksDetails>
             <a
               href="mailto:pierre@scheibling.fr"
               target="_blank"
               rel="pierre@scheibling.fr"
             >
-              <img src={mail} alt="Mail" />
-              <h2>pierre@scheibling.fr</h2>
+              <img
+                src={mail}
+                alt="Mail"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              />
+              <h2
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                pierre@scheibling.fr
+              </h2>
             </a>
           </LinksDetails>
         </Links>
@@ -92,7 +117,7 @@ const ContactDetails = styled(motion.div)`
   height: 100%;
   align-items: center;
   justify-content: center;
-  font-size: clamp(0.8rem, 0.65rem + 0.601vw, 3rem);
+  font-size: clamp(0.5rem, 1.5vh, 2rem);
   @media (max-width: 834px) {
     flex-direction: column;
   }
@@ -140,16 +165,16 @@ const Frame1 = styled(motion.div)`
   top: 0;
   width: 100%;
   height: 100vh;
-  background: #a3d3ff;
+  background: #cbe5fe;
 `;
 const Frame2 = styled(Frame1)`
-  background: #fdffa1;
+  background: #feffd0;
 `;
 const Frame3 = styled(Frame1)`
-  background: #fd9191;
+  background: #fdc6c6;
 `;
 const Frame4 = styled(Frame1)`
-  background: #e2a48e;
+  background: #ffcdba;
 `;
 
 export default Contact;

@@ -5,19 +5,12 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 // Animations
 import { motion } from "framer-motion";
-import { pageAnimation } from "../Animations";
-import { titleAnim } from "../Animations";
-import { postAnim } from "../Animations";
+import { pageAnimation, titleAnim, postAnim } from "../utils/Animations";
 
 //import image
 import Github from "../img/stack/Github.png";
 
 const PresentationSection = () => {
-  // const picture = {
-  //   hidden: { scale: 1.1 },
-  //   show: { scale: 1, transition: { duration: 1, ease: "easeOut", delay: 2 } },
-  // };
-
   return (
     <Presentation
       className="presentation"
@@ -38,13 +31,7 @@ const PresentationSection = () => {
           </div>
         </Introduction>
         <Image>
-          <motion.img
-            // variants={picture}
-            // initial="hidden"
-            // animate="show"
-            src={moi}
-            alt="photo-id"
-          />
+          <motion.img src={moi} alt="photo-id" />
         </Image>
         <Welcome>
           <div className="hide">
@@ -64,7 +51,7 @@ const PresentationSection = () => {
           </motion.button>
         </Link>
       </Contact>
-      <CodeLink>
+      <CodeLink variants={titleAnim}>
         <a
           href="https://github.com/PierreScheibling/Portfolio-React"
           target="_blank"
@@ -111,7 +98,6 @@ const Introduction = styled(motion.div)`
   gap: 1rem;
   width: 100%;
   h2 {
-    /* font-family: 'Signatura Monoline Script', sans-serif; */
     font-size: clamp(0.8rem, 0.65rem + 0.601vw, 2rem);
   }
   span {

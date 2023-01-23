@@ -19,7 +19,7 @@ import { Skills } from "./skillList";
 import { WinningModal } from "./winningModal";
 
 // Import animations
-import { pageAnimation } from "../../Animations";
+import { pageAnimation } from "../../utils/Animations";
 
 // Import SCSS
 import "./animations.scss";
@@ -315,13 +315,14 @@ const GameInfo = styled.div`
   align-items: center;
   padding: clamp(0.5rem, 1vw, 2rem);
   button {
-    padding: 0.5rem 0.5rem;
-    font-size: clamp(1rem, 1.5vw, 2rem);
+    padding: 0.7rem 1.6rem;
+    font-size: clamp(0.8rem, 0.65rem + 0.601vw, 3rem);
     cursor: pointer;
     border-radius: 0.3rem;
     background: #e2a48e;
     color: white;
     border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   }
   div {
     display: flex;

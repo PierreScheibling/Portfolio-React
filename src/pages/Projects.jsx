@@ -24,7 +24,7 @@ import "slick-carousel/slick/slick-theme.css";
 import AppMusic from "../components/musicPlayer/AppMusic";
 
 //Animations
-import { pageAnimation, slideReveal } from "../Animations";
+import { pageAnimation, slideReveal } from "../utils/Animations";
 import Wave from "../components/Wave.jsx";
 
 const Projects = () => {
@@ -268,7 +268,6 @@ const Slide = styled(motion.div)`
   position: relative;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   margin-bottom: 2.5rem;
-  position: relative;
   a:visited {
     text-decoration: none;
     color: white;
@@ -407,15 +406,16 @@ const Contact = styled(motion.div)`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: clamp(0.2rem, 3vw, 6rem);
+  margin-top: 1rem;
   button {
-    font-size: clamp(1rem, 1.5vw, 4rem);
-    padding: clamp(1rem, 2vw, 1rem);
+    padding: 0.7rem 1.6rem;
+    font-size: clamp(0.8rem, 0.65rem + 0.601vw, 3rem);
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 0.3rem;
     background: #e2a48e;
     color: white;
     border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   }
 `;
 

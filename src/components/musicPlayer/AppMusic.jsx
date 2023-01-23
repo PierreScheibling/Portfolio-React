@@ -48,11 +48,12 @@ function App() {
     <GlobalMusicPlayer
       className={`MusicApp ${libraryStatus ? "library-active" : ""}`}
     >
-      <MusicNav
+      <MusicNav />
+      <MusicSong
+        currentSong={currentSong}
         libraryStatus={libraryStatus}
         setLibraryStatus={setLibraryStatus}
       />
-      <MusicSong currentSong={currentSong} />
       <MusicPlayer
         audioRef={audioRef}
         setSongInfo={setSongInfo}

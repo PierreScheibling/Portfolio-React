@@ -89,6 +89,7 @@ const Line = styled(motion.div)`
   width: 0%;
   position: absolute;
   bottom: -80%;
+  border-radius: 10px;
 `;
 
 export default Nav;
