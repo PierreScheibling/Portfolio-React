@@ -12,8 +12,14 @@ import JS from "../img/stack/JS.png";
 import Postgre from "../img/stack/Postgre-SQL.png";
 import Reactlogo from "../img/stack/React.png";
 import ROR from "../img/stack/ROR.png";
+import NextJS from "../img/stack/Next.png";
+import Sanity from "../img/stack/Sanity.png";
+import Netlify from "../img/stack/Netlify.png";
+import Shopify from "../img/stack/shopify.png";
 import KickAce from "../img/kickAce.png";
 import GameChangerPic from "../img/GameChanger.png";
+import AdeleCarlesPic from "../img/carles-avocat.png";
+import MatchyMatchyPic from "../img/matchy-matchy.png";
 
 //Style
 import styled from "styled-components";
@@ -70,28 +76,20 @@ function SimpleSlider() {
         <Project>
           <Slide>
             <ProjectPresentation>
-              <KickAcePicture>
-                <img src={KickAce} alt="kickace" />
-              </KickAcePicture>
+              <AdelePic>
+                <img src={AdeleCarlesPic} alt="Image du projet de création de site de l'Avocat Adèle Carles" />
+              </AdelePic>
               <KickAceDescription>
-                <h1>Kick-Ace</h1>
+                <h1>Adèle CARLES - Avocat</h1>
                 <Stack>
-                  <img src={ROR} alt="Ruby On Rails" />
-                  <img src={JS} alt="JS" />
-                  <img src={HTML} alt="HTML" />
-                  <img src={CSS} alt="CSS" />
-                  <img src={Figma} alt="Figma" />
-                  <img src={Heroku} alt="Heroku" />
+                  <img src={NextJS} alt="NextJS" />
+                  <img src={Sanity} alt="Sanity" />
+                  <img src={API} alt="API" />
+                  <img src={Netlify} alt="Netlify" />
                   <img src={Github} alt="Github" />
-                  <img src={cloudinary} alt="Cloudinary" />
-                  <img src={Postgre} alt="Postgre SQL" />
                 </Stack>
                 <p>
-                  Kick-Ace est un jeu de fantasy tennis où chaque joueur doit
-                  constituer une équipe de 8 tennismen grâce à un système
-                  d'enchères. Le jeu est ensuite organisé par ligue de 4 à 8
-                  joueurs où chaque équipe va s'affronter en fonction des
-                  résultats des tennismen à l'ATP.
+                  Création d'un site pour le cabinet d'Avocat Adèle CARLES. Site créé en NextJS avec Sanity comme CMS, suivi d'un cahier des charges techniques et visuel. Création d'un backoffice pour la gestion de la partie publications (blog). Hébergement sur Netlify.
                 </p>
                 <Contact>
                   <motion.button
@@ -99,10 +97,10 @@ function SimpleSlider() {
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
                     <a
-                      href="https://www.youtube.com/watch?v=ptb0CURbsCw"
+                      href="https://carles-avocat.fr/"
                       target="_blank"
                     >
-                      Présentation
+                      Site
                     </a>
                   </motion.button>
                 </Contact>
@@ -110,9 +108,9 @@ function SimpleSlider() {
             </ProjectPresentation>
             <CodeLink>
               <a
-                href="https://github.com/Flolq/KICK_ACE"
+                href="https://github.com/PierreScheibling/CarlesAdeleWS"
                 target="_blank"
-                rel="code Kick-Ace"
+                rel="code site Adèle Carles"
               >
                 <img src={Github} />
                 <p>Voir le code</p>
@@ -124,6 +122,98 @@ function SimpleSlider() {
         <Project>
           <Slide>
             {currentSlide === 1 && (
+            <>
+            <ProjectPresentation>
+              <AdelePic>
+                <img src={MatchyMatchyPic} alt="Image du projet de création de site Matchy Matchy sur Shopify" />
+              </AdelePic>
+              <KickAceDescription>
+                <h1>Matchy Matchy</h1>
+                <StackMatchy>
+                  <img src={Shopify} alt="Shopify" />
+                </StackMatchy>
+                <p>
+                  Accompagnement dans la création et la personnalisation d'un site marchand sur Shopify. Adaptation du code en fonction des besoins clients (sur la partie front-end comme back-end).
+                </p>
+                <Contact>
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <a
+                      href="https://matchymatchy-paris.com/"
+                      target="_blank"
+                    >
+                      Site
+                    </a>
+                  </motion.button>
+                </Contact>
+              </KickAceDescription>
+            </ProjectPresentation>
+            <Wave />
+            </>
+            )}
+          </Slide>
+        </Project>
+        <Project>
+          <Slide>
+            {currentSlide === 2 && (
+              <>
+              <ProjectPresentation>
+              <KickAcePicture>
+                  <img src={KickAce} alt="kickace" />
+              </KickAcePicture>
+              <KickAceDescription>
+                  <h1>Kick-Ace</h1>
+                  <Stack>
+                    <img src={ROR} alt="Ruby On Rails" />
+                    <img src={JS} alt="JS" />
+                    <img src={Figma} alt="Figma" />
+                    <img src={Heroku} alt="Heroku" />
+                    <img src={Github} alt="Github" />
+                    <img src={cloudinary} alt="Cloudinary" />
+                    <img src={Postgre} alt="Postgre SQL" />
+                  </Stack>
+                  <p>
+                    Kick-Ace est un jeu de fantasy tennis où chaque joueur doit
+                    constituer une équipe de 8 tennismen grâce à un système
+                    d'enchères. Le jeu est ensuite organisé par ligue de 4 à 8
+                    joueurs où chaque équipe va s'affronter en fonction des
+                    résultats des tennismen à l'ATP.
+                  </p>
+                  <Contact>
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
+                      <a
+                        href="https://www.youtube.com/watch?v=ptb0CURbsCw"
+                        target="_blank"
+                      >
+                        Présentation
+                      </a>
+                    </motion.button>
+                  </Contact>
+                </KickAceDescription>
+              </ProjectPresentation>
+              <CodeLink>
+                <a
+                  href="https://github.com/Flolq/KICK_ACE"
+                  target="_blank"
+                  rel="code Kick-Ace"
+                >
+                  <img src={Github} />
+                  <p>Voir le code</p>
+                </a>
+              </CodeLink>
+              <Wave />
+              </>
+            )}
+          </Slide>
+        </Project>
+        <Project>
+          <Slide>
+            {currentSlide === 3 && (
               <>
                 <InnerSlide
                   initial={initial}
@@ -149,7 +239,7 @@ function SimpleSlider() {
         </Project>
         <Project>
           <Slide className="slide-game-changer">
-            {currentSlide === 2 && (
+            {currentSlide === 4 && (
               <>
                 <InnerSlide
                   initial={initial}
@@ -332,6 +422,19 @@ const KickAcePicture = styled(motion.div)`
   }
 `;
 
+const AdelePic = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  width: 40%;
+  img {
+    width: clamp(15rem, 30vw, 30rem);
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
 const KickAceDescription = styled(motion.div)`
   display: flex;
   flex-direction: column;
@@ -366,8 +469,23 @@ const CodeLink = styled(motion.div)`
 
 const Stack = styled(motion.div)`
   display: flex;
+  align-items: center;
   img {
     width: clamp(1rem, 2vw, 3rem);
+    height: 100%;
+    object-fit: contain;
+    margin: clamp(0.5rem, 1vw, 1rem);
+  }
+  @media (max-width: 667px) {
+    display: none;
+  }
+`;
+
+const StackMatchy = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  img {
+    width: clamp(1rem, 6vw, 4rem);
     height: 100%;
     object-fit: contain;
     margin: clamp(0.5rem, 1vw, 1rem);
