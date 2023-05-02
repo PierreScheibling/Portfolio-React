@@ -38,6 +38,7 @@ const PresentationSection = () => {
             <motion.h2 className="titleh2" variants={postAnim}>
               Developpeur Front-End
             </motion.h2>
+            <motion.p className="titleh2" variants={postAnim}>NextJS / ReactJS</motion.p>
           </div>
         </Welcome>
       </Greetings>
@@ -150,7 +151,8 @@ const Contact = styled(motion.div)`
 `;
 
 const CodeLink = styled(motion.div)`
-  a {
+ a {
+    opacity: 0.7;
     position: absolute;
     bottom: 2%;
     left: 2%;

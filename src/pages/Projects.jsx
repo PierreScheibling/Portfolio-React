@@ -444,6 +444,7 @@ const KickAceDescription = styled(motion.div)`
 const CodeLink = styled(motion.div)`
   z-index: 2;
   a {
+    opacity: 0.5;
     position: absolute;
     bottom: 1rem;
     left: 2rem;
