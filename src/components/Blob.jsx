@@ -21,7 +21,7 @@ const BlobPage = () => {
 //styles components
 const Blob = styled(motion.div)`
   .blob {
-    opacity: 0.5;
+    opacity: 0.2;
     position: fixed;
     top: 20%;
     left: 10%;

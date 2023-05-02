@@ -12,6 +12,8 @@ import HTML from "../../img/stack/HTML.png";
 import JS from "../../img/stack/JS.png";
 import Reactlogo from "../../img/stack/React.png";
 import ROR from "../../img/stack/ROR.png";
+import NextJS from "../../img/stack/NextJSLogo.png";
+import Shopify from "../../img/stack/ShopifyLogo.png";
 
 // import components
 import { Card } from "./card";
@@ -29,14 +31,14 @@ export const Memory = () => {
   const initialState = [
     {
       id: 1,
-      img: HTML,
-      skillName: "HTML",
+      img: NextJS,
+      skillName: "NextJS",
       matched: false,
     },
     {
       id: 2,
-      img: CSS,
-      skillName: "CSS",
+      img: Reactlogo,
+      skillName: "React",
       matched: false,
     },
     {
@@ -47,14 +49,14 @@ export const Memory = () => {
     },
     {
       id: 4,
-      img: Reactlogo,
-      skillName: "React",
+      img: ROR,
+      skillName: "Ruby On Rails",
       matched: false,
     },
     {
       id: 5,
-      img: ROR,
-      skillName: "Ruby On Rails",
+      img: Shopify,
+      skillName: "Shopify",
       matched: false,
     },
     {

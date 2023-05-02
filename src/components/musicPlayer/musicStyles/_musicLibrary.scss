@@ -9,8 +9,8 @@
   transform: translateX(-100%);
   transition: opacity 1s ease-in-out;
   opacity: 0;
-  border-top-left-radius: 3rem;
-  border-bottom-left-radius: 3rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
   background: rgb(255, 255, 255,0.8);
     h2 {
       font-size: clamp(1rem, 2vw, 3rem);

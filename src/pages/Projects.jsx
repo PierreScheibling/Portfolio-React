@@ -75,7 +75,9 @@ function SimpleSlider() {
       >
         <Project>
           <Slide>
-            <ProjectPresentation>
+            <ProjectPresentation initial={initial}
+                  animate={animate}
+                  transition={transition}>
               <AdelePic>
                 <img src={AdeleCarlesPic} alt="Image du projet de création de site de l'Avocat Adèle Carles" />
               </AdelePic>
@@ -123,7 +125,9 @@ function SimpleSlider() {
           <Slide>
             {currentSlide === 1 && (
             <>
-            <ProjectPresentation>
+            <ProjectPresentation  initial={initial}
+                  animate={animate}
+                  transition={transition}>
               <AdelePic>
                 <img src={MatchyMatchyPic} alt="Image du projet de création de site Matchy Matchy sur Shopify" />
               </AdelePic>
@@ -159,10 +163,12 @@ function SimpleSlider() {
           <Slide>
             {currentSlide === 2 && (
               <>
-              <ProjectPresentation>
-              <KickAcePicture>
+              <ProjectPresentation initial={initial}
+                  animate={animate}
+                  transition={transition}>
+              <AdelePic>
                   <img src={KickAce} alt="kickace" />
-              </KickAcePicture>
+              </AdelePic>
               <KickAceDescription>
                   <h1>Kick-Ace</h1>
                   <Stack>
@@ -175,7 +181,7 @@ function SimpleSlider() {
                     <img src={Postgre} alt="Postgre SQL" />
                   </Stack>
                   <p>
-                    Kick-Ace est un jeu de fantasy tennis où chaque joueur doit
+                    Projet réalisé dans la cadre de la formation au Wagon. Kick-Ace est un jeu de fantasy tennis où chaque joueur doit
                     constituer une équipe de 8 tennismen grâce à un système
                     d'enchères. Le jeu est ensuite organisé par ligue de 4 à 8
                     joueurs où chaque équipe va s'affronter en fonction des
@@ -354,7 +360,7 @@ const Slide = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 3rem;
+  border-radius: 0.5rem;
   position: relative;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   margin-bottom: 2.5rem;
@@ -366,7 +372,7 @@ const Slide = styled(motion.div)`
   @media (max-width: 834px) {
     flex-direction: column;
     justify-content: center;
-    height: clamp(60vh, 60vh, 80vh);
+    /* height: clamp(60vh, 60vh, 80vh); */
   }
 `;
 
@@ -383,15 +389,17 @@ const ProjectPresentation = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   z-index: 2;
   h1 {
-    font-size: clamp(1rem, 3vw, 4rem);
+    font-size: clamp(1rem, 2.5vw, 4rem);
+    font-weight: lighter;
+    margin-bottom: 1rem;
   }
   p {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     margin-right: 4rem;
-    font-size: clamp(0.1rem, 1.2vw, 2.2rem);
+    font-size: clamp(0.1rem, 1vw, 2.2rem);
     text-align: justify;
     line-height: clamp(1rem, 3vw, 3rem);
   }
@@ -409,19 +417,6 @@ const ProjectPresentation = styled(motion.div)`
   }
 `;
 
-const KickAcePicture = styled(motion.div)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  width: 40%;
-  img {
-    width: clamp(15rem, 30vw, 30rem);
-    height: 100%;
-    object-fit: contain;
-  }
-`;
-
 const AdelePic = styled(motion.div)`
   display: flex;
   align-items: center;
@@ -429,15 +424,16 @@ const AdelePic = styled(motion.div)`
   z-index: 2;
   width: 40%;
   img {
-    width: clamp(15rem, 30vw, 30rem);
-    height: 100%;
+    width: 100%;
     object-fit: cover;
+    padding: 1rem;
   }
 `;
 
 const KickAceDescription = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   width: 60%;
   @media (max-width: 834px) {
     justify-content: center;
@@ -481,17 +477,9 @@ const Stack = styled(motion.div)`
   }
 `;
 
-const StackMatchy = styled(motion.div)`
-  display: flex;
-  align-items: center;
+const StackMatchy = styled(Stack)`
   img {
     width: clamp(1rem, 6vw, 4rem);
-    height: 100%;
-    object-fit: contain;
-    margin: clamp(0.5rem, 1vw, 1rem);
-  }
-  @media (max-width: 667px) {
-    display: none;
   }
 `;
 
