@@ -79,7 +79,7 @@ export const titleAnim = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { duration: 0.75, ease: "easeOut" },
+    transition: { duration: 0.3, ease: "easeOut" },
   },
 };
 
@@ -96,7 +96,7 @@ export const postAnim = {
   show: {
     x: 0,
     opacity: 1,
-    transition: { duration: 1, ease: "easeOut" },
+    transition: { duration: 0.3, ease: "easeOut" },
   },
 };
 

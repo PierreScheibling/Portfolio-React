@@ -91,7 +91,7 @@ function SimpleSlider() {
                   <img src={Github} alt="Github, utilisation dans le projet" />
                 </Stack>
                 <p>
-                  Création d'un site pour le cabinet d'Avocat Adèle CARLES. Site créé en NextJS avec Sanity comme CMS, suivi d'un cahier des charges techniques et visuel. Création d'un backoffice pour la gestion de la partie publications (blog). Hébergement sur Netlify.
+                  Création d'un site pour le cabinet d'Avocat Adèle CARLES. Site créé en NextJS avec Sanity comme CMS, suivi d'un cahier des charges technique et visuel. Création d'un backoffice pour la gestion de la partie publications (blog). Hébergement sur Netlify.
                 </p>
                 <Contact>
                   <motion.button
