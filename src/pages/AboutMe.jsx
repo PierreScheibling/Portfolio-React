@@ -39,7 +39,7 @@ const AboutMe = () => {
               src={costard}
               alt="Photo de Pierre SCHEIBLING, professionnelle en costard"
             />
-            <a href="/CV-PierreSCHEIBLING.pdf" download>Télécharger mon CV</a>
+            <a href="/CV-PierreSCHEIBLING.pdf" download><p>Télécharger mon CV</p></a>
           </Picture>
           <Curriculum>
             <Bio>
@@ -190,6 +190,16 @@ const Picture = styled(motion.div)`
   }
   a {
     margin-top: 2rem;
+    p {
+      font-size: clamp(0.1rem, 1.2vw, 2.2rem);
+    }
+  }
+  @media (max-width: 834px) {
+    a {
+      p {
+      font-size: clamp(0.1rem, 2vw, 2.2rem);
+      }
+    }
   }
 `;
 
