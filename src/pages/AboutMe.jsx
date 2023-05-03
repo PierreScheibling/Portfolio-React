@@ -37,7 +37,7 @@ const AboutMe = () => {
               initial="hidden"
               animate="show"
               src={costard}
-              alt="costard"
+              alt="Photo de Pierre SCHEIBLING, professionnelle en costard"
             />
           </Picture>
           <Curriculum>
@@ -122,9 +122,24 @@ const Curriculum = styled(motion.div)`
   align-items: flex-start;
   justify-content: flex-start;
   width: 80%;
+  @media (max-width: 834px) {
+    margin-top: 2rem;
+  }
 `;
 
-const Bio = styled(motion.div)``;
+const Bio = styled(motion.div)`
+  @media (max-width: 834px) {
+    p {
+      font-size: clamp(0.1rem, 1.6vw, 2.2rem);
+      line-height: 150%;
+    }
+  }
+  @media (max-width: 667px) {
+    p {
+      font-size: clamp(0.1rem, 1.9vw, 2.2rem);
+    }
+  }
+`;
 
 const Experience = styled(motion.div)`
   width: 100%;
@@ -146,6 +161,17 @@ const XpLine = styled(motion.div)`
     display: flex;
     justify-content: flex-start;
     width: 70%;
+  }
+  @media (max-width: 834px) {
+    p {
+      font-size: clamp(0.1rem, 1.6vw, 2.2rem);
+      line-height: 150%;
+    }
+  }
+  @media (max-width: 667px) {
+    p {
+      font-size: clamp(0.1rem, 1.9vw, 2.2rem);
+    }
   }
 `;
 

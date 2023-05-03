@@ -84,12 +84,12 @@ const StyledNav = styled.nav`
 `;
 
 const Line = styled(motion.div)`
-  height: 0.2rem;
+  height: 0.12rem;
   background: #e2a48e;
   width: 0%;
   position: absolute;
   bottom: -80%;
-  border-radius: 10px;
+  border-radius: 2px;
 `;
 
 export default Nav;

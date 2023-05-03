@@ -31,7 +31,7 @@ const PresentationSection = () => {
           </div>
         </Introduction>
         <Image>
-          <motion.img src={moi} alt="photo-id" />
+          <motion.img src={moi} alt="Photo de présentation de Pierre SCHEIBLING" />
         </Image>
         <Welcome>
           <div className="hide">
@@ -127,8 +127,12 @@ const Welcome = styled(motion.div)`
   justify-content: center;
   align-items: center;
   width: 100%;
+  line-height: 200%;
   h2 {
     font-size: clamp(0.8rem, 0.65rem + 0.601vw, 1.2rem);
+  }
+  p {
+    font-style: italic;
   }
 `;
 

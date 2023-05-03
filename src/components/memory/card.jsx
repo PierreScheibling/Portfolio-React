@@ -36,10 +36,10 @@ export const Card = ({ card, ...props }) => {
       onClick={() => handleClick(card)}
     >
       <div className="on">
-        <img src={img} alt="" draggable="false" />
+        <img src={img} alt="image visible" draggable="false" />
       </div>
       <div className="off">
-        <img src={face} alt="" draggable="false" />
+        <img src={face} alt="image non visible" draggable="false" />
       </div>
     </CardItem>
   );

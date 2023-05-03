@@ -282,8 +282,9 @@ const SkillList = styled.ul`
   width: 100%;
   @media (max-width: 820px) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
+    margin-bottom: 2rem;
     p {
       display: none;
     }
@@ -309,7 +310,8 @@ const SkillsTitle = styled.div`
   padding-bottom: 2rem;
 `;
 
-const GameSection = styled.div``;
+const GameSection = styled.div`
+`;
 
 const GameInfo = styled.div`
   display: flex;

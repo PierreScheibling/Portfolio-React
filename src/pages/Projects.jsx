@@ -84,11 +84,11 @@ function SimpleSlider() {
               <KickAceDescription>
                 <h1>Adèle CARLES - Avocat</h1>
                 <Stack>
-                  <img src={NextJS} alt="NextJS" />
-                  <img src={Sanity} alt="Sanity" />
-                  <img src={API} alt="API" />
-                  <img src={Netlify} alt="Netlify" />
-                  <img src={Github} alt="Github" />
+                  <img src={NextJS} alt="NextJS, utilisation du langage dans le projet" />
+                  <img src={Sanity} alt="Sanity, utilisation du CMS dans le projet" />
+                  <img src={API} alt="API, utilisation dans le projet" />
+                  <img src={Netlify} alt="Netlify, utilisation de l'hébergeur dans le projet" />
+                  <img src={Github} alt="Github, utilisation dans le projet" />
                 </Stack>
                 <p>
                   Création d'un site pour le cabinet d'Avocat Adèle CARLES. Site créé en NextJS avec Sanity comme CMS, suivi d'un cahier des charges techniques et visuel. Création d'un backoffice pour la gestion de la partie publications (blog). Hébergement sur Netlify.
@@ -134,7 +134,7 @@ function SimpleSlider() {
               <KickAceDescription>
                 <h1>Matchy Matchy</h1>
                 <StackMatchy>
-                  <img src={Shopify} alt="Shopify" />
+                  <img src={Shopify} alt="Shopify, image du projet" />
                 </StackMatchy>
                 <p>
                   Accompagnement dans la création et la personnalisation d'un site marchand sur Shopify. Adaptation du code en fonction des besoins clients (sur la partie front-end comme back-end).
@@ -167,18 +167,18 @@ function SimpleSlider() {
                   animate={animate}
                   transition={transition}>
               <AdelePic>
-                  <img src={KickAce} alt="kickace" />
+                  <img src={KickAce} alt="kickace, image du projet" />
               </AdelePic>
               <KickAceDescription>
                   <h1>Kick-Ace</h1>
                   <Stack>
-                    <img src={ROR} alt="Ruby On Rails" />
-                    <img src={JS} alt="JS" />
-                    <img src={Figma} alt="Figma" />
-                    <img src={Heroku} alt="Heroku" />
-                    <img src={Github} alt="Github" />
-                    <img src={cloudinary} alt="Cloudinary" />
-                    <img src={Postgre} alt="Postgre SQL" />
+                    <img src={ROR} alt="Ruby On Rails, utilisation du langage dans le projet" />
+                    <img src={JS} alt="JS, utilisation du langage dans le projet" />
+                    <img src={Figma} alt="Figma, utilisation de l'outil dans le projet" />
+                    <img src={Heroku} alt="Heroku, utilisation de l'hébergeur dans le projet" />
+                    <img src={Github} alt="Github, utilisation dans le projet" />
+                    <img src={cloudinary} alt="Cloudinary, utilisation dans le projet" />
+                    <img src={Postgre} alt="Postgre SQL, utilisation du langage dans le projet" />
                   </Stack>
                   <p>
                     Projet réalisé dans la cadre de la formation au Wagon. Kick-Ace est un jeu de fantasy tennis où chaque joueur doit
@@ -254,14 +254,14 @@ function SimpleSlider() {
                 >
                   <ProjectPresentation>
                     <VisualGame>
-                      <img src={GameChangerPic} alt="Game_changer" />
+                      <img src={GameChangerPic} alt="Game changer, image du projet" />
                     </VisualGame>
                     <GamePresentation>
                       <h1>Game Changer</h1>
                       <Stack>
-                        <img src={API} alt="API" />
-                        <img src={Reactlogo} alt="React" />
-                        <img src={Github} alt="Github" />
+                        <img src={API} alt="API, utilisation dans le projet" />
+                        <img src={Reactlogo} alt="React, utilisation du langage dans le projet" />
+                        <img src={Github} alt="Github, utilisation dans le projet" />
                       </Stack>
                       <p>
                         Game Changer est un blog d'actualité sur les Jeux Videos
@@ -323,17 +323,19 @@ const ProjectsPage = styled(motion.div)`
   .slick-arrow {
     z-index: -2;
     margin-top: 0;
-    margin-right: clamp(2rem, 10vh, 6rem);
+    margin-right: clamp(2rem, 12vh, 6rem);
     margin-bottom: 0;
-    margin-left: clamp(2rem, 5vh, 7rem);
+    margin-left: clamp(2rem, 7vh, 7rem);
     z-index: 1 !important;
   }
   button.slick-next:before {
-    font-size: clamp(0.5rem, 8vh, 4rem) !important;
+    opacity: 0.5;
+    font-size: clamp(0.5rem, 6vh, 4rem) !important;
     color: #e2a48e !important;
   }
   button.slick-prev:before {
-    font-size: clamp(0.5rem, 8vh, 4rem) !important;
+    opacity: 0.5;
+    font-size: clamp(0.5rem, 6vh, 4rem) !important;
     color: #e2a48e !important;
   }
 
@@ -408,6 +410,7 @@ const ProjectPresentation = styled(motion.div)`
     flex-direction: column;
     p {
       margin-right: 0rem;
+      font-size: clamp(0.1rem, 1.6vw, 2.2rem);
     }
   }
   @media (max-width: 667px) {
@@ -427,6 +430,10 @@ const AdelePic = styled(motion.div)`
     width: 100%;
     object-fit: cover;
     padding: 1rem;
+  }
+  @media (max-width: 834px) {
+    padding: 0;
+    width: 65%;
   }
 `;
 
@@ -473,14 +480,18 @@ const Stack = styled(motion.div)`
     object-fit: contain;
     margin: clamp(0.5rem, 1vw, 1rem);
   }
-  @media (max-width: 667px) {
-    display: none;
+  @media (max-width: 834px) {
+    img {
+      width: clamp(1rem, 3vw, 3rem);
+    }
   }
+
 `;
 
 const StackMatchy = styled(Stack)`
   img {
     width: clamp(1rem, 6vw, 4rem);
+    margin: 0;
   }
 `;
 
