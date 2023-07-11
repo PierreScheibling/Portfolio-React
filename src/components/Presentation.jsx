@@ -146,7 +146,7 @@ const Contact = styled(motion.div)`
     padding: 0.7rem 1.6rem;
     font-size: clamp(0.8rem, 0.65rem + 0.601vw, 3rem);
     cursor: pointer;
-    border-radius: 0.3rem;
+    /* border-radius: 0.3rem; */
     background: #e2a48e;
     color: white;
     border: none;

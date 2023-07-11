@@ -3,11 +3,9 @@ import React, { useState } from "react";
 // import logos
 import API from "../img/stack/API.png";
 import cloudinary from "../img/stack/Cloudinary.png";
-import CSS from "../img/stack/CSS.png";
 import Figma from "../img/stack/Figma.png";
 import Github from "../img/stack/Github.png";
 import Heroku from "../img/stack/Heroku.png";
-import HTML from "../img/stack/HTML.png";
 import JS from "../img/stack/JS.png";
 import Postgre from "../img/stack/Postgre-SQL.png";
 import Reactlogo from "../img/stack/React.png";
@@ -20,6 +18,10 @@ import KickAce from "../img/kickAce.png";
 import GameChangerPic from "../img/GameChanger.png";
 import AdeleCarlesPic from "../img/carles-avocat.png";
 import MatchyMatchyPic from "../img/matchy-matchy.png";
+import BlushHome from "../img/Blush-HomePage.png";
+import Tailwind from "../img/stack/Tailwind.png";
+import Typescript from "../img/stack/Typescript.png";
+import Prisma from "../img/stack/Prisma.png";
 
 //Style
 import styled from "styled-components";
@@ -129,6 +131,59 @@ function SimpleSlider() {
                   animate={animate}
                   transition={transition}>
               <AdelePic>
+                <img src={BlushHome} alt="Image du projet du site e-commerce Blush" />
+              </AdelePic>
+              <KickAceDescription>
+                <h1>Blush Shop</h1>
+                <Stack>
+                  <img src={Typescript} alt="Typescript, utilisation du langage dans le projet" />
+                  <img src={NextJS} alt="NextJS, utilisation du langage dans le projet" />
+                  <img src={Prisma} alt="Prisma" />
+                  <img src={Tailwind} alt="Tailwind" />
+                  <img src={Netlify} alt="Netlify, utilisation de l'hébergeur dans le projet" />
+                  <img src={Github} alt="Github, utilisation dans le projet" />
+                </Stack>
+                <p>
+                  Création d'un site e-commerce de vêtements. Utilisation de stripe pour les paiements et gestion des articles, Auth0 pour l'authentification des utilisateurs (listing des commandes précédentes, gestion des profils). Site créé intégralement en Typescript, NextJS et Tailwind avec une base de données en Postgré SQL pour la gestion des commandes (et Prisma pour lier la base de données avec Stripe).
+                </p>
+                <Contact>
+                  <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <a
+                      href="https://blush-shop.netlify.app/"
+                      target="_blank"
+                    >
+                      Site
+                    </a>
+                  </motion.button>
+                </Contact>
+              </KickAceDescription>
+            </ProjectPresentation>
+            <CodeLink>
+              <a
+                href="https://github.com/PierreScheibling/Next-Ecommerce"
+                target="_blank"
+                rel="code site Blush"
+              >
+                <img src={Github} />
+                <p>Voir le code</p>
+              </a>
+            </CodeLink>
+            <Wave />
+            </>
+            )}
+          </Slide>
+        </Project>
+        <Project>
+          <Slide>
+            {currentSlide === 2 && (
+            <>
+            <ProjectPresentation  initial={initial}
+                  animate={animate}
+                  transition={transition}>
+              <AdelePic>
                 <img src={MatchyMatchyPic} alt="Image du projet de création de site Matchy Matchy sur Shopify" />
               </AdelePic>
               <KickAceDescription>
@@ -161,7 +216,7 @@ function SimpleSlider() {
         </Project>
         <Project>
           <Slide>
-            {currentSlide === 2 && (
+            {currentSlide === 3 && (
               <>
               <ProjectPresentation initial={initial}
                   animate={animate}
@@ -219,7 +274,7 @@ function SimpleSlider() {
         </Project>
         <Project>
           <Slide>
-            {currentSlide === 3 && (
+            {currentSlide === 4 && (
               <>
                 <InnerSlide
                   initial={initial}
@@ -245,7 +300,7 @@ function SimpleSlider() {
         </Project>
         <Project>
           <Slide className="slide-game-changer">
-            {currentSlide === 4 && (
+            {currentSlide === 5 && (
               <>
                 <InnerSlide
                   initial={initial}
@@ -362,7 +417,7 @@ const Slide = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   position: relative;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   margin-bottom: 2.5rem;
@@ -529,7 +584,7 @@ const Contact = styled(motion.div)`
     padding: 0.7rem 1.6rem;
     font-size: clamp(0.8rem, 0.65rem + 0.601vw, 3rem);
     cursor: pointer;
-    border-radius: 0.3rem;
+    /* border-radius: 0.3rem; */
     background: #e2a48e;
     color: white;
     border: none;

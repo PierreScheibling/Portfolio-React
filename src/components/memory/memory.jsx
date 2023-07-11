@@ -4,16 +4,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import styled from "styled-components";
 
 // import logos
-import API from "../../img/stack/API.png";
-import CSS from "../../img/stack/CSS.png";
+import Tailwind from "../../img/stack/Tailwind.png";
 import Figma from "../../img/stack/Figma.png";
 import Github from "../../img/stack/Github.png";
-import HTML from "../../img/stack/HTML.png";
 import JS from "../../img/stack/JS.png";
 import Reactlogo from "../../img/stack/React.png";
 import ROR from "../../img/stack/ROR.png";
 import NextJS from "../../img/stack/NextJSLogo.png";
-import Shopify from "../../img/stack/ShopifyLogo.png";
+import Typescript from "../../img/stack/Typescript.png";
 
 // import components
 import { Card } from "./card";
@@ -49,20 +47,20 @@ export const Memory = () => {
     },
     {
       id: 4,
+      img: Typescript,
+      skillName: "Typescript",
+      matched: false,
+    },
+    {
+      id: 5,
       img: ROR,
       skillName: "Ruby On Rails",
       matched: false,
     },
     {
-      id: 5,
-      img: Shopify,
-      skillName: "Shopify",
-      matched: false,
-    },
-    {
       id: 6,
-      img: Figma,
-      skillName: "Figma",
+      img: Tailwind,
+      skillName: "Tailwind",
       matched: false,
     },
     {
@@ -73,8 +71,8 @@ export const Memory = () => {
     },
     {
       id: 8,
-      img: API,
-      skillName: "API",
+      img: Figma,
+      skillName: "Figma",
       matched: false,
     },
   ];
@@ -271,7 +269,7 @@ const MemoryList = styled(motion.ul)`
   gap: 0.5em;
   width: 100%;
   overflow: hidden;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 `;
 const SkillList = styled.ul`
   display: flex;
@@ -322,7 +320,7 @@ const GameInfo = styled.div`
     padding: 0.7rem 1.6rem;
     font-size: clamp(0.8rem, 0.65rem + 0.601vw, 3rem);
     cursor: pointer;
-    border-radius: 0.3rem;
+    /* border-radius: 0.3rem; */
     background: #e2a48e;
     color: white;
     border: none;

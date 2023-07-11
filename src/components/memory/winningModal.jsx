@@ -38,7 +38,7 @@ const WinningModalWP = styled(motion.div)`
   -webkit-backdrop-filter: blur(9.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   text-align: center;
-  border-radius: 0.3rem;
+  /* border-radius: 0.3rem; */
   font-size: clamp(0.7rem, 1.5vw, 3rem);
 `;
 
